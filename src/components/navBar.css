@@ -1,0 +1,56 @@
+.nav {
+  height: 5vh;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  transition: background-position 2000ms ease-in-out;
+}
+
+.nav:hover {
+  animation: box-shadow 4s ease-in-out infinite;
+  transition: background-position 2000ms ease-in-out;
+}
+
+.nav:hover .icon {
+  fill: white;
+  transition: fill 2000ms ease-in-out;
+}
+
+.nav-scale:hover {
+  height: 7vh;
+  transition: background-position 2000ms ease-in-out;
+}
+
+.nav-border {
+  color: white;
+  border-bottom: 1px solid;
+}
+
+.icon {
+  float: left;
+  padding-left: 1%;
+  fill: black;
+  transition: fill 2000ms ease-in-out;
+  /* display: flex; */
+}
+
+.contact {
+  padding-right: 1%;
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.contact:hover {
+  text-decoration: underline;
+}
+
+@keyframes icon-shade {
+  0% {
+    box-shadow: 0 0 0px 0px #000000;
+  }
+  100% {
+    box-shadow: 0 0 0px 0px #ffffff;
+  }
+}

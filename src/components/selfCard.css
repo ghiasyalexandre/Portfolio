@@ -1,0 +1,65 @@
+
+.self-hr {
+  width: 80%;
+
+  height: 2px;
+  border: 0;
+  background: linear-gradient(135deg, #55efc4, #6c5ce7, #d11d1d);
+  background-size: 300% !important;
+  transition: background-position 2000ms;
+  position: left;
+
+  @media screen and (min-width: 576px) {
+    width: 80%;
+  }
+}
+
+
+.bg-gradient {
+  background: linear-gradient(135deg, #000000, rgb(19, 19, 19), #000000);
+  background-size: 300%;
+  background-position: left;
+  transition: background-position 1000ms;
+}
+
+.bg-gradient:hover {
+  background-position: right;
+}
+
+
+#core path:hover {
+  animation: pulse 2000ms ease-in-out infinite;
+  fill: url(#skill-icon-gradient) !important;
+}
+
+#skill-icon-gradient {
+  --color-stop-1: #55efc4;
+  --color-stop-2: #6c5ce7;
+  --color-stop-3: #c56df5;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes self-shadow {
+  0% {
+    box-shadow: 0 0 0px 0px #ffffff;
+  }
+
+  50% {
+    box-shadow: 0 0 15px 0px #ffffff;
+  }
+
+  100% {
+    box-shadow: 0 0 0px 0px #ffffff;
+  }
+}
