@@ -1,6 +1,6 @@
 # Hi! My name is Ghiasy Alexandre 😄
 
-🌍  I am a Software Developer based in Orlando, Florida.
+🌍  I am a Software Developer based in Florida.
 <br/>
 
 ### Skills
