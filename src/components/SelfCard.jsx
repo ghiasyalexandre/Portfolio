@@ -37,6 +37,7 @@ function SelfCard(props) {
               <div className="flex justify-evenly">
                 <a
                   className="group"
+                  aria-label="LinkedIn"
                   href="https://www.linkedin.com/in/ghiasy-a/"
                   target="_blank"
                   rel="noreferrer"
@@ -66,6 +67,7 @@ function SelfCard(props) {
                   href="https://github.com/ghiasyalexandre"
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="Github"
                   draggable={false}
                 >
                   <svg
@@ -86,6 +88,7 @@ function SelfCard(props) {
                   href="https://www.instagram.com/ghiasy.a/"
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="Instagram"
                   draggable={false}
                 >
                   <svg
@@ -106,6 +109,7 @@ function SelfCard(props) {
                   href="https://docs.google.com/document/d/19I8bSM32SW5Uj1uzMZR66mZxYbtSH_zTVHioR0nKX4I/"
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="Resume"
                   draggable={false}
                 >
                   <svg

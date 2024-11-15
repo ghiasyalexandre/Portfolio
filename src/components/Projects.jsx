@@ -35,6 +35,7 @@ export default function Projects() {
 
   return (
     <div className="bg-gradient w-full h-fit">
+      <meta name="Ghiasy Alexandre's Porfolio page of Projects" />
       <FadeInSection>
         <div className="w-full flex-col justify-center py-8">
           <h1 className="text-white pb-4 text-center font-semibold text-4xl sm:text-5xl lg:text-6xl">
