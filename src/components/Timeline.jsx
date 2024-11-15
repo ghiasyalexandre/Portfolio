@@ -8,7 +8,7 @@ export default function Timeline() {
       organization: "Freelance",
       dateRange: "Mar 2024 - Present",
       description:
-        "Developed and maintained web applications using React, Node.js, and MongoDB. Collaborated with cross-functional teams to deliver high-quality software.",
+        "Developed and maintained web applications using React, Node.js, and MongoDB to deliver high-quality websites.",
     },
     {
       type: "work",
@@ -16,7 +16,7 @@ export default function Timeline() {
       organization: "Daytona State College",
       dateRange: "Mar 2023 - Mar 2024",
       description:
-        "Developed and maintained web applications using React, Node.js, and MongoDB. Collaborated with cross-functional teams to deliver high-quality software.",
+        "Develop new and enhance existing applications using PeopleCode, SQL, Java, other Oracle PeopleSoft tools, manage backend systems, and create related technical documentation.",
     },
     {
       type: "education",
@@ -32,7 +32,7 @@ export default function Timeline() {
       organization: "Lockheed Martin",
       dateRange: "Jun 2021 - Feb 2022",
       description:
-        "Developed and maintained web applications using React, Node.js, and MongoDB. Collaborated with cross-functional teams to deliver high-quality software.",
+        "Create new features and troubleshoot bugs using manual and automated testing tools.",
     },
     {
       type: "work",
@@ -40,7 +40,7 @@ export default function Timeline() {
       organization: "University of Central Florida",
       dateRange: "Sep 2019 - Jun 2021",
       description:
-        "Developed and maintained web applications using React, Node.js, and MongoDB. Collaborated with cross-functional teams to deliver high-quality software.",
+        "Led teams to construct different technical event setups following safety protocols. Setting up of computers, cables, lighting, and audio.",
     },
   ];
 
