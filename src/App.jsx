@@ -120,7 +120,7 @@ function App() {
                 <FadeInSection>
                   <VideoCard
                     cardTitle="Price Review"
-                    video="https://www.youtube.com/embed/xcHfXqt_XFM"
+                    video="ogfYd705cRs"
                     caption="A product review website where users can see or post reviews and view other users. Implemented user
           sign-up/login system, product reviewing, profanity filter, review abuse reporting, and frontend administrator
           controls."
@@ -152,7 +152,7 @@ function App() {
                 <FadeInSection>
                   <VideoCard
                     cardTitle="Quantum Hydrogen Atom in VR"
-                    video="https://www.youtube.com/embed/6MUPqvrvFKc"
+                    video="goiWrNiaT0I"
                     caption="An educational visualization on Quantum principles of a Hydrogen atom in Virtual Reality."
                     skills={["unity", "sharp", "vr"]}
                   />

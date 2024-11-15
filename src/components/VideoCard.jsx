@@ -1,5 +1,7 @@
 import "./videoCard.css";
 import DynamicSkills from "./DynamicSkills";
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
 function VideoCard(props) {
   const cardTitle = props.cardTitle;
@@ -27,12 +29,18 @@ function VideoCard(props) {
         <div ref={reveal} className="bg-gradient reveal">
           <figure className="video-figure">
             <div className="video-wrapper px-4 pt-4 sm:px-6 sm:pt-6">
-              <iframe
+              {/* <iframe
                 className=" aspect-video w-full h-auto flex align-middle border rounded-lg shadow-lg shadow-white/30"
                 src={video}
                 title={cardTitle}
                 allowFullScreen
-              ></iframe>
+              ></iframe> */}
+              <LiteYouTubeEmbed
+                id={video}
+                iframeClass=""
+                title={cardTitle}
+                webp={true}
+              ></LiteYouTubeEmbed>
             </div>
             <h2 className="text-2xl xs:text-3xl sm:text-4xl text-center mt-4 px-4 lg:px-8 font-semibold">
               {cardTitle}
