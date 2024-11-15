@@ -1,12 +1,12 @@
 import "./videoCard.css";
 import DynamicSkills from "./DynamicSkills";
-import LiteYouTubeEmbed from "react-lite-youtube-embed";
-import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
+// import LiteYouTubeEmbed from "react-lite-youtube-embed";
+// import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
+import VideoPlayer from "./VideoPlayer";
 
 function VideoCard(props) {
   const cardTitle = props.cardTitle;
   const caption = props.caption;
-  const skills = props.skills;
   const video = props.video;
 
   const reveal = () => {
@@ -24,34 +24,16 @@ function VideoCard(props) {
   };
 
   return (
-    <div className="box-shadow-anim">
-      <div className="video-border-anim">
-        <div ref={reveal} className="bg-gradient reveal">
-          <figure className="video-figure">
-            <div className="video-wrapper px-4 pt-4 sm:px-6 sm:pt-6">
-              {/* <iframe
-                className=" aspect-video w-full h-auto flex align-middle border rounded-lg shadow-lg shadow-white/30"
-                src={video}
-                title={cardTitle}
-                allowFullScreen
-              ></iframe> */}
-              <LiteYouTubeEmbed
-                id={video}
-                iframeClass=""
-                title={cardTitle}
-                webp={true}
-              ></LiteYouTubeEmbed>
+    <div className="rounded-lg">
+      <div className="">
+        <div ref={reveal} className="bg-gradient">
+          <figure>
+            <div>
+              <VideoPlayer src={video} />
             </div>
             <h2 className="text-2xl xs:text-3xl sm:text-4xl text-center mt-4 px-4 lg:px-8 font-semibold">
               {cardTitle}
             </h2>
-            <hr className="border-neutral-700 my-4 mx-8" />
-            <figcaption className="text-center text-neutral-300 text-base sm:text-lg lg:text-base xl:text-xl mx-8 mb-2">
-              {caption}
-            </figcaption>
-            <div className="flex justify-center py-2">
-              <DynamicSkills skills={skills} />
-            </div>
           </figure>
         </div>
       </div>

@@ -4,14 +4,12 @@ import Skills from "./components/Skills";
 import Timeline from "./components/Timeline";
 import AppFooter from "./components/AppFooter";
 import FadeInSection from "./components/FadeInSection";
-import PoPGif from "../public/PoP.gif";
-import VRonGif from "../public/VRon.gif";
-import SimpleC from "../public/SimpleC.webp";
-import AudioVisGif from "../public/AudioVis.gif";
-import { lazy, Suspense } from "react";
+import { Suspense, lazy } from "react";
 
-const VideoCard = lazy(() => import("./components/VideoCard"));
-const Card = lazy(() => import("./components/Card"));
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+const VFX = lazy(() => import("./components/VfxGallery"));
+const Projects = lazy(() => import("./components/Projects"));
 
 import "./App.css";
 
@@ -34,7 +32,7 @@ function App() {
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet"
       ></link>
-      <div className="">
+      <div>
         <NavBar />
 
         {/* <button
@@ -76,112 +74,25 @@ function App() {
             </div>
           </FadeInSection>
         </div>
+
         <FadeInSection>
           <SelfCard />
-
           <Skills />
         </FadeInSection>
+
         <FadeInSection>
           <Timeline />
         </FadeInSection>
-        <Suspense>
-          <div className="bg-gradient-light dark:bg-gradient w-full h-fit">
-            <FadeInSection>
-              <div className="w-full flex-col justify-center py-8">
-                <h1 className="fun-text pb-4 text-center font-semibold text-4xl sm:text-5xl lg:text-6xl">
-                  Projects
-                </h1>
-                <hr className="w-48 lg:w-60 border-neutral-400 mx-auto"></hr>
-              </div>
-            </FadeInSection>
-            <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center gap-8 mx-4 xs:mx-12 sm:mx-16 ">
-              <div className="flex flex-col gap-8">
-                <FadeInSection>
-                  <Card
-                    cardTitle="Plight of Proteus"
-                    cardImg={PoPGif}
-                    skills={["unity", "sharp"]}
-                    link="https://ghiasy321.itch.io/plight-of-proteus"
-                    caption="A 2D procedurally generated Rogue like adventure game optimized to run within the browser with webGL."
-                  />
-                </FadeInSection>
 
-                <FadeInSection>
-                  <Card
-                    cardTitle="Mahtx Detail Co"
-                    cardImg="./Mahtx.webp"
-                    skills={["react", "html", "js", "css"]}
-                    link="https://mahtxdetail.com/"
-                    caption="Car Detailing Business website email booking system,
-                SEO optimized score of 92 from Google Index Analytics."
-                  />
-                </FadeInSection>
+        <Router>
+          <Suspense>
+            <Routes>
+              <Route path="/" element={<Projects />} />
+              <Route path="/vfx" element={<VFX />} />
+            </Routes>
+          </Suspense>
+        </Router>
 
-                <FadeInSection>
-                  <VideoCard
-                    cardTitle="Price Review"
-                    video="ogfYd705cRs"
-                    caption="A product review website where users can see or post reviews and view other users. Implemented user
-          sign-up/login system, product reviewing, profanity filter, review abuse reporting, and frontend administrator
-          controls."
-                    skills={["html", "js", "sql", "php"]}
-                  />
-                </FadeInSection>
-
-                <FadeInSection>
-                  <Card
-                    cardTitle="VRon"
-                    cardImg={VRonGif}
-                    skills={["unity", "sharp", "vr"]}
-                    link="https://github.com/ghiasyalexandre"
-                    caption="A Mario Kart like virtual reality game with Tron like visuals."
-                  />
-                </FadeInSection>
-              </div>
-              <div className="flex flex-col gap-4 lg:gap-8">
-                <FadeInSection>
-                  <Card
-                    cardTitle="Taildawg Productions"
-                    cardImg="./Taildawg.webp"
-                    skills={["react", "html", "js", "css"]}
-                    link="https://taildawgproductions.com/"
-                    caption="Greek paddle business website. A 3D React app that uses Three.js to allow demo customization (work in progress)."
-                  />
-                </FadeInSection>
-
-                <FadeInSection>
-                  <VideoCard
-                    cardTitle="Quantum Hydrogen Atom in VR"
-                    video="goiWrNiaT0I"
-                    caption="An educational visualization on Quantum principles of a Hydrogen atom in Virtual Reality."
-                    skills={["unity", "sharp", "vr"]}
-                  />
-                </FadeInSection>
-
-                <FadeInSection>
-                  <Card
-                    cardTitle="Audio Visualizer"
-                    cardImg={AudioVisGif}
-                    skills={["unity", "sharp"]}
-                    caption="An editor for audio visualizations with file uploading, playback controls, and plenty of color!"
-                  />
-                </FadeInSection>
-
-                <div className="mb-24 lg:mb-36">
-                  <FadeInSection>
-                    <Card
-                      cardTitle="SimpleC Compiler"
-                      cardImg={SimpleC}
-                      link="https://github.com/ghiasyalexandre/SimpleC"
-                      skills={["c"]}
-                      caption="A Simplistic Version of C called SimpleC. Implemented a text parser to identify keywords, identifiers, variables, and function calls."
-                    />
-                  </FadeInSection>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Suspense>
         <AppFooter />
       </div>
     </div>

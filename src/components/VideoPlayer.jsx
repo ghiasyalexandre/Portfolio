@@ -1,43 +1,39 @@
-import { CSSProperties, useCallback, useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
+import { useIsVisible } from "./useIsVisible";
 
-import { useIsVisible } from "@/hooks/use-is-visible";
-
-type VideoPlayerProps = {
-  src: string;
-  poster?: string;
-  alt?: string;
-  style?: CSSProperties;
-};
-export const VideoPlayer = ({
-  src,
-  poster,
-  style,
-  alt,
-}: VideoPlayerProps) => {
+export default function VideoPlayer(props) {
+  const src = props.src;
+  const poster = props.poster;
+  const alt = props.alt;
+  const style = props.style;
   const { isVisible, targetRef } = useIsVisible(
     {
       root: null,
       rootMargin: "200px",
       threshold: 0.1,
     },
-    false,
+    false
   );
 
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoRef = useRef(null);
 
   const startVideoOnMouseMove = useCallback(async () => {
-    try {
-      await videoRef.current.play();
-    } catch (e) {
-      // do nothing
+    if (videoRef.current) {
+      try {
+        await videoRef.current.play();
+      } catch (e) {
+        // do nothing
+      }
     }
   }, []);
 
   const stopVideoOnMove = useCallback(() => {
-    try {
-      videoRef.current.pause();
-    } catch (e) {
-      // do nothing
+    if (videoRef.current) {
+      try {
+        videoRef.current.pause();
+      } catch (e) {
+        // do nothing
+      }
     }
   }, []);
 
@@ -49,9 +45,21 @@ export const VideoPlayer = ({
     }
   }, [isVisible, startVideoOnMouseMove, stopVideoOnMove]);
 
+  const handleMouseEnter = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = false; // Unmute video on hover
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = true; // Mute video when hover ends
+    }
+  };
+
   return (
     <span
-      ref={targetRef as any}
+      ref={targetRef}
       style={{
         position: "relative",
         minHeight: "50px",
@@ -62,7 +70,6 @@ export const VideoPlayer = ({
         ref={videoRef}
         loop
         muted
-        autoPlay={false}
         preload="none"
         playsInline
         poster={poster}
@@ -74,6 +81,8 @@ export const VideoPlayer = ({
           height: "100%",
           ...style,
         }}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
         <source src={src} type="video/mp4" />
         Your browser does not support the video tag. Please try viewing this
@@ -81,4 +90,4 @@ export const VideoPlayer = ({
       </video>
     </span>
   );
-};
+}

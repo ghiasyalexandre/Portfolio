@@ -24,13 +24,13 @@ function SelfCard(props) {
             <hr className="self-hr mx-auto my-4 lg:my-8" />
 
             <div className="">
-              <figcaption className="text-neutral-300 mx-4 sm:mx-8 lg:mx-16 text-center text-sm sm:text-base lg:text-xl xl:text-2xl !leading-tight xl:!leading-9">
+              <figcaption className=" text-neutral-200 mx-4 sm:mx-8 lg:mx-16 text-center text-sm sm:text-base lg:text-xl xl:text-2xl !leading-tight xl:!leading-9">
                 Software developer with a background in web design,
                 client-server applications, and software development cycles with
                 a focus on backend. Previous Programmer I for Daytona State
                 College utilizing SQL, SQR, and PeopleTools. Previous internship
-                at Lockheed Martin/CWEP program involving simulations and C#.
-                Two years of IT work study experience as a Tech Lead for UCF.
+                at Lockheed Martin/CWEP program involving simulations and C#. I
+                code Audio Reactive VFX for a hobby, view my work below.
               </figcaption>
               <hr className="self-hr mx-auto my-4 lg:my-8" />
 
