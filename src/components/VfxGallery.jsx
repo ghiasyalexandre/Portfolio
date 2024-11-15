@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
-import VideoCard from "./VideoCard";
+import VFXCard from "./VFXCard";
 
-import Joji from "../../public/videos/CarJoji.mp4";
-import InLove from "../../public/videos/Fall_In_Love.mp4";
-import Gunner from "../../public/videos/Gunner.mp4";
+import Joji from "../../public/videos/CarJoji.webm";
+import InLove from "../../public/videos/FallInLove.webm";
+import Gunner from "../../public/videos/Gunner.webm";
 import Ideas from "../../public/videos/Ideas.mp4";
 import Pokemon from "../../public/videos/PokemonBattle.mp4";
 import OnAndOff from "../../public/videos/OnAndOff.mp4";
 import StudyTime from "../../public/videos/StudyTime.mp4";
-import Saturn from "../../public/videos/Saturn.mp4";
+import Saturn from "../../public/videos/Saturn.webm";
 import Galaxy from "../../public/videos/Galaxy.mp4";
 import Tunnel from "../../public/videos/Tunnel.mp4";
 
@@ -24,19 +24,19 @@ export default function VfxGallery() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 px-8 lg:px-16 gap-8">
           <div className="flex flex-col gap-4">
-            <VideoCard video={Saturn}></VideoCard>
-            <VideoCard video={InLove}></VideoCard>
-            <VideoCard video={Galaxy}></VideoCard>
+            <VFXCard video={Saturn}></VFXCard>
+            <VFXCard video={InLove}></VFXCard>
+            <VFXCard video={Galaxy}></VFXCard>
 
-            <VideoCard video={Joji}></VideoCard>
-            <VideoCard video={StudyTime}></VideoCard>
+            <VFXCard video={Joji}></VFXCard>
+            <VFXCard video={StudyTime}></VFXCard>
           </div>
           <div className="flex flex-col gap-4">
-            <VideoCard video={Gunner}></VideoCard>
-            <VideoCard video={OnAndOff}></VideoCard>{" "}
-            <VideoCard video={Tunnel}></VideoCard>
-            <VideoCard video={Pokemon}></VideoCard>
-            <VideoCard video={Ideas}></VideoCard>
+            <VFXCard video={Gunner}></VFXCard>
+            <VFXCard video={OnAndOff}></VFXCard>
+            <VFXCard video={Tunnel}></VFXCard>
+            <VFXCard video={Pokemon}></VFXCard>
+            <VFXCard video={Ideas}></VFXCard>
           </div>
         </div>
         <div className="flex justify-center py-12 bg-gradient">

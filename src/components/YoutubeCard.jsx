@@ -1,6 +1,6 @@
 import "./videoCard.css";
 import DynamicSkills from "./DynamicSkills";
-// import LiteYouTubeEmbed from "react-lite-youtube-embed";
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
 // import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
 function YoutubeCard(props) {
@@ -30,20 +30,24 @@ function YoutubeCard(props) {
     >
       <figure className="video-figure">
         <div className="video-wrapper px-4 pt-4 sm:px-6 sm:pt-6">
-          <iframe
+          {/* <iframe
             className=" aspect-video w-full h-auto flex align-middle border rounded-lg shadow-lg shadow-white/30"
             src={video}
             title={cardTitle}
             allowFullScreen
-          ></iframe>
-          {/* <LiteYouTubeEmbed
-                id={video}
-                iframeClass=""
-                title={cardTitle}
-                webp={true}
-              ></LiteYouTubeEmbed> */}
-          {/* <YouTubePlayer src={video} /> */}
+          ></iframe> */}
+
+          <LiteYouTubeEmbed
+            id={video}
+            iframeClass="w-full h-full"
+            playerClass="hidden"
+            wrapperClass="w-full cursor-pointer aspect-video border rounded-lg shadow-lg shadow-white/30"
+            title={cardTitle}
+            poster="hqdefault"
+            webp
+          ></LiteYouTubeEmbed>
         </div>
+        <p className=" text-right mt-1 mr-4 sm:mr-8">Click Image to Preview!</p>
         <h2 className="text-2xl xs:text-3xl sm:text-4xl text-center mt-4 px-4 lg:px-8 font-semibold">
           {cardTitle}
         </h2>
