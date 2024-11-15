@@ -28,7 +28,7 @@ function VideoCard(props) {
           <figure className="video-figure">
             <div className="video-wrapper px-4 pt-4 sm:px-6 sm:pt-6">
               <iframe
-                className=" aspect-video w-full h-fit flex align-middle border rounded-lg shadow-lg shadow-white/30"
+                className=" aspect-video w-full h-auto flex align-middle border rounded-lg shadow-lg shadow-white/30"
                 src={video}
                 title={cardTitle}
                 allowFullScreen

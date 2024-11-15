@@ -13,14 +13,14 @@ function Card(props) {
         <figure className="video-figure">
           <div>
             <a
-              className="w-full h-fit inline-block cursor-pointer  px-4 pt-4 sm:px-6 sm:pt-6"
+              className="w-full h-auto inline-block cursor-pointer  px-4 pt-4 sm:px-6 sm:pt-6"
               href={link}
               draggable={false}
               target="_blank"
               rel="noreferrer"
             >
               <img
-                className="w-full h-fit border rounded-lg shadow-lg shadow-white/30"
+                className="w-full h-auto border rounded-lg shadow-lg shadow-white/30"
                 src={cardImg}
                 draggable={false}
                 alt="img"
