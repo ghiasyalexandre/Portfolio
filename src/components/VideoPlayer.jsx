@@ -30,6 +30,7 @@ export default function VideoPlayer(props) {
   const stopVideoOnMove = useCallback(() => {
     if (videoRef.current) {
       try {
+        videoRef.current.muted = true;
         videoRef.current.pause();
       } catch (e) {
         // do nothing
@@ -85,6 +86,7 @@ export default function VideoPlayer(props) {
         onMouseLeave={handleMouseLeave}
       >
         <source src={src} type="video/mp4" />
+        <source src={src} type="video/webm" />
         Your browser does not support the video tag. Please try viewing this
         page in a modern browser.
       </video>

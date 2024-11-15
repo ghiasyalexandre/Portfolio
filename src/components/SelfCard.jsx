@@ -27,10 +27,10 @@ function SelfCard(props) {
               <figcaption className=" text-neutral-200 mx-4 sm:mx-8 lg:mx-16 text-center text-sm sm:text-base lg:text-xl xl:text-2xl !leading-tight xl:!leading-9">
                 Software developer with a background in web design,
                 client-server applications, and software development cycles with
-                a focus on backend. Previous Programmer I for Daytona State
-                College utilizing SQL, SQR, and PeopleTools. Previous internship
-                at Lockheed Martin/CWEP program involving simulations and C#. I
-                code Audio Reactive VFX for a hobby, view my work below.
+                a focus on backend. Previous Programmer for Daytona State
+                College utilizing SQL, SQR, and PeopleTools. Interned at
+                Lockheed Martin involving simulations and C#. Check out my Audio
+                VFX library below.
               </figcaption>
               <hr className="self-hr mx-auto my-4 lg:my-8" />
 

@@ -28,8 +28,11 @@ function YoutubeCard(props) {
       className=" bg-gradient border border-white rounded-xl hover:shadow-neonLightSlim transition-all duration-1000 ease-in-out"
       ref={reveal}
     >
+      <p className=" text-left text-xs sm:text-sm pt-2 pl-5 sm:pl-8 sm:pt-2">
+        Click Image to Preview!
+      </p>
       <figure className="video-figure">
-        <div className="video-wrapper px-4 pt-4 sm:px-6 sm:pt-6">
+        <div className="video-wrapper px-4 sm:px-6">
           {/* <iframe
             className=" aspect-video w-full h-auto flex align-middle border rounded-lg shadow-lg shadow-white/30"
             src={video}
@@ -47,7 +50,9 @@ function YoutubeCard(props) {
             webp
           ></LiteYouTubeEmbed>
         </div>
-        <p className=" text-right mt-1 mr-4 sm:mr-8">Click Image to Preview!</p>
+        {/* <p className="text-xs md:text-sm text-right mt-1 mr-4 sm:mr-8">
+          Click Image to Preview!
+        </p> */}
         <h2 className="text-2xl xs:text-3xl sm:text-4xl text-center mt-4 px-4 lg:px-8 font-semibold">
           {cardTitle}
         </h2>

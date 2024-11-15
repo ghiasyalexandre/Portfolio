@@ -56,11 +56,14 @@ export default function Projects() {
                 caption="A 2D procedurally generated Rogue like adventure game optimized to run within the browser with webGL."
               /> */}
               <div className=" bg-gradient border border-white rounded-xl hover:shadow-neonLightSlim transition-all duration-1000 ease-in-out">
+                <p className=" text-left text-xs sm:text-sm pt-2 px-4 sm:pl-8 sm:pt-2">
+                  Click Image to Preview!
+                </p>
                 <figure className="video-figure">
                   <div>
                     <div
                       onClick={toggleViewPop}
-                      className="w-full h-auto inline-block cursor-pointer  px-4 pt-4 sm:px-6 sm:pt-6"
+                      className="w-full h-auto inline-block cursor-pointer px-4 sm:px-6 "
                     >
                       {!viewPoP ? (
                         <img
@@ -79,14 +82,9 @@ export default function Projects() {
                       )}
                     </div>
                   </div>
-                  <div>
-                    <p className=" text-right mr-4 sm:mr-8">
-                      Click Image to Preview!
-                    </p>
-                    <h2 className="text-2xl xs:text-3xl sm:text-4xl  mt-4 text-center font-semibold px-4 lg:px-8">
-                      Plight of Proteus
-                    </h2>
-                  </div>
+                  <h2 className="text-2xl xs:text-3xl sm:text-4xl  mt-4 text-center font-semibold px-4 lg:px-8">
+                    Plight of Proteus
+                  </h2>
                   <hr className="border-neutral-700 my-4 mx-8" />
                   <figcaption className="text-center text-neutral-300 text-base sm:text-lg lg:text-base xl:text-xl mx-8 md:mx-16 mb-2">
                     A 2D procedurally generated Rogue like adventure game
