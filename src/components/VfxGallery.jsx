@@ -23,7 +23,7 @@ export default function VfxGallery() {
             VFX Work
           </h1>
           <hr className="w-60 lg:w-72 border-neutral-400 mx-auto"></hr>
-          <p className="text-center text-neutral-400 mt-1">
+          <p className="text-center text-neutral-400 mt-1 text-xs sm:text-sm">
             Tap or Hover to Play Audio!
           </p>
         </div>
