@@ -56,7 +56,7 @@ export default function Projects() {
                 caption="A 2D procedurally generated Rogue like adventure game optimized to run within the browser with webGL."
               /> */}
               <div className=" bg-gradient border border-white rounded-xl hover:shadow-neonLightSlim transition-all duration-1000 ease-in-out">
-                <p className=" text-left text-xs sm:text-sm pt-2 px-4 sm:pl-8 sm:pt-2">
+                <p className=" text-neutral-400 text-left text-xs sm:text-sm pt-2 px-4 sm:pl-8 sm:pt-2">
                   Click Image to Preview!
                 </p>
                 <figure className="video-figure">

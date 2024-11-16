@@ -28,7 +28,7 @@ function YoutubeCard(props) {
       className=" bg-gradient border border-white rounded-xl hover:shadow-neonLightSlim transition-all duration-1000 ease-in-out"
       ref={reveal}
     >
-      <p className=" text-left text-xs sm:text-sm pt-2 pl-5 sm:pl-8 sm:pt-2">
+      <p className=" text-neutral-400 text-left text-xs sm:text-sm pt-2 pl-5 sm:pl-8 sm:pt-2">
         Click Image to Preview!
       </p>
       <figure className="video-figure">

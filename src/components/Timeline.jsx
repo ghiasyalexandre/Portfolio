@@ -20,11 +20,10 @@ export default function Timeline() {
     },
     {
       type: "education",
-      title: "Bachelor's in Integrative Studies",
+      title: "Bachelor's of Integrative Studies",
       organization: "University of Central Florida",
       dateRange: "Aug 2018 - Dec 2022",
-      description:
-        "Completed a 4-year program with a focus on software development, data structures, and algorithms. Graduated with 117 Computer Science credits. Minor in Computer Science.",
+      description: `Completed a 4-year program with a focus on software development, data structures, and algorithms. \n Minor in Computer Science.`,
     },
     {
       type: "work",
