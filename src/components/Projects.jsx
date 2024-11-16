@@ -86,7 +86,7 @@ export default function Projects() {
                     Plight of Proteus
                   </h2>
                   <hr className="border-neutral-700 my-4 mx-8" />
-                  <figcaption className="text-center text-neutral-300 text-base sm:text-lg lg:text-base xl:text-xl mx-8 md:mx-16 mb-2">
+                  <figcaption className="text-center text-neutral-300 text-base sm:text-lg lg:text-base xl:text-xl mx-8 md:mx-16 mb-2 ">
                     A 2D procedurally generated Rogue like adventure game
                     optimized to run within the browser with webGL.
                   </figcaption>
@@ -143,7 +143,7 @@ export default function Projects() {
               cardImg="./Taildawg.webp"
               skills={["react", "html", "js", "css"]}
               link="https://taildawgproductions.com/"
-              caption="Greek paddle business website. A 3D React app that uses Three.js to allow demo customization (work in progress)."
+              caption={`Greek paddle business website. A 3D React app that uses Three.js to allow demo customization. \n(work in progress)`}
             />
           </FadeInSection>
 

@@ -30,7 +30,7 @@ function Card(props) {
           {cardTitle}
         </h2>
         <hr className="border-neutral-700 my-4 mx-8" />
-        <figcaption className="text-center text-neutral-300 text-base sm:text-lg lg:text-base xl:text-xl mx-8 md:mx-16 mb-2">
+        <figcaption className="text-center text-neutral-300 text-base sm:text-lg lg:text-base xl:text-xl mx-8 md:mx-16 mb-2 whitespace-pre-line">
           {caption}
         </figcaption>
         <div className="flex justify-center py-2">
