@@ -184,7 +184,7 @@ export default function Projects() {
           </div>
         </div>
       </div>
-      <div className="flex justify-center py-12 bg-gradient w-full">
+      <div className="flex justify-center py-12 w-full">
         <Link to="/vfx">
           <button>View VFX Work</button>
         </Link>

@@ -16,8 +16,8 @@ export default function VfxGallery() {
   return (
     <>
       <meta name="Ghiasy Alexandre's Porfolio page of VFX designs" />
-
-      <div className="pt-12">
+      <div className="bg-gradient"></div>
+      <div className="pt-12 ">
         <div className="w-full flex-col justify-center py-8">
           <h1 className="text-white pb-4 text-center font-semibold text-4xl sm:text-5xl lg:text-6xl">
             VFX Work
@@ -44,10 +44,13 @@ export default function VfxGallery() {
             <VFXCard video={Ideas}></VFXCard>
           </div>
         </div>
-        <div className="flex justify-center py-12 bg-gradient">
+        <div className="flex justify-center gap-x-8 py-12">
           <Link to="/">
             <button>View Projects</button>
           </Link>
+          <a target="" href="https://www.instagram.com/adairvfx/">
+            <button>VFX Instagram</button>
+          </a>
         </div>
       </div>
     </>
