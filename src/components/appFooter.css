@@ -24,7 +24,7 @@
 
   background-size: 200%;
   background-position: left;
-  transition: background-position 1000ms ease-in-out;
+  transition: background-position 1500ms ease-in-out;
 }
 
 .fun-text {
@@ -72,7 +72,7 @@
 
 .fun:hover {
   background-position: right;
-  transition: background-position 1000ms ease-in-out;
+  transition: background-position 1500ms ease-in-out;
 }
 
 .fun-invert {
@@ -82,48 +82,12 @@
 
   background-size: 250%;
   background-position: right;
-  transition: background-position 1000ms ease-in-out;
+  transition: background-position 1500ms ease-in-out;
 }
 
 .fun-invert:hover {
   background-position: left;
-  transition: background-position 1000ms ease-in-out;
-}
-
-.fa {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: whitesmoke;
-}
-
-.fa:hover {
-  text-decoration: underline;
-}
-
-.left {
-  padding-left: 1%;
-}
-
-.left-icon {
-  padding-left: 0.5rem !important;
-  padding-top: 0.25rem;
-}
-
-a {
-  text-decoration: none;
-}
-
-.center-icon {
-  padding-left: 0.5rem !important;
-  vertical-align: -0.15em;
-}
-
-.right {
-  padding-right: 1%;
-}
-
-.right-icon {
-  padding-left: 0.5rem !important;
+  transition: background-position 1500ms ease-in-out;
 }
 
 svg {

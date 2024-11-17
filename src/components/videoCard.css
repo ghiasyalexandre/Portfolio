@@ -11,16 +11,6 @@
   --video-width: 70vw;
   width: var(--video-width);
   height: fit-content;
-
-  @media screen and (max-width: 720px) {
-    --video-width: 80vw;
-  }
-  @media screen and (min-width: 1500px) {
-    --video-width: 55vw;
-  }
-  @media screen and (min-width: 1800px) {
-    --video-width: 45vw;
-  }
 }
 
 .video-container:hover {

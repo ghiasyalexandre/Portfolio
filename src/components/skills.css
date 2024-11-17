@@ -25,6 +25,7 @@
   white-space: nowrap;
   width: 4.5vw;
   height: auto;
+  min-width: 22px;
   @media screen and (min-width: 1066px) {
     max-width: 52px !important;
   }
@@ -38,45 +39,6 @@
   overflow: hidden;
   display: flex;
   white-space: nowrap;
-}
-
-.skill-icon:hover {
-  animation: pulse 1s ease-in-out;
-}
-
-.skills-h1 {
-  margin-top: 0.25em !important;
-  margin-bottom: 0.25em !important;
-  color: white !important;
-  max-width: fit-content !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-.no-margin-top {
-  margin-top: 0;
-}
-
-.no-margin-bot {
-  margin-bottom: 0;
-}
-
-.skills-mb {
-  margin-bottom: 1em;
-}
-
-.skills-hr {
-  width: 100%;
-  border: 1px white dotted;
-}
-
-.skills-title-hr {
-  width: inherit;
-  margin-top: 0px;
-}
-
-.skills-title-div {
-  display: block;
 }
 
 .tooltip {
@@ -140,6 +102,12 @@
   to {
     left: 0%;
   }
+}
+
+#skill-icon-gradient {
+  --color-stop-1: #2bb98f;
+  --color-stop-2: #6c5ce7;
+  --color-stop-3: #f56d9a;
 }
 
 .color-react path {

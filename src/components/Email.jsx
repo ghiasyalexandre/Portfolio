@@ -44,14 +44,14 @@ const Email = () => {
   };
 
   return (
-    <div className="bg-gradient p-4 pb-16 md:p-16 border-t border-neutral-800">
+    <div className="bg-gradient p-4 py-16 sm:p-16 border-t border-neutral-800">
       <div className="bg-gradient p-4 sm:p-6 rounded-lg shadow-neonLightSlim max-w-4xl sm:mx-auto">
         <h2 className="text-2xl font-bold text-white mb-4">Get in Touch</h2>
         <p className="text-neutral-200 mb-2">
           Drop your email and I'll get back to you as soon as possible.
         </p>
         <hr className="self-hr-invert mb-4 w-full" />
-        <form onSubmit={handleSubmit} className="space-y-2 ">
+        <form onSubmit={handleSubmit} className="space-y-2 sm:space-y-4">
           <div>
             <label
               htmlFor="name"
