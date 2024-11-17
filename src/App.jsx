@@ -65,7 +65,7 @@ function App() {
         <div className="bg-gradient">
           <FadeInSection>
             <div className=" w-full flex justify-center py-4 sm:py-6">
-              <h1 className="text-center font-semibold text-4xl sm:text-5xl lg:text-6xl fun-text  py-1">
+              <h1 className="text-center font-semibold text-4xl sm:text-5xl lg:text-6xl fun-text  py-2">
                 Ghiasy Alexandre
               </h1>
             </div>
