@@ -4,7 +4,7 @@ import VFXCard from "./VFXCard";
 import Joji from "../../public/videos/CarJoji.webm";
 import InLove from "../../public/videos/FallInLove.webm";
 import Gunner from "../../public/videos/Gunner.webm";
-import Ideas from "../../public/videos/IdeasOut.webm";
+import Ideas from "../../public/videos/Ideas.mp4";
 import Pokemon from "../../public/videos/PokemonBattle.mp4";
 import OnAndOff from "../../public/videos/OnAndOff.mp4";
 import StudyTime from "../../public/videos/StudyTime.mp4";
