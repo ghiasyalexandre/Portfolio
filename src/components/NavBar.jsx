@@ -1,5 +1,4 @@
 import "./navBar.css";
-import "./AppFooter.css";
 import { useState } from "react";
 
 function NavBar() {

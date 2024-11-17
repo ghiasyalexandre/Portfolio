@@ -1,4 +1,3 @@
-import React from "react";
 import "./selfCard.css";
 import Porto from "../../public/Porto.webp";
 
