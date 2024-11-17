@@ -116,7 +116,7 @@ export default function Projects() {
               <YoutubeCard
                 cardTitle="Price Review"
                 video="xcHfXqt_XFM"
-                thumbnail="../../public/PriceReviewThumbnail.webp"
+                thumbnail="./PriceReviewThumbnail.webp"
                 caption="A product review website where users can see or post reviews and view other users. Implemented user
       sign-up/login system, product reviewing, profanity filter, review abuse reporting, and frontend administrator
       controls."
@@ -153,7 +153,7 @@ export default function Projects() {
               <YoutubeCard
                 cardTitle="Quantum Hydrogen Atom in VR"
                 video="6MUPqvrvFKc"
-                thumbnail="../../public/AtomThumbnail.webp"
+                thumbnail="./AtomThumbnail.webp"
                 caption="An educational visualization on Quantum principles of a Hydrogen atom in Virtual Reality."
                 skills={["unity", "sharp", "vr"]}
               />
