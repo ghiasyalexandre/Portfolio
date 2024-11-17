@@ -120,12 +120,14 @@ const Email = () => {
               className="w-full px-4 py-2 mt-1 min-h-32 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
             />
           </div>
-          <button
-            type="submit"
-            className="w-full fun-invert text-white font-semibold py-2 rounded-lg transition duration-300"
-          >
-            Send Email
-          </button>
+          <div className="w-full flex">
+            <button
+              type="submit"
+              className="w-full md:w-48 md:mx-auto fun-invert text-white font-semibold py-2 rounded-full transition duration-300"
+            >
+              Send Email
+            </button>
+          </div>
         </form>
         {status === "SUCCESS" && (
           <p className="text-green-500 mt-4">

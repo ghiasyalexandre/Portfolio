@@ -6,6 +6,7 @@ import LiteYouTubeEmbed from "react-lite-youtube-embed";
 function YoutubeCard(props) {
   const cardTitle = props.cardTitle;
   const caption = props.caption;
+  const thumbnail = props.thumbnail;
   const skills = props.skills;
   const video = props.video;
 
@@ -42,10 +43,12 @@ function YoutubeCard(props) {
 
           <LiteYouTubeEmbed
             id={video}
-            iframeClass="w-full h-full"
+            iframeClass="w-full h-full rounded-lg"
             playerClass="hidden"
-            wrapperClass="w-full cursor-pointer aspect-video border rounded-lg shadow-lg shadow-white/30"
+            wrapperClass="w-full bg-inherit aspect-video  cursor-pointer  border rounded-lg shadow-lg shadow-white/30"
             title={cardTitle}
+            thumbnail={thumbnail}
+            // style={`background-image: url(${thumbnail})`}
             poster="hqdefault"
             webp
           ></LiteYouTubeEmbed>
@@ -53,7 +56,7 @@ function YoutubeCard(props) {
         {/* <p className="text-xs md:text-sm text-right mt-1 mr-4 sm:mr-8">
           Click Image to Preview!
         </p> */}
-        <h2 className="text-2xl xs:text-3xl sm:text-4xl text-center mt-4 px-4 lg:px-8 font-semibold">
+        <h2 className="text-2xl xs:text-3xl sm:text-4xl text-center mt-4 px-4 lg:px-8 font-semibold   bg">
           {cardTitle}
         </h2>
         <hr className="border-neutral-700 my-4 mx-8" />

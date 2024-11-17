@@ -8,7 +8,7 @@ function AppFooter() {
     >
       <a
         href="https://github.com/ghiasyalexandre"
-        className="text-base sm:text-lg lg:text-xl font-semibold pt-2.5 ml-3 flex "
+        className="text-base sm:text-lg lg:text-xl font-semibold pt-2.5 ml-3 flex hover:underline underline-offset-2"
         target="_blank"
         rel="noreferrer"
         draggable={false}
@@ -25,7 +25,7 @@ function AppFooter() {
       </a>
       <a
         href="https://www.linkedin.com/in/ghiasy-a/"
-        className="ml-4 text-base sm:text-lg lg:text-xl font-semibold flex pt-2.5"
+        className="ml-4 text-base sm:text-lg lg:text-xl font-semibold flex pt-2.5 hover:underline underline-offset-2"
         target="_blank"
         rel="noreferrer"
         draggable={false}
@@ -42,7 +42,7 @@ function AppFooter() {
       </a>
       <a
         href="https://docs.google.com/document/d/19I8bSM32SW5Uj1uzMZR66mZxYbtSH_zTVHioR0nKX4I/"
-        className="text-base sm:text-lg lg:text-xl font-semibold flex pt-2.5 mx-2 "
+        className="text-base sm:text-lg lg:text-xl font-semibold flex pt-2.5 mx-2 hover:underline underline-offset-2"
         target="_blank"
         rel="noreferrer"
         draggable={false}
