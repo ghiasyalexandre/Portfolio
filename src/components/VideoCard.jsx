@@ -29,7 +29,7 @@ function VideoCard(props) {
       className=" bg-gradient border border-white rounded-xl hover:shadow-neonLightSlim transition-all duration-1000 ease-in-out"
       ref={reveal}
     >
-      <figure className="">
+      <figure className="video-figure">
         <div className="px-4 pt-4 sm:px-6 sm:pt-6">
           <div className="w-full h-auto border-2 rounded-lg shadow-lg shadow-white/30">
             <VideoPlayer src={video} />

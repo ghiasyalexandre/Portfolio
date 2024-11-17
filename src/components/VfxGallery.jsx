@@ -17,7 +17,7 @@ export default function VfxGallery() {
     <>
       <meta name="Ghiasy Alexandre's Porfolio page of VFX designs" />
       <div className="bg-gradient"></div>
-      <div className="pt-12 ">
+      <div className="pt-8 ">
         <div className="w-full flex-col justify-center py-8">
           <h1 className="text-white pb-4 text-center font-semibold text-4xl sm:text-5xl lg:text-6xl">
             VFX Work
