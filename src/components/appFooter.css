@@ -38,6 +38,33 @@
   background-clip: text;
 }
 
+.fun-border {
+  /* cursor: pointer; */
+  /* background: linear-gradient(135deg, #a770ef, #f38b8b, #fdb99b); */
+  background: linear-gradient(135deg, #55efc4, #6c5ce7, #d63031);
+  /* color: transparent; */
+  background-size: 170%;
+  background-position: left;
+  transition: background-position 1000ms ease-in-out;
+  background-clip: border-box;
+}
+
+.fun-text-invert {
+  /* cursor: pointer; */
+  /* background: linear-gradient(135deg, #a770ef, #f38b8b, #fdb99b); */
+  background: linear-gradient(135deg, #55efc4, #6c5ce7, #d63031);
+  color: transparent;
+  background-size: 170%;
+  background-position: right;
+  transition: background-position 1000ms ease-in-out;
+  background-clip: text;
+}
+
+.fun-text:hover {
+  background-position: left;
+  transition: background-position 1000ms ease-in-out;
+}
+
 .fun-text:hover {
   background-position: right;
   transition: background-position 1000ms ease-in-out;

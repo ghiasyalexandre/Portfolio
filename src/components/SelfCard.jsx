@@ -9,7 +9,7 @@ function SelfCard(props) {
         <div className="col-span-1 justify-center flex pb-4 md:pb-0 ">
           <img
             draggable={false}
-            className="h-auto w-fit sm:h-full sm:w-auto rounded-lg select-none xs:pb-0 border-white border hover:shadow-neonLightSlim transition-all duration-500 ease-in-out"
+            className="h-auto w-fit max-h-96 sm:h-full sm:w-auto rounded-lg select-none xs:pb-0 border-white border hover:shadow-neonLightSlim transition-all duration-500 ease-in-out"
             src={Porto}
             alt="../"
           />
@@ -17,11 +17,11 @@ function SelfCard(props) {
 
         <div className="col-span-1 sm:col-span-2 flex items-center">
           <div className="">
-            <h2 className="text-white w-full font-semibold text-4xl md:text-4xl lg:text-6xl text-center">
+            <h2 className="text-white w-full font-semibold text-4xl md:text-4xl lg:text-5xl text-center">
               About Me
             </h2>
 
-            <hr className="self-hr mx-auto my-4 lg:my-8" />
+            <hr className="self-hr mx-auto my-4 lg:my-8 w-[80%]" />
 
             <div className="">
               <figcaption className=" text-neutral-200 mx-4 sm:mx-8 lg:mx-16 text-center text-sm sm:text-base lg:text-xl xl:text-2xl !leading-tight xl:!leading-9">
@@ -32,7 +32,7 @@ function SelfCard(props) {
                 Lockheed Martin involving simulations and C#. Check out my Audio
                 VFX library below.
               </figcaption>
-              <hr className="self-hr mx-auto my-4 lg:my-8" />
+              <hr className="self-hr mx-auto my-4 lg:my-8 w-[80%]" />
 
               <div className="flex justify-evenly">
                 <a

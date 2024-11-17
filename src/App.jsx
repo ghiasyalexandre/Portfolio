@@ -12,6 +12,7 @@ const VFX = lazy(() => import("./components/VfxGallery"));
 const Projects = lazy(() => import("./components/Projects"));
 
 import "./App.css";
+import Email from "./components/Email";
 
 function App() {
   // const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
@@ -23,15 +24,11 @@ function App() {
   return (
     <div className="App">
       <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
       <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossOrigin="true"
-      />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet"
-      ></link>
+      />
       <div>
         <NavBar />
 
@@ -93,6 +90,7 @@ function App() {
           </Suspense>
         </Router>
 
+        <Email />
         <AppFooter />
       </div>
     </div>

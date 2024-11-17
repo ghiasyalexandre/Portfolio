@@ -19,7 +19,7 @@ export default function VfxGallery() {
       <div className="bg-gradient"></div>
       <div className="pt-8 ">
         <div className="w-full flex-col justify-center py-8">
-          <h1 className="text-white pb-4 text-center font-semibold text-4xl sm:text-5xl lg:text-6xl">
+          <h1 className="text-white pb-2 text-center font-semibold text-4xl sm:text-5xl lg:text-6xl">
             VFX Work
           </h1>
           <hr className="w-60 lg:w-72 border-neutral-400 mx-auto"></hr>
@@ -45,11 +45,15 @@ export default function VfxGallery() {
           </div>
         </div>
         <div className="flex justify-center gap-x-8 py-12">
-          <Link to="/">
-            <button>View Projects</button>
+          <Link to="/" draggable={false}>
+            <button className="bg-gradient">View Projects</button>
           </Link>
-          <a target="" href="https://www.instagram.com/adairvfx/">
-            <button>VFX Instagram</button>
+          <a
+            target=""
+            draggable={false}
+            href="https://www.instagram.com/adairvfx/"
+          >
+            <button className="bg-gradient">VFX Instagram</button>
           </a>
         </div>
       </div>

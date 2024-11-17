@@ -6,7 +6,7 @@ import {
 
 const Experience = ({ experience }) => {
   return (
-    <div className="pt-8 px-8 lg:px-16 rounded-lg shadow-lg max-w-sm xs:max-w-md sm:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto transition-all duration-300 ease-in-out">
+    <div className="pt-8 px-8 lg:px-16 rounded-lg max-w-sm xs:max-w-md sm:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto transition-all duration-300 ease-in-out">
       <div className="flex flex-col justify-center pb-12">
         <h1 className="text-white text-center font-semibold text-4xl sm:text-5xl lg:text-6xl">
           Experience
