@@ -7,7 +7,7 @@ function SelfCard(props) {
         <div className="col-span-1 justify-center flex pb-4 md:pb-0 ">
           <img
             draggable={false}
-            className="h-auto w-auto max-h-96 sm:h-full sm:w-auto rounded-lg select-none xs:pb-0 border-white border hover:shadow-neonLightSlim transition-all duration-500 ease-in-out"
+            className="h-auto w-auto max-h-96 sm:max-h-120 sm:h-full sm:w-auto rounded-lg select-none xs:pb-0 border-white border hover:shadow-neonLightSlim transition-all duration-500 ease-in-out"
             src={Porto}
             alt="../"
           />

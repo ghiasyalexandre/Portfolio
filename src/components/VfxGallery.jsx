@@ -16,14 +16,13 @@ export default function VfxGallery() {
   return (
     <>
       <meta name="Ghiasy Alexandre's Porfolio page of VFX designs" />
-      <div className="bg-gradient"></div>
       <div className="pt-8 ">
         <div className="w-full flex-col justify-center py-8">
-          <h1 className="text-white pb-2 text-center font-semibold text-4xl sm:text-5xl lg:text-6xl">
-            VFX Work
+          <h1 className="text-white pb-3 sm:pb-4 text-center font-semibold text-4xl sm:text-5xl lg:text-6xl">
+            Gallery
           </h1>
-          <hr className="w-60 lg:w-72 border-neutral-400 mx-auto"></hr>
-          <p className="text-center text-neutral-400 mt-1 text-xs sm:text-sm">
+          <hr className="w-48 lg:w-56 border-neutral-400 mx-auto"></hr>
+          <p className="text-center text-neutral-400 mt-1 sm:mb-2 text-xs sm:text-sm">
             Tap or Hover to Play Audio!
           </p>
         </div>
@@ -44,16 +43,16 @@ export default function VfxGallery() {
             <VFXCard video={Ideas}></VFXCard>
           </div>
         </div>
-        <div className="flex justify-center gap-x-8 py-12">
+        <div className="flex justify-center gap-x-16 py-12">
           <Link to="/" draggable={false}>
-            <button className="bg-gradient">View Projects</button>
+            <button className="bg-gradient scale-125">View Projects</button>
           </Link>
           <a
             target=""
             draggable={false}
             href="https://www.instagram.com/adairvfx/"
           >
-            <button className="bg-gradient">VFX Instagram</button>
+            <button className="bg-gradient scale-125">VFX Instagram</button>
           </a>
         </div>
       </div>

@@ -16,6 +16,10 @@ export default {
         '130': '130%',
         '140': '140%',
       },
+      maxHeight: {
+        '120' : '30rem'
+      },
+      
       
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

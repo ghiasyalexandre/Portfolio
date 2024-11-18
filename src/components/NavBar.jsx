@@ -1,5 +1,5 @@
 import "./navBar.css";
-import { useState } from "react";
+// import { useState } from "react";
 
 function NavBar() {
   const navbar = () => document.getElementById("navbar");
@@ -41,7 +41,7 @@ function NavBar() {
         onClick={() => {
           navbar().scrollIntoView({ behavior: "smooth" });
         }}
-        className="px-2 py-2 font-semibold opacity-30 hover:opacity-80 bg-gradient border-black  hover:border-white rounded-full absolute right-2 sm:right-7 bottom-14 sm:top-auto sm:bottom-16 z-30"
+        className="px-2 py-2 font-semibold opacity-30 hover:opacity-80 hover:animate-bounce bg-gradient border-black  hover:border-white rounded-full absolute right-2 sm:right-7 bottom-14 sm:top-auto sm:bottom-16 z-30"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

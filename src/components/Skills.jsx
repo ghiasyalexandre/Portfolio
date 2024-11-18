@@ -12,7 +12,7 @@ function Skills() {
       {/* <hr className="w-28 justify-self-center"></hr> */}
       <div className="skills-container">
         <svg
-          className="color-java skill-icon tooltip h-12"
+          className="color-java skill-icon tooltip h-16"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 384 512"
         >
