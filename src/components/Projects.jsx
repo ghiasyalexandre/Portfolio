@@ -171,7 +171,19 @@ export default function Projects() {
             </div>
           </FadeInSection>
 
-          <div className="pb-12 lg:pb-12">
+          <FadeInSection>
+            <div ref={reveal}>
+              <Card
+                cardTitle="UCF Pi Delta Psi"
+                cardImg="./pdpsi.png"
+                skills={["angular", "html", "ts", "css"]}
+                link="https://ucfpdpsi.org"
+                caption="Business website for the University of Central Florida's historical Asian Cultural Fraternity."
+              />
+            </div>
+          </FadeInSection>
+6
+          <div className="pb-4 lg:pb-12">
             <FadeInSection>
               <div ref={reveal}>
                 <Card
