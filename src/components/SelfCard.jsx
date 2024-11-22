@@ -34,7 +34,7 @@ function SelfCard(props) {
 
               <div className="flex justify-evenly">
                 <a
-                  className="group"
+                  className="group/icon"
                   aria-label="LinkedIn"
                   href="https://www.linkedin.com/in/ghiasy-a/"
                   target="_blank"
@@ -43,7 +43,7 @@ function SelfCard(props) {
                 >
                   <svg
                     id="core"
-                    className="w-7 xs:w-6 sm:w-7 md:w-8 lg:w-10 tooltip group-hover:scale-115 transition-all ease-in-out duration-300 opacity-80 hover:opacity-100 "
+                    className="w-7 xs:w-6 sm:w-7 md:w-8 lg:w-10 tooltip group-hover/icon:scale-115 transition-all ease-in-out duration-300 opacity-80 hover:opacity-100 "
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
                   >
@@ -63,7 +63,7 @@ function SelfCard(props) {
                 </a>
                 <a
                   href="https://github.com/ghiasyalexandre"
-                  className="group"
+                  className="group/icon"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Github"
@@ -71,7 +71,7 @@ function SelfCard(props) {
                 >
                   <svg
                     id="core"
-                    className="w-7 xs:w-6 sm:w-7 md:w-8 lg:w-10 tooltip group-hover:scale-115 transition-all ease-in-out duration-300 opacity-80 hover:opacity-100"
+                    className="w-7 xs:w-6 sm:w-7 md:w-8 lg:w-10 tooltip group-hover/icon:scale-115 transition-all ease-in-out duration-300 opacity-80 hover:opacity-100"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 496 512"
                   >
@@ -86,14 +86,14 @@ function SelfCard(props) {
                 <a
                   href="https://www.instagram.com/ghiasy.a/"
                   target="_blank"
-                  className="group"
+                  className="group/icon"
                   rel="noreferrer"
                   aria-label="Instagram"
                   draggable={false}
                 >
                   <svg
                     id="core"
-                    className="w-7 xs:w-6 sm:w-7 md:w-8 lg:w-10 tooltip group-hover:scale-115 transition-all ease-in-out duration-300 opacity-80 hover:opacity-100 "
+                    className="w-7 xs:w-6 sm:w-7 md:w-8 lg:w-10 tooltip group-hover/icon:scale-115 transition-all ease-in-out duration-300 opacity-80 hover:opacity-100 "
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
                   >
@@ -110,12 +110,12 @@ function SelfCard(props) {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Resume"
-                  className="group"
+                  className="group/icon"
                   draggable={false}
                 >
                   <svg
                     id="core"
-                    className="h-7 xs:h-6 sm:h-7 md:h-8 lg:h-10 tooltip group-hover:scale-115 transition-all ease-in-out duration-300 opacity-80 hover:opacity-100"
+                    className="h-7 xs:h-6 sm:h-7 md:h-8 lg:h-10 tooltip group-hover/icon:scale-115 transition-all ease-in-out duration-300 opacity-80 hover:opacity-100"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 384 512"
                   >

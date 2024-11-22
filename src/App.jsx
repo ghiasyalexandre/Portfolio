@@ -26,10 +26,10 @@ function App() {
       <div>
         <NavBar />
 
-        <div className="bg-gradient">
+        <div className="bg-gradient group">
           <FadeInSection>
             <div className=" w-full flex justify-center py-4 sm:py-6">
-              <h1 className="text-center font-semibold text-4xl sm:text-5xl lg:text-6xl fun-text  py-2">
+              <h1 className="text-center font-semibold text-4xl sm:text-5xl lg:text-6xl fun-text group-hover:bg-right py-2">
                 Ghiasy Alexandre
               </h1>
             </div>
