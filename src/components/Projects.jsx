@@ -162,23 +162,23 @@ export default function Projects() {
 
           <FadeInSection>
             <div ref={reveal}>
-              <VideoCard
-                cardTitle="Audio Visualizer"
-                video={Viz}
-                skills={["unity", "sharp"]}
-                caption="An editor for audio visualizations with file uploading, playback controls, and plenty of color!"
-              />
-            </div>
-          </FadeInSection>
-
-          <FadeInSection>
-            <div ref={reveal}>
               <Card
                 cardTitle="UCF Pi Delta Psi"
                 cardImg="./pdpsi.png"
                 skills={["angular", "html", "ts", "css"]}
                 link="https://ucfpdpsi.org"
                 caption="Business website for the University of Central Florida's historical Asian Cultural Fraternity."
+              />
+            </div>
+          </FadeInSection>
+
+          <FadeInSection>
+            <div ref={reveal}>
+              <VideoCard
+                cardTitle="Audio Visualizer"
+                video={Viz}
+                skills={["unity", "sharp"]}
+                caption="An editor for audio visualizations with file uploading, playback controls, and plenty of color!"
               />
             </div>
           </FadeInSection>

@@ -2,7 +2,7 @@ import Porto from "../../public/Porto.webp";
 
 function SelfCard(props) {
   return (
-    <div className="bg-gradient border-neutral-800 border-t">
+    <div className="bg-gradient border-neutral-800 border-t group">
       <div className="grid grid-cols-1 md:grid-cols-3 px-4 sm:pl-8 py-8">
         <div className="col-span-1 justify-center flex pb-4 md:pb-0 ">
           <img
@@ -19,7 +19,7 @@ function SelfCard(props) {
               About Me
             </h2>
 
-            <hr className="self-hr mx-auto my-4 lg:my-8 w-[80%]" />
+            <hr className="self-hr mx-auto my-4 lg:my-8 w-[80%] group-hover:bg-right" />
 
             <div>
               <figcaption className=" text-neutral-200 w-[80%] mx-auto text-center text-sm sm:text-base lg:text-xl xl:text-2xl !leading-tight xl:!leading-9">
@@ -30,7 +30,7 @@ function SelfCard(props) {
                 Lockheed Martin involving simulations and C#. Check out my Audio
                 VFX library below.
               </figcaption>
-              <hr className="self-hr mx-auto my-4 lg:my-8 w-[80%]" />
+              <hr className="self-hr mx-auto my-4 lg:my-8 w-[80%] group-hover:bg-right" />
 
               <div className="flex justify-evenly">
                 <a
