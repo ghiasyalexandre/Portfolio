@@ -34,11 +34,16 @@ export default function Projects() {
   };
 
   return (
-    <div className="bg-gradient w-full h-fit">
-      <meta name="Ghiasy Alexandre's Porfolio page of Projects" />
+    <article
+      className="bg-gradient w-full h-fit"
+      aria-labelledby="projects-heading"
+    >
       <FadeInSection>
         <div className="w-full flex-col justify-center py-8">
-          <h1 className="text-white pb-4 text-center font-semibold text-4xl sm:text-5xl lg:text-6xl">
+          <h1
+            id="projects-heading"
+            className="text-white pb-4 text-center font-semibold text-4xl sm:text-5xl lg:text-6xl"
+          >
             Projects
           </h1>
           <hr className="w-48 lg:w-60 border-neutral-400 mx-auto"></hr>
@@ -47,7 +52,7 @@ export default function Projects() {
       <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center gap-8 mx-4 xs:mx-12 sm:mx-16 ">
         <div className="flex flex-col gap-8">
           <FadeInSection>
-            <div ref={reveal}>
+            <section aria-labelledby="plight-of-proteus-title" ref={reveal}>
               {/* <Card
                 cardTitle="Plight of Proteus"
                 cardImg={PoPThumbnail}
@@ -56,31 +61,35 @@ export default function Projects() {
                 caption="A 2D procedurally generated Rogue like adventure game optimized to run within the browser with webGL."
               /> */}
               <div className=" bg-gradient border border-white rounded-xl hover:shadow-neonLightSlim transition-all duration-1000 ease-in-out">
-                <p className=" text-neutral-400 text-left text-xs sm:text-sm pt-2 px-4 sm:pl-8 sm:pt-2">
+                <p
+                  className=" text-neutral-400 text-left text-xs sm:text-sm pt-2 px-4 sm:pl-8 sm:pt-2"
+                  aria-hidden="true"
+                >
                   Click Image to Preview!
                 </p>
                 <figure className="video-figure">
                   <div>
-                    <div
+                    <button
                       onClick={toggleViewPop}
-                      className="w-full h-auto inline-block cursor-pointer px-4 sm:px-6 "
+                      className="w-full h-auto inline-block cursor-pointer px-4 sm:px-6 border-0 "
+                      aria-label="Toggle preview for Plight of Proteus"
                     >
                       {!viewPoP ? (
                         <img
                           className="w-full h-auto border rounded-lg shadow-lg shadow-white/30"
                           src={PoPThumbnail}
                           draggable={false}
-                          alt="img"
+                          aria-label="Toggle preview for Plight of Proteus"
                         />
                       ) : (
                         <img
                           className="w-full h-auto border rounded-lg shadow-lg shadow-white/30"
                           src={PoPGif}
                           draggable={false}
-                          alt="gif"
+                          alt="Plight of Proteus Preview"
                         />
                       )}
-                    </div>
+                    </button>
                   </div>
                   <h2 className="text-2xl xs:text-3xl sm:text-4xl  mt-4 text-center font-semibold px-4 lg:px-8">
                     Plight of Proteus
@@ -95,7 +104,7 @@ export default function Projects() {
                   </div>
                 </figure>
               </div>
-            </div>
+            </section>
           </FadeInSection>
 
           <FadeInSection>
@@ -199,10 +208,10 @@ export default function Projects() {
         </div>
       </div>
       <div className="flex justify-center py-12 w-full">
-        <Link to="/vfx" draggable={false}>
+        <Link to="/vfx" draggable={false} aria-label="View VFX work">
           <button className="bg-gradient scale-125">View VFX Work</button>
         </Link>
       </div>
-    </div>
+    </article>
   );
 }

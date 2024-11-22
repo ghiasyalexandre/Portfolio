@@ -9,20 +9,26 @@ function SelfCard(props) {
             draggable={false}
             className="h-auto w-auto max-h-96 sm:max-h-120 sm:h-full sm:w-auto rounded-lg select-none xs:pb-0 border-white border hover:shadow-neonLightSlim transition-all duration-500 ease-in-out"
             src={Porto}
-            alt="../"
+            alt="Ghiasy Alexandre portrait"
           />
         </div>
 
         <div className="col-span-1 sm:col-span-2 flex items-center">
           <div className="">
-            <h2 className="text-white w-full font-semibold text-4xl md:text-4xl lg:text-5xl text-center">
+            <h1
+              id="about-me"
+              className="text-white w-full font-semibold text-4xl md:text-4xl lg:text-5xl text-center"
+            >
               About Me
-            </h2>
+            </h1>
 
             <hr className="self-hr mx-auto my-4 lg:my-8 w-[80%] group-hover:bg-right" />
 
             <div>
-              <figcaption className=" text-neutral-200 w-[80%] mx-auto text-center text-sm sm:text-base lg:text-xl xl:text-2xl !leading-tight xl:!leading-9">
+              <figcaption
+                aria-labelledby="about-me"
+                className=" text-neutral-200 w-[80%] mx-auto text-center text-sm sm:text-base lg:text-xl xl:text-2xl !leading-tight xl:!leading-9"
+              >
                 Software developer with a background in web design,
                 client-server applications, and software development cycles with
                 a focus on backend. Previous Programmer for Daytona State
@@ -35,7 +41,7 @@ function SelfCard(props) {
               <div className="flex justify-evenly">
                 <a
                   className="group/icon"
-                  aria-label="LinkedIn"
+                  aria-label="Visit my LinkedIn profile"
                   href="https://www.linkedin.com/in/ghiasy-a/"
                   target="_blank"
                   rel="noreferrer"
@@ -66,7 +72,7 @@ function SelfCard(props) {
                   className="group/icon"
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="Github"
+                  aria-label="Visit my GitHub profile"
                   draggable={false}
                 >
                   <svg
@@ -88,7 +94,7 @@ function SelfCard(props) {
                   target="_blank"
                   className="group/icon"
                   rel="noreferrer"
-                  aria-label="Instagram"
+                  aria-label="Visit my Instagram profile"
                   draggable={false}
                 >
                   <svg
@@ -109,7 +115,7 @@ function SelfCard(props) {
                   href="https://docs.google.com/document/d/19I8bSM32SW5Uj1uzMZR66mZxYbtSH_zTVHioR0nKX4I/"
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="Resume"
+                  aria-label="Download my resume"
                   className="group/icon"
                   draggable={false}
                 >
