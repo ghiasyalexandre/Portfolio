@@ -182,7 +182,7 @@ export default function Projects() {
               />
             </div>
           </FadeInSection>
-6
+
           <div className="pb-4 lg:pb-12">
             <FadeInSection>
               <div ref={reveal}>
