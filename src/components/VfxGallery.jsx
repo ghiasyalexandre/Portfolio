@@ -16,7 +16,7 @@ import { Helmet } from "react-helmet-async";
 export default function VfxGallery() {
   return (
     <article
-      className="pt-8 "
+      className="pt-8 w-full h-fit "
       aria-labelledby="vfx-gallery-title"
       aria-describedby="vfx-gallery-description"
     >

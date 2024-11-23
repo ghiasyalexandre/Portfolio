@@ -13,6 +13,7 @@ const Projects = lazy(() => import("./components/Projects"));
 
 import "./App.css";
 import Email from "./components/Email";
+import ErrorPage from "./components/ErrorPage";
 
 function App() {
   return (
@@ -87,8 +88,19 @@ function App() {
                 <Route
                   path="/vfx"
                   element={
-                    <section aria-labelledby="vfx">
+                    <section
+                      aria-labelledby="vfx"
+                      className="overflow-y-hidden"
+                    >
                       <VFX />
+                    </section>
+                  }
+                />
+                <Route
+                  path="*"
+                  element={
+                    <section aria-labelledby="error page">
+                      <Projects />
                     </section>
                   }
                 />

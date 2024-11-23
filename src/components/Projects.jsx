@@ -67,7 +67,7 @@ export default function Projects() {
                 >
                   Click Image to Preview!
                 </p>
-                <figure className="video-figure">
+                <figure>
                   <div>
                     <button
                       onClick={toggleViewPop}
