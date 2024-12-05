@@ -99,7 +99,7 @@ export default function VfxGallery() {
             />
           </div>
         </div>
-        <div className="flex justify-center gap-x-16 py-12">
+        <div className="flex justify-center gap-x-12 py-12">
           <Link
             to="/"
             draggable={false}
