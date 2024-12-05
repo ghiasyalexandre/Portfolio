@@ -35,7 +35,7 @@ function NavBar() {
           <a
             draggable={false}
             onClick={() => {
-              footer().scrollIntoView({ behavior: "smooth" });
+              footer().scrollIntoView({ behavior: "smooth", block: "end" });
             }}
             className="font-semibold text-xl hover:underline underline-offset-4"
             aria-label="Scroll to contact section"

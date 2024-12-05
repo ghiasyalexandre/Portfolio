@@ -13,14 +13,14 @@ const Projects = lazy(() => import("./components/Projects"));
 
 import "./App.css";
 import Email from "./components/Email";
-import ErrorPage from "./components/ErrorPage";
+// import ErrorPage from "./components/ErrorPage";
 
 function App() {
   return (
     <HelmetProvider>
       <div className="App">
         <Helmet>
-          <title>Ghiasy Alexandre's Portfolio</title>
+          <title>Ghiasy Alexandre&apos;s Portfolio</title>
           <meta
             name="description"
             content="Explore the portfolio of Ghiasy Alexandre, a skilled software developer specializing in backend development, web design, client-server applications, and software development cycles. Former programmer at Daytona State College with expertise in SQL, SQR, and PeopleTools. Gained hands-on experience with simulations and C# during an internship at Lockheed Martin. Discover innovative projects, including an Audio VFX library, showcasing technical expertise and creativity."
@@ -80,7 +80,10 @@ function App() {
                 <Route
                   path="/"
                   element={
-                    <section aria-labelledby="projects">
+                    <section
+                      aria-labelledby="projects"
+                      className="overflow-y-hidden"
+                    >
                       <Projects />
                     </section>
                   }

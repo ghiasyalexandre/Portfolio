@@ -45,10 +45,15 @@ const Email = () => {
 
   return (
     <div className="bg-gradient p-4 py-16 sm:p-16 border-t border-neutral-800">
-      <div className="bg-gradient p-4 sm:p-6 rounded-lg shadow-neonLightSlim max-w-4xl sm:mx-auto">
-        <h2 className="text-2xl font-bold text-white mb-4">Get in Touch</h2>
-        <p className="text-neutral-200 mb-2">
-          Drop your email and I'll get back to you as soon as possible.
+      <div
+        id="email"
+        className="bg-gradient p-4 sm:p-6 rounded-lg shadow-neonLightSlim max-w-4xl sm:mx-auto"
+      >
+        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 text-center ">
+          Contact Me
+        </h2>
+        <p className="text-neutral-200 mb-2 text-center">
+          Attach your email and I&apos;ll get back to you as soon as possible.
         </p>
         <hr className="self-hr-invert mb-4 w-full" />
         <form onSubmit={handleSubmit} className="space-y-2 sm:space-y-4">
@@ -123,7 +128,7 @@ const Email = () => {
           <div className="w-full flex">
             <button
               type="submit"
-              className="w-full md:w-48 md:mx-auto fun-invert text-white font-semibold py-2 rounded-full transition duration-300"
+              className="w-full md:w-48 md:mx-auto fun-invert text-white font-semibold py-2 rounded-full transition-all duration-300 border border-white"
             >
               Send Email
             </button>

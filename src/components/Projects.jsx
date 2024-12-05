@@ -207,9 +207,9 @@ export default function Projects() {
           </div>
         </div>
       </div>
-      <div className="flex justify-center py-12 w-full">
-        <Link to="/vfx" draggable={false} aria-label="View VFX work">
-          <button className="bg-gradient scale-125">View VFX Work</button>
+      <div className="flex justify-center py-12 w-full ">
+        <Link to="/vfx" draggable={false} aria-label="View VFX Gallery">
+          <button className="bg-gradient scale-110">View VFX Work</button>
         </Link>
       </div>
     </article>
