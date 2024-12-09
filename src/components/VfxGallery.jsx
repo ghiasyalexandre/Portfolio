@@ -24,13 +24,12 @@ export default function VfxGallery() {
         />
       </Helmet>
       <article
-        className="pt-4 "
         aria-labelledby="vfx-gallery-title"
         aria-describedby="vfx-gallery-description"
       >
-        <div className="w-full flex-col justify-center py-8">
+        <div className="w-full flex-col justify-center py-8 lg:py-12">
           <h1
-            className="text-white pb-3 sm:pb-4 text-center font-semibold text-4xl sm:text-5xl lg:text-6xl"
+            className="text-white pb-3 sm:pb-4 text-center font-semibold text-4xl sm:text-5xl lg:text-7xl"
             id="vfx-gallery-title"
           >
             Gallery

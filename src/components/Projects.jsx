@@ -39,27 +39,20 @@ export default function Projects() {
       aria-labelledby="projects-heading"
     >
       <FadeInSection>
-        <div className="w-full flex-col justify-center py-8">
+        <div className="w-full flex-col justify-center py-8 lg:py-12">
           <h1
             id="projects-heading"
-            className="text-white pb-4 text-center font-semibold text-4xl sm:text-5xl lg:text-6xl"
+            className="text-white pb-4 text-center font-semibold text-4xl sm:text-5xl lg:text-7xl"
           >
             Projects
           </h1>
-          <hr className="w-48 lg:w-60 border-neutral-400 mx-auto"></hr>
+          <hr className="w-48 lg:w-72 border-neutral-400 mx-auto"></hr>
         </div>
       </FadeInSection>
       <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center gap-8 mx-4 xs:mx-12 sm:mx-16 ">
         <div className="flex flex-col gap-8">
           <FadeInSection>
             <section aria-labelledby="plight-of-proteus-title" ref={reveal}>
-              {/* <Card
-                cardTitle="Plight of Proteus"
-                cardImg={PoPThumbnail}
-                skills={["unity", "sharp"]}
-                link="https://ghiasy321.itch.io/plight-of-proteus"
-                caption="A 2D procedurally generated Rogue like adventure game optimized to run within the browser with webGL."
-              /> */}
               <div className=" bg-gradient border border-white rounded-xl hover:shadow-neonLightSlim transition-all duration-1000 ease-in-out">
                 <p
                   className=" text-neutral-400 text-left text-xs sm:text-sm pt-2 px-4 sm:pl-8 sm:pt-2"

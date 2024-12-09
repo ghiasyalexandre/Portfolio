@@ -27,14 +27,13 @@ function SelfCard(props) {
             <div>
               <figcaption
                 aria-labelledby="about-me"
-                className=" text-neutral-200 w-[80%] mx-auto text-center text-sm sm:text-base lg:text-xl xl:text-2xl !leading-tight xl:!leading-9"
+                className=" text-neutral-200 group-hover:text-white w-[80%] mx-auto text-center text-sm sm:text-base lg:text-xl xl:text-2xl !leading-tight xl:!leading-9"
               >
                 Software developer with a background in web design,
-                client-server applications, and software development cycles with
-                a focus on backend. Previous Programmer for Daytona State
-                College utilizing SQL, SQR, and PeopleTools. Interned at
-                Lockheed Martin involving simulations and C#. Check out my Audio
-                VFX library below.
+                client-server applications, software development cycles, and IT
+                best practices. Previous Programmer for Daytona State College
+                utilizing SQL, SQR, and PeopleTools. Interned at Lockheed Martin
+                involving simulations and C#. See my Audio VFX library below.
               </figcaption>
               <hr className="self-hr mx-auto my-4 lg:my-8 w-[80%] group-hover:bg-right" />
 
@@ -49,7 +48,7 @@ function SelfCard(props) {
                 >
                   <svg
                     id="core"
-                    className="w-7 xs:w-6 sm:w-7 md:w-8 lg:w-10 tooltip group-hover/icon:scale-115 transition-all ease-in-out duration-300 opacity-80 hover:opacity-100 "
+                    className="w-7 xs:w-6 sm:w-7 md:w-8 lg:w-10 tooltip group-hover/icon:scale-115 transition-all ease-in-out duration-300 opacity-90 group-hover:opacity-100 "
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
                   >
@@ -77,7 +76,7 @@ function SelfCard(props) {
                 >
                   <svg
                     id="core"
-                    className="w-7 xs:w-6 sm:w-7 md:w-8 lg:w-10 tooltip group-hover/icon:scale-115 transition-all ease-in-out duration-300 opacity-80 hover:opacity-100"
+                    className="w-7 xs:w-6 sm:w-7 md:w-8 lg:w-10 tooltip group-hover/icon:scale-115 transition-all ease-in-out duration-300 opacity-90 group-hover:opacity-100"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 496 512"
                   >
@@ -99,7 +98,7 @@ function SelfCard(props) {
                 >
                   <svg
                     id="core"
-                    className="w-7 xs:w-6 sm:w-7 md:w-8 lg:w-10 tooltip group-hover/icon:scale-115 transition-all ease-in-out duration-300 opacity-80 hover:opacity-100 "
+                    className="w-7 xs:w-6 sm:w-7 md:w-8 lg:w-10 tooltip group-hover/icon:scale-115 transition-all ease-in-out duration-300 opacity-90 group-hover:opacity-100 "
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
                   >
@@ -121,7 +120,7 @@ function SelfCard(props) {
                 >
                   <svg
                     id="core"
-                    className="h-7 xs:h-6 sm:h-7 md:h-8 lg:h-10 tooltip group-hover/icon:scale-115 transition-all ease-in-out duration-300 opacity-80 hover:opacity-100"
+                    className="h-7 xs:h-6 sm:h-7 md:h-8 lg:h-10 tooltip group-hover/icon:scale-115 transition-all ease-in-out duration-300 opacity-90 group-hover:opacity-100"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 384 512"
                   >

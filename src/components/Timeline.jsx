@@ -14,7 +14,7 @@ export default function Timeline() {
       type: "work",
       title: "Programmer I",
       organization: "Daytona State College",
-      dateRange: "Mar 2023 - Mar 2024",
+      dateRange: "Mar 2023 - Aug 2024",
       description:
         "Develop new and enhance existing applications using PeopleCode, SQL, Java, other Oracle PeopleSoft tools, manage backend systems, and create related technical documentation.",
     },
