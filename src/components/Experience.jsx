@@ -7,7 +7,7 @@ import {
 const Experience = ({ experience }) => {
   return (
     <section
-      aria-labelledby="experience-title"
+      aria-labelledby="experience-title text-pretty text-balance"
       className="pt-8 px-8 lg:px-16 rounded-lg max-w-sm xs:max-w-md sm:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto transition-all duration-300 ease-in-out"
     >
       <div className="flex flex-col justify-center pb-12">
@@ -59,6 +59,9 @@ const Experience = ({ experience }) => {
               </p>
               <p className="text-gray-200 mt-2 text-center sm:text-left whitespace-pre-line">
                 {exp.description}
+              </p>
+              <p className="text-gray-200 mt-2 text-center font-semibold sm:text-left whitespace-pre-line">
+                {exp.highlight}
               </p>
             </div>
           </div>

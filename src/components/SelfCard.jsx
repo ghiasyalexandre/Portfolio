@@ -27,13 +27,14 @@ function SelfCard(props) {
             <div>
               <figcaption
                 aria-labelledby="about-me"
-                className=" text-neutral-200 group-hover:text-white w-[80%] mx-auto text-center text-sm sm:text-base lg:text-xl xl:text-2xl !leading-tight xl:!leading-9"
+                className=" text-neutral-200 group-hover:text-white w-[80%] mx-auto text-center text-sm sm:text-base lg:text-xl xl:text-2xl !leading-tight xl:!leading-9 transition-all duration-500 ease-in-out"
               >
                 Software developer with a background in web design,
                 client-server applications, software development cycles, and IT
-                best practices. Previous Programmer for Daytona State College
-                utilizing SQL, SQR, and PeopleTools. Interned at Lockheed Martin
-                involving simulations and C#. See my Audio VFX library below.
+                best practices. Current Application Developer II for the
+                University of Central Florida utilizing SQL, SQR, and
+                PeopleTools. Interned at Lockheed Martin involving simulations
+                and C#. See my Audio VFX library below.
               </figcaption>
               <hr className="self-hr mx-auto my-4 lg:my-8 w-[80%] group-hover:bg-right" />
 

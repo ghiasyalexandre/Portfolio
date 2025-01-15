@@ -4,17 +4,25 @@ export default function Timeline() {
   const experience = [
     {
       type: "work",
+      title: "Application Developer II",
+      organization: "University of Central Florida",
+      dateRange: "Jan 2025 - Present",
+      description:
+        "Develop new and enhance existing applications using PeopleCode, SQL, Java, other Oracle PeopleSoft tools, manage backend systems, and create related technical documentation.",
+    },
+    {
+      type: "work",
       title: "Web Designer",
       organization: "Freelance",
       dateRange: "Mar 2024 - Present",
       description:
-        "Developed and maintained web applications using React, Node.js, and MongoDB to deliver high-quality websites.",
+        "Developed and maintained web applications using Angular, React, and MongoDB to deliver high-quality websites.",
     },
     {
       type: "work",
       title: "Programmer I",
       organization: "Daytona State College",
-      dateRange: "Mar 2023 - Aug 2024",
+      dateRange: "Mar 2023 - Mar 2024",
       description:
         "Develop new and enhance existing applications using PeopleCode, SQL, Java, other Oracle PeopleSoft tools, manage backend systems, and create related technical documentation.",
     },
@@ -23,7 +31,8 @@ export default function Timeline() {
       title: "Bachelor's of Integrative Studies",
       organization: "University of Central Florida",
       dateRange: "Aug 2018 - Dec 2022",
-      description: `Completed a 4-year program with a focus on software development, data structures, and algorithms. \n Minor in Computer Science.`,
+      description: `4-year degree with a focus on Computer Science principles such as: data structures/algorithms, web design, and optimization.`,
+      highlight: `Minor in Computer Science`,
     },
     {
       type: "work",

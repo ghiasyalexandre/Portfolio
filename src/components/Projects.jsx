@@ -115,6 +115,18 @@ export default function Projects() {
 
           <FadeInSection>
             <div ref={reveal}>
+              <VideoCard
+                cardTitle="VRon"
+                video={VRonVid}
+                skills={["unity", "sharp", "vr"]}
+                link="https://github.com/ghiasyalexandre"
+                caption="A Mario Kart like virtual reality game with Tron like visuals."
+              />
+            </div>
+          </FadeInSection>
+
+          <FadeInSection>
+            <div ref={reveal}>
               <YoutubeCard
                 cardTitle="Price Review"
                 video="xcHfXqt_XFM"
@@ -129,12 +141,12 @@ export default function Projects() {
 
           <FadeInSection>
             <div ref={reveal}>
-              <VideoCard
-                cardTitle="VRon"
-                video={VRonVid}
-                skills={["unity", "sharp", "vr"]}
-                link="https://github.com/ghiasyalexandre"
-                caption="A Mario Kart like virtual reality game with Tron like visuals."
+              <Card
+                cardTitle="UCF Pi Delta Psi"
+                cardImg="./pdpsi.webp"
+                skills={["angular", "html", "ts", "css"]}
+                link="https://ucfpdpsi.org"
+                caption="Business website for the University of Central Florida's historical Asian Cultural Fraternity."
               />
             </div>
           </FadeInSection>
@@ -165,11 +177,11 @@ export default function Projects() {
           <FadeInSection>
             <div ref={reveal}>
               <Card
-                cardTitle="UCF Pi Delta Psi"
-                cardImg="./pdpsi.png"
+                cardTitle="Money Maker Mindset"
+                cardImg="./MMindset.webp"
                 skills={["angular", "html", "ts", "css"]}
-                link="https://ucfpdpsi.org"
-                caption="Business website for the University of Central Florida's historical Asian Cultural Fraternity."
+                link="https://financial-app-8ra.pages.dev/"
+                caption={`A Financial Education website with articles on investing, saving, and tools such as a loan calculator. \n(work in progress)`}
               />
             </div>
           </FadeInSection>
