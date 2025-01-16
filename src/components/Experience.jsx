@@ -7,7 +7,7 @@ import {
 const Experience = ({ experience }) => {
   return (
     <section
-      aria-labelledby="experience-title text-pretty text-balance"
+      aria-labelledby="experience-title text-pretty text-balance group"
       className="pt-8 px-8 lg:px-16 rounded-lg max-w-sm xs:max-w-md sm:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto transition-all duration-300 ease-in-out"
     >
       <div className="flex flex-col justify-center pb-12">
@@ -17,18 +17,24 @@ const Experience = ({ experience }) => {
         >
           Experience
         </h1>
-        <hr className="w-72 border-neutral-400 mt-4 mx-auto lg:w-80"></hr>
+        <hr className="w-72 border-neutral-400/50 mt-4 mx-auto lg:w-80"></hr>
       </div>
 
       <article
-        className="relative   "
+        className="relative "
         style={{
           borderImage: "linear-gradient(135deg, #55efc4, #6c5ce7, #d63031) 1",
-          transition: "backgroundImage 1000ms ease-in-out",
-          backgroundSize: "250%",
-          backgroundPosition: "left",
+          transition: "borderImage 1000ms ease-in-out",
           borderStyle: "solid",
           borderLeftWidth: "4px",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.borderImageSource =
+            "linear-gradient(45deg, #55efc4, #6c5ce7, #d63031)"; // Change gradient direction
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.borderImageSource =
+            "linear-gradient(135deg, #55efc4, #6c5ce7, #d63031)"; // Reset gradient direction
         }}
       >
         {experience.map((exp, index) => (

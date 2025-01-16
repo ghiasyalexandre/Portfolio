@@ -7,7 +7,7 @@ function Skills() {
         <h1 className="mt-4 mb-2 mx-auto text-4xl sm:text-5xl lg:text-6xl font-semibold text-white text-center justify-items-center">
           Technologies
         </h1>
-        <hr className="w-80 lg:w-96 border-neutral-400 mt-2 mx-auto"></hr>
+        <hr className="w-80 lg:w-96 border-neutral-400/50 mt-2 mx-auto"></hr>
       </div>
       {/* <hr className="w-28 justify-self-center"></hr> */}
       <div className="skills-container">

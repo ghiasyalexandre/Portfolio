@@ -34,7 +34,7 @@ export default function VfxGallery() {
           >
             Gallery
           </h1>
-          <hr className="w-48 lg:w-56 border-neutral-400 mx-auto" />
+          <hr className="w-48 lg:w-56 border-neutral-400/50 mx-auto" />
           <p
             className="text-center text-neutral-400 mt-1 sm:mb-2 text-xs sm:text-sm "
             id="vfx-gallery-description"

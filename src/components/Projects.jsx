@@ -46,7 +46,7 @@ export default function Projects() {
           >
             Projects
           </h1>
-          <hr className="w-48 lg:w-72 border-neutral-400 mx-auto"></hr>
+          <hr className="w-48 lg:w-72 border-neutral-400/50 mx-auto"></hr>
         </div>
       </FadeInSection>
       <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center gap-8 mx-4 xs:mx-12 sm:mx-16 ">
@@ -103,12 +103,11 @@ export default function Projects() {
           <FadeInSection>
             <div ref={reveal}>
               <Card
-                cardTitle="Mahtx Detail Co"
-                cardImg="./Mahtx.webp"
-                skills={["react", "html", "js", "css"]}
-                link="https://mahtxdetail.com/"
-                caption="Car Detailing Business website email booking system,
-            SEO optimized score of 92 from Google Index Analytics."
+                cardTitle="Money Maker Mindset"
+                cardImg="./MMindset.webp"
+                skills={["angular", "html", "ts", "css"]}
+                link="https://financial-app-8ra.pages.dev/"
+                caption={`A Financial Education website with articles on investing, saving, and tools such as a loan calculator. \n(work in progress)`}
               />
             </div>
           </FadeInSection>
@@ -153,13 +152,16 @@ export default function Projects() {
         </div>
         <div className="flex flex-col gap-4 lg:gap-8">
           <FadeInSection>
-            <Card
-              cardTitle="Taildawg Productions"
-              cardImg="./Taildawg.webp"
-              skills={["react", "html", "js", "css"]}
-              link="https://taildawgproductions.com/"
-              caption={`Greek paddle business website. A 3D React app that uses Three.js to allow demo customization. \n(work in progress)`}
-            />
+            <div ref={reveal}>
+              <Card
+                cardTitle="Mahtx Detail Co"
+                cardImg="./Mahtx.webp"
+                skills={["react", "html", "js", "css"]}
+                link="https://mahtxdetail.com/"
+                caption="Car Detailing Business website email booking system,
+            SEO optimized score of 92 from Google Index Analytics."
+              />
+            </div>
           </FadeInSection>
 
           <FadeInSection>
@@ -175,15 +177,13 @@ export default function Projects() {
           </FadeInSection>
 
           <FadeInSection>
-            <div ref={reveal}>
-              <Card
-                cardTitle="Money Maker Mindset"
-                cardImg="./MMindset.webp"
-                skills={["angular", "html", "ts", "css"]}
-                link="https://financial-app-8ra.pages.dev/"
-                caption={`A Financial Education website with articles on investing, saving, and tools such as a loan calculator. \n(work in progress)`}
-              />
-            </div>
+            <Card
+              cardTitle="Taildawg Productions"
+              cardImg="./Taildawg.webp"
+              skills={["react", "html", "js", "css"]}
+              link="https://taildawgproductions.com/"
+              caption={`Greek paddle business website. A 3D React app that uses Three.js to allow demo customization. \n(work in progress)`}
+            />
           </FadeInSection>
 
           <FadeInSection>
