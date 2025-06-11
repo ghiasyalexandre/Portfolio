@@ -7,8 +7,7 @@ export default function Timeline() {
       title: "M.S. Data Science",
       organization: "University of Central Florida",
       dateRange: "Starting Aug 2025",
-      description:
-        "Using PeopleCode, SQL, SQR, Java and other Oracle PeopleSoft tools—optimizing PL/SQL queries ensuring data integrity and design new features, perform manual testing and report generation, and troubleshoot PeopleSoft CS.",
+      description: "Accepted into UCF's Data Science Masters program.",
     },
     {
       type: "work",
