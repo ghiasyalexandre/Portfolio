@@ -34,7 +34,8 @@ function SelfCard(props) {
                 best practices. Current Application Developer II for the
                 University of Central Florida utilizing SQL, SQR, and
                 PeopleTools. Interned at Lockheed Martin involving simulations
-                and C#. See my Audio VFX library below.
+                and C#. <br />
+                See my VFX library below.
               </figcaption>
               <hr className="self-hr mx-auto my-4 lg:my-8 w-[80%] group-hover:bg-right" />
 

@@ -3,12 +3,20 @@ import ExperienceShowcase from "./Experience";
 export default function Timeline() {
   const experience = [
     {
+      type: "education",
+      title: "M.S. Data Science",
+      organization: "University of Central Florida",
+      dateRange: "Starting Aug 2025",
+      description:
+        "Using PeopleCode, SQL, SQR, Java and other Oracle PeopleSoft tools—optimizing PL/SQL queries ensuring data integrity and design new features, perform manual testing and report generation, and troubleshoot PeopleSoft CS.",
+    },
+    {
       type: "work",
       title: "Application Developer II",
       organization: "University of Central Florida",
       dateRange: "Jan 2025 - Present",
       description:
-        "Develop new and enhance existing applications using PeopleCode, SQL, Java, other Oracle PeopleSoft tools, manage backend systems, and create related technical documentation.",
+        "Using PeopleCode, SQL, SQR, Java and other Oracle PeopleSoft tools—optimizing PL/SQL queries ensuring data integrity and design new features, perform manual testing and report generation, and troubleshoot PeopleSoft CS.",
     },
     {
       type: "work",
@@ -16,7 +24,7 @@ export default function Timeline() {
       organization: "Freelance",
       dateRange: "Mar 2024 - Present",
       description:
-        "Developed and maintained web applications using Angular, React, and MongoDB to deliver high-quality websites.",
+        "Developed and maintained web applications using Angular, React, MongoDB, PHP, AWS, Three.js to deliver high-quality websites.",
     },
     {
       type: "work",
