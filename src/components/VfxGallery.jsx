@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import VFXCard from "./VFXCard";
 
-import Fly from "../../public/videos/Fly.mp4";
+import Fly from "../../public/videos/Fly.webm";
 import InLove from "../../public/videos/FallInLove.webm";
 import Gunner from "../../public/videos/Gunner.webm";
 import Ideas from "../../public/videos/Ideas.mp4";
@@ -12,7 +12,7 @@ import Saturn from "../../public/videos/Saturn.webm";
 import Galaxy from "../../public/videos/Galaxy.mp4";
 import Tunnel from "../../public/videos/Tunnel.mp4";
 import WideO from "../../public/videos/WideO.webm";
-import VoxelCube from "../../public/videos/VoxelCube.mp4";
+import VoxelCube from "../../public/videos/VoxelCube.webm";
 import { Helmet } from "react-helmet-async";
 
 export default function VfxGallery() {
