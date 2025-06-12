@@ -1,18 +1,18 @@
 import { Link } from "react-router-dom";
 import VFXCard from "./VFXCard";
 
-import Fly from "/videos/Fly.mp4";
-import InLove from "/videos/FallInLove.webm";
-import Gunner from "/videos/Gunner.webm";
-import Ideas from "/videos/Ideas.mp4";
-import Pokemon from "/videos/PokemonBattle.mp4";
-import OnAndOff from "/videos/OnAndOff.mp4";
-import StudyTime from "/videos/StudyTime.mp4";
-import Saturn from "/videos/Saturn.webm";
-import Galaxy from "/videos/Galaxy.mp4";
-import Tunnel from "/videos/Tunnel.mp4";
-import WideO from "/videos/WideO.webm";
-import VoxelCube from "/videos/VoxelCube.mp4";
+import Fly from "../../public/videos/Fly.mp4";
+import InLove from "../../public/videos/FallInLove.webm";
+import Gunner from "../../public/videos/Gunner.webm";
+import Ideas from "../../public/videos/Ideas.mp4";
+import Pokemon from "../../public/videos/PokemonBattle.mp4";
+import OnAndOff from "../../public/videos/OnAndOff.mp4";
+import StudyTime from "../../public/videos/StudyTime.mp4";
+import Saturn from "../../public/videos/Saturn.webm";
+import Galaxy from "../../public/videos/Galaxy.mp4";
+import Tunnel from "../../public/videos/Tunnel.mp4";
+import WideO from "../../public/videos/WideO.webm";
+import VoxelCube from "../../public/videos/VoxelCube.mp4";
 import { Helmet } from "react-helmet-async";
 
 export default function VfxGallery() {
