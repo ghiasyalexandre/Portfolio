@@ -1,16 +1,18 @@
 import { Link } from "react-router-dom";
 import VFXCard from "./VFXCard";
 
-import Joji from "../../public/videos/CarJoji.webm";
-import InLove from "../../public/videos/FallInLove.webm";
-import Gunner from "../../public/videos/Gunner.webm";
-import Ideas from "../../public/videos/Ideas.mp4";
-import Pokemon from "../../public/videos/PokemonBattle.mp4";
-import OnAndOff from "../../public/videos/OnAndOff.mp4";
-import StudyTime from "../../public/videos/StudyTime.mp4";
-import Saturn from "../../public/videos/Saturn.webm";
-import Galaxy from "../../public/videos/Galaxy.mp4";
-import Tunnel from "../../public/videos/Tunnel.mp4";
+import Fly from "/videos/Fly.mp4";
+import InLove from "/videos/FallInLove.webm";
+import Gunner from "/videos/Gunner.webm";
+import Ideas from "/videos/Ideas.mp4";
+import Pokemon from "/videos/PokemonBattle.mp4";
+import OnAndOff from "/videos/OnAndOff.mp4";
+import StudyTime from "/videos/StudyTime.mp4";
+import Saturn from "/videos/Saturn.webm";
+import Galaxy from "/videos/Galaxy.mp4";
+import Tunnel from "/videos/Tunnel.mp4";
+import WideO from "/videos/WideO.webm";
+import VoxelCube from "/videos/VoxelCube.mp4";
 import { Helmet } from "react-helmet-async";
 
 export default function VfxGallery() {
@@ -47,22 +49,28 @@ export default function VfxGallery() {
             <VFXCard
               video={Saturn}
               cardTitle="Saturn Journey"
-              caption="A mesmerizing journey through Saturn Audio Reacting to SZA."
+              caption="Saturn  by SZA Audio Reactive Saturn."
             ></VFXCard>
             <VFXCard
               video={InLove}
               cardTitle="Fall in Love"
-              caption="Romantic visuals enhanced with vibrant audio effects."
+              caption="Beyonce's Fall in love visuals enhanced with vibrant audio effects."
             />
             <VFXCard
-              video={Galaxy}
-              cardTitle="Galaxy Voyage"
-              caption="Explore the mysteries of the galaxy in this audio-visual masterpiece."
+              video={VoxelCube}
+              cardTitle="Voxel Cube"
+              caption="Audio-visual remix inspired by Queens's song Cool Cat."
             />
             <VFXCard
-              video={Joji}
-              cardTitle="Joji Remix"
-              caption="Audio-visual remix inspired by Joji's musical aesthetics."
+              video={Fly}
+              cardTitle="ISOxo Big Bang"
+              caption="ISOxo with a audio-visual masterpiece of a nebula."
+            />
+
+            <VFXCard
+              video={WideO}
+              cardTitle="Disco Lines Remix"
+              caption="Audio-visual remix inspired by Disco Lines's music."
             />
             <VFXCard
               video={StudyTime}
@@ -90,6 +98,11 @@ export default function VfxGallery() {
               video={Pokemon}
               cardTitle="Pokemon Battle"
               caption="Reimagined battle visuals inspired by the Pokemon universe."
+            />
+            <VFXCard
+              video={Galaxy}
+              cardTitle="Frank Ocean Galaxy Voyage"
+              caption="Frank Ocean with a audio-visual masterpiece galaxy."
             />
             <VFXCard
               video={Ideas}

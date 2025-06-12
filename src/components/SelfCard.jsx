@@ -1,4 +1,4 @@
-import Porto from "../../public/Porto.webp";
+import Porto from "/Porto.webp";
 
 function SelfCard(props) {
   return (

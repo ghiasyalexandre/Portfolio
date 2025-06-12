@@ -2,7 +2,7 @@ import PoPGif from "../../public/PoP.gif";
 import PoPThumbnail from "../../public/PoPThumbnail.webp";
 import VRonVid from "../../public/videos/VRon.webm";
 import SimpleC from "../../public/SimpleC.webp";
-import Viz from "../../public/videos/Viz.webm";
+import Viz from "../../public/videos/Voxel1.webm";
 import FadeInSection from "./FadeInSection";
 import YoutubeCard from "./YoutubeCard";
 import Card from "./Card";
