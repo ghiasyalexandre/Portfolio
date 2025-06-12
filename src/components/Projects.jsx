@@ -192,7 +192,7 @@ export default function Projects() {
                 cardTitle="Audio Visualizer"
                 video={Viz}
                 skills={["unity", "sharp"]}
-                caption="An editor for audio visualizations with file uploading, playback controls, and plenty of color!"
+                caption="An efficient Voxel audio visualization using hlsl shaders to push 1 million voxels at more than 60fps with plenty of color!"
               />
             </div>
           </FadeInSection>
