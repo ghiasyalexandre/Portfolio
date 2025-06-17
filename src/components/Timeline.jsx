@@ -19,7 +19,7 @@ export default function Timeline() {
     },
     {
       type: "work",
-      title: "Web Designer",
+      title: "Full-Stack Developer",
       organization: "Freelance",
       dateRange: "Mar 2024 - Present",
       description:

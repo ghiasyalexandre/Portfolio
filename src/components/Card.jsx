@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import DynamicSkills from "./DynamicSkills";
 
 function Card(props) {
@@ -10,9 +11,9 @@ function Card(props) {
   return (
     <article className=" bg-gradient border border-white rounded-xl hover:shadow-neonLightSlim transition-all duration-1000 ease-in-out">
       <figure className="video-figure" aria-labelledby={`${cardTitle}-title`}>
-        <div>
+        <div className="px-4 pt-4 sm:px-6 sm:pt-6">
           <a
-            className="w-full h-auto inline-block cursor-pointer  px-4 pt-4 sm:px-6 sm:pt-6"
+            className="w-full h-auto inline-block cursor-pointer "
             href={link}
             draggable={false}
             target="_blank"
@@ -33,7 +34,7 @@ function Card(props) {
         >
           {cardTitle}
         </h2>
-        <hr className="border-neutral-700 my-4 mx-8" />
+        <hr className="border-neutral-700 my-4 mx-8 " />
         <figcaption className="text-center text-neutral-300 text-base sm:text-lg lg:text-base xl:text-xl mx-8 md:mx-16 mb-2 whitespace-pre-line">
           {caption}
         </figcaption>

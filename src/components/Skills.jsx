@@ -4,10 +4,10 @@ function Skills() {
   return (
     <div className="bg-gradient border-y border-neutral-800 w-full relative h-36 xs:h-40 sm:h-44 lg:h-52">
       <div className="flex flex-col justify-center pb-6">
-        <h1 className="mt-4 mb-2 mx-auto text-4xl sm:text-5xl lg:text-6xl font-semibold text-white text-center justify-items-center">
+        <h1 className="mt-4 mb-2 mx-auto text-4xl sm:text-5xl lg:text-6xl font-semibold text-white text-center justify-items-center border-b border-neutral-700 pb-2 sm:pb-4">
           Technologies
         </h1>
-        <hr className="w-80 lg:w-96 border-neutral-400/50 mt-2 mx-auto"></hr>
+        {/* <hr className="w-80 lg:w-96 border-neutral-400/50 mt-2 mx-auto"></hr> */}
       </div>
       {/* <hr className="w-28 justify-self-center"></hr> */}
       <div className="skills-container">

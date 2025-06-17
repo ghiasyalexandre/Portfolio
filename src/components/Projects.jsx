@@ -145,7 +145,7 @@ export default function Projects() {
                 cardImg="./pdpsi.webp"
                 skills={["angular", "html", "ts", "css"]}
                 link="https://ucfpdpsi.org"
-                caption="Business website for the University of Central Florida's historical Asian Cultural Fraternity."
+                caption="Business website for the University of Central Florida's historical Asian Cultural Fraternity. Sub 1ms load time! 92/100 Google Index Analytics."
               />
             </div>
           </FadeInSection>
@@ -158,8 +158,7 @@ export default function Projects() {
                 cardImg="./Mahtx.webp"
                 skills={["react", "html", "js", "css"]}
                 link="https://mahtxdetail.com/"
-                caption="Car Detailing Business website email booking system,
-            SEO optimized score of 92 from Google Index Analytics."
+                caption="Car Detailing Business website email booking system, SEO optimized score of 92 from Google Index Analytics."
               />
             </div>
           </FadeInSection>
@@ -170,7 +169,7 @@ export default function Projects() {
                 cardTitle="Quantum Hydrogen Atom in VR"
                 video="6MUPqvrvFKc"
                 thumbnail="./AtomThumbnail.webp"
-                caption="An educational visualization on Quantum principles of a Hydrogen atom in Virtual Reality."
+                caption="An educational visualization on Quantum principles of a Hydrogen atom in Virtual Reality. Involving custom shaders and VR controls that runs at 60fps. Worked with a physics engine to simulate the electron cloud behavior."
                 skills={["unity", "sharp", "vr"]}
               />
             </div>

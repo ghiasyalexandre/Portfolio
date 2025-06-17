@@ -31,7 +31,7 @@ function YoutubeCard(props) {
       ref={reveal}
     >
       <p
-        className=" text-neutral-400 text-left text-xs sm:text-sm pt-2 pl-5 sm:pl-8 sm:pt-2"
+        className=" text-neutral-400 text-left text-xs sm:text-sm pl-5 sm:pl-8 pt-4 sm:px-6 sm:pt-6"
         aria-hidden="true"
       >
         Click Image to Preview!
