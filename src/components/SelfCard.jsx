@@ -31,10 +31,10 @@ function SelfCard(props) {
               >
                 Software developer with a background in web design,
                 client-server applications, software development cycles, and IT
-                best practices. Current Technical Support Engineer for the
+                best practices. Current Technical Support Engineer for 
                 ServiceNow. Previous experience at the University of Central Florida,
                 Daytona State College, and Lockheed Martin. <br />
-                See my VFX library below.
+                See my VFX work below.
               </figcaption>
               <hr className="self-hr mx-auto my-4 lg:my-8 w-[80%] group-hover:bg-right" />
 
