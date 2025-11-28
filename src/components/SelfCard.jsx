@@ -31,10 +31,9 @@ function SelfCard(props) {
               >
                 Software developer with a background in web design,
                 client-server applications, software development cycles, and IT
-                best practices. Current Application Developer II for the
-                University of Central Florida utilizing SQL, SQR, and
-                PeopleTools. Interned at Lockheed Martin involving simulations
-                and C#. <br />
+                best practices. Current Technical Support Engineer for the
+                ServiceNow. Previous experience at the University of Central Florida,
+                Daytona State College, and Lockheed Martin. <br />
                 See my VFX library below.
               </figcaption>
               <hr className="self-hr mx-auto my-4 lg:my-8 w-[80%] group-hover:bg-right" />

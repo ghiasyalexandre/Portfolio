@@ -213,7 +213,7 @@ export default function Projects() {
       </div>
       <div className="flex justify-center py-12 w-full ">
         <Link to="/vfx" draggable={false} aria-label="View VFX Gallery">
-          <button className="bg-gradient scale-110">View VFX Work</button>
+          <button className="bg-gradient text-white scale-110">View VFX Work</button>
         </Link>
       </div>
     </article>

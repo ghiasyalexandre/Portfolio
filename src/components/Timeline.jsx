@@ -4,18 +4,28 @@ export default function Timeline() {
   const experience = [
     {
       type: "education",
-      title: "M.S. Data Science",
+      title: "M.S. Robotics Systems",
       organization: "University of Central Florida",
-      dateRange: "Starting Aug 2025",
-      description: "Accepted into UCF's Data Science Masters program.",
+      dateRange: "Starting Jan 2026",
+      description: "Accepted into UCF's Robotics and Autonomous Systems Masters program.",
+    },
+        {
+      type: "work",
+      title: "Technical Support Engineer - Automation",
+      organization: "ServiceNow",
+      dateRange: "Sep 2025 - Present",
+      description:
+        "Focus on supporting customers by troubleshooting the ServiceNow platform related to authentication systems (LDAP/SSO), web services (SOAP/REST), data extraction (JDBC), integrations, scripting, networking, relational databases, and log analysis.",
+              highlight: `★ ServiceNow Platform Certified ★`,
+
     },
     {
       type: "work",
       title: "Application Developer II",
       organization: "University of Central Florida",
-      dateRange: "Jan 2025 - Present",
+      dateRange: "Jan 2025 - Oct 2025",
       description:
-        "Using PeopleCode, SQL, SQR, Java and other Oracle PeopleSoft tools—optimizing PL/SQL queries ensuring data integrity and design new features, perform manual testing and report generation, and troubleshoot PeopleSoft CS.",
+        "Using PeopleCode, SQL, SQR, Java and other Oracle PeopleSoft tools optimizing PL/SQL queries ensuring data integrity and design new features, perform manual testing and report generation, and troubleshoot PeopleSoft CS.",
     },
     {
       type: "work",
@@ -23,7 +33,7 @@ export default function Timeline() {
       organization: "Freelance",
       dateRange: "Mar 2024 - Present",
       description:
-        "Developed and maintained web applications using Angular, React, MongoDB, PHP, AWS, Three.js to deliver high-quality websites.",
+        "Developed and maintained web applications using Angular, React, MongoDB, PHP, AWS, Three.js to deliver high-quality websites. Offering SEO and Speed Optimization with Google Analytics support.",
     },
     {
       type: "work",
@@ -47,7 +57,7 @@ export default function Timeline() {
       organization: "Lockheed Martin",
       dateRange: "Jun 2021 - Feb 2022",
       description:
-        "Create new features and troubleshoot bugs using manual and automated testing tools.",
+        "Used Unity3D for practical simulations to create new features, troubleshoot bugs, and perform automated/manual testing.",
     },
     {
       type: "work",

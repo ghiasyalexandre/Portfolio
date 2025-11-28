@@ -28,6 +28,7 @@ export default function VfxGallery() {
       <article
         aria-labelledby="vfx-gallery-title"
         aria-describedby="vfx-gallery-description"
+      className="bg-gradient w-full h-fit"
       >
         <div className="w-full flex-col justify-center py-8 lg:py-12">
           <h1
@@ -117,7 +118,7 @@ export default function VfxGallery() {
             draggable={false}
             aria-label="View all projects by the Ghiasy Alexandre"
           >
-            <button className="bg-gradient scale-110">View Projects</button>
+            <button className="bg-gradient text-white scale-110">View Projects</button>
           </Link>
           <a
             target="_blank"
@@ -125,7 +126,7 @@ export default function VfxGallery() {
             href="https://www.instagram.com/adairvfx/"
             aria-label="Visit the VFX Instagram account"
           >
-            <button className="bg-gradient scale-110">VFX Instagram</button>
+            <button className="bg-gradient text-white scale-110">VFX Instagram</button>
           </a>
         </div>
       </article>
