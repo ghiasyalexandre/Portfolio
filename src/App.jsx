@@ -71,7 +71,7 @@ function App() {
           <Router>
             <Suspense
               fallback={
-                <div className=" flex justify-center place-items-center text-center text-5xl h-[80vh] animate-pulse uppercase">
+                <div className="bg-gradient flex justify-center place-items-center text-center text-5xl h-[80vh] animate-pulse uppercase">
                   Loading...
                 </div>
               }
