@@ -15,8 +15,8 @@ export default function Timeline() {
       organization: "ServiceNow",
       dateRange: "Sep 2025 - Present",
       description:
-        "Focus on supporting customers by troubleshooting the ServiceNow platform related to authentication systems (LDAP/SSO), web services (SOAP/REST), data extraction (JDBC), integrations, scripting, networking, relational databases, and log analysis.",
-      highlight: `★ServiceNow Platform Certified★`,
+        "Focus on supporting customers by troubleshooting the ServiceNow platform related to authentication (LDAP/SSO), web services (SOAP/REST), data extraction (JDBC), integrations, scripting, networking, relational databases, and log analysis.",
+      highlight: `★ ServiceNow Certified ★`,
 
     },
     {
