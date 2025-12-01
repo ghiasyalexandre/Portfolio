@@ -51,22 +51,22 @@ const Experience = ({ experience }) => {
             <div className="p-6 bg-gradient rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
               <div className="flex flex-col sm:flex-row items-center justify-between">
                 <h2
-                  className="text-lg sm:text-xl text-center sm:text-left font-semibold text-gray-100"
+                  className="text-lg sm:text-xl text-center sm:text-left font-semibold text-white"
                   id={`experience-title-${index}`}
                 >
                   {exp.title}
                 </h2>
-                <span className="text-xs sm:text-sm text-center text-gray-200">
+                <span className="text-xs py-1 sm:py-0 sm:text-sm text-center text-gray-200">
                   {exp.dateRange}
                 </span>
               </div>
-              <p className="text-gray-400 text-md text-center sm:text-left italic mb-1 border-b border-neutral-700 pb-2">
+              <p className="text-gray-300 text-md text-center sm:text-left italic mb-1 border-b border-neutral-700 pb-2">
                 {exp.organization}
               </p>
-              <p className="text-gray-200 mt-2 text-center sm:text-left whitespace-pre-line ">
+              <p className="text-gray-100 mt-2 text-center sm:text-left whitespace-pre-line ">
                 {exp.description}
               </p>
-              <p className="text-gray-200 mt-2 text-center font-semibold sm:text-left whitespace-pre-line">
+              <p className="text-white italic mt-2 text-center font-semibold sm:text-left whitespace-pre-line">
                 {exp.highlight}
               </p>
             </div>

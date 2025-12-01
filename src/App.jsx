@@ -62,12 +62,6 @@ function App() {
             </FadeInSection>
           </section>
 
-          <section aria-labelledby="timeline">
-            <FadeInSection>
-              <Timeline />
-            </FadeInSection>
-          </section>
-
           <Router>
             <Suspense
               fallback={
@@ -80,12 +74,19 @@ function App() {
                 <Route
                   path="/"
                   element={
-                    <section
-                      aria-labelledby="projects"
-                      className="overflow-y-hidden"
-                    >
-                      <Projects />
-                    </section>
+                    <div>
+                      <section aria-labelledby="timeline">
+                        <FadeInSection>
+                          <Timeline />
+                        </FadeInSection>
+                      </section>
+                      <section
+                        aria-labelledby="projects"
+                        className="overflow-y-hidden"
+                      >
+                        <Projects />
+                      </section>
+                    </div>
                   }
                 />
                 <Route

@@ -46,7 +46,7 @@ function NavBar() {
       </div>
       <button
         onClick={() => {
-          navbar().scrollIntoView({ behavior: "smooth" });
+          navbar().scrollIntoView({ behavior: "smooth", block: "end" });
         }}
         aria-label="Scroll to contact section"
         className="px-2 py-2 font-semibold opacity-30 hover:opacity-80 hover:animate-bounce bg-gradient border-black  hover:border-white rounded-full absolute right-2 sm:right-7 bottom-14 sm:top-auto sm:bottom-16 z-30"
