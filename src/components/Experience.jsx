@@ -20,7 +20,7 @@ const Experience = ({ experience }) => {
         <hr className="w-72 border-neutral-400/50 mt-4 mx-auto lg:w-80"></hr>
       </div>
 
-      <article
+      {/* <article
         className="relative "
         style={{
           borderImage: "linear-gradient(135deg, #55efc4, #6c5ce7, #d63031) 1",
@@ -36,6 +36,11 @@ const Experience = ({ experience }) => {
           e.currentTarget.style.borderImageSource =
             "linear-gradient(135deg, #55efc4, #6c5ce7, #d63031)"; // Reset gradient direction
         }}
+      > */}
+      <article
+        className="timeline relative overflow-hidden rounded-md p-4 transition-all duration-700"
+        onMouseEnter={(e) => e.currentTarget.classList.add("hover-border")}
+        onMouseLeave={(e) => e.currentTarget.classList.remove("hover-border")}
       >
         {experience.map((exp, index) => (
           <div

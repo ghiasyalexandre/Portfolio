@@ -14,6 +14,7 @@ import Tunnel from "../../public/videos/Tunnel.mp4";
 import WideO from "../../public/videos/WideO.webm";
 import VoxelCube from "../../public/videos/VoxelCube.webm";
 import { Helmet } from "react-helmet-async";
+import FadeInSection from "./FadeInSection";
 
 export default function VfxGallery() {
   return (
@@ -39,7 +40,7 @@ export default function VfxGallery() {
           </h1>
           <hr className="w-48 lg:w-56 border-neutral-400/50 mx-auto pb-1" />
           <p
-            className="text-center text-neutral-400 mt-1 sm:mb-2 text-xs sm:text-sm lg:text-base "
+            className="text-center font-semibold sm:font-normal text-neutral-400 mt-1 sm:mb-2 text-xs sm:text-sm lg:text-base "
             id="vfx-gallery-description"
           >
             Tap or Hover to Play Audio !
@@ -47,69 +48,92 @@ export default function VfxGallery() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 px-8 lg:px-16 gap-4">
           <div className="flex flex-col gap-4">
-            <VFXCard
-              video={Saturn}
-              cardTitle="Saturn Journey"
-              caption="Saturn  by SZA Audio Reactive Saturn."
-            ></VFXCard>
-            <VFXCard
-              video={InLove}
-              cardTitle="Fall in Love"
-              caption="Beyonce's Fall in love visuals enhanced with vibrant audio effects."
-            />
-            <VFXCard
-              video={VoxelCube}
-              cardTitle="Voxel Cube"
-              caption="Audio-visual remix inspired by Queens's song Cool Cat."
-            />
-            <VFXCard
-              video={Fly}
-              cardTitle="ISOxo Big Bang"
-              caption="ISOxo with a audio-visual masterpiece of a nebula."
-            />
-
-            <VFXCard
-              video={WideO}
-              cardTitle="Disco Lines Remix"
-              caption="Audio-visual remix inspired by Disco Lines's music."
-            />
-            <VFXCard
-              video={StudyTime}
-              cardTitle="Study Time"
-              caption="Relaxing visuals designed for an immersive study environment."
-            />
+            <FadeInSection>
+              <VFXCard
+                video={Saturn}
+                cardTitle="Saturn Journey"
+                caption="Saturn  by SZA Audio Reactive Saturn."
+              ></VFXCard>
+            </FadeInSection>
+            <FadeInSection>
+              <VFXCard
+                video={InLove}
+                cardTitle="Fall in Love"
+                caption="Beyonce's Fall in love visuals enhanced with vibrant audio effects."
+              />
+            </FadeInSection>{" "}
+            <FadeInSection>
+              <VFXCard
+                video={VoxelCube}
+                cardTitle="Voxel Cube"
+                caption="Audio-visual remix inspired by Queens's song Cool Cat."
+              />{" "}
+            </FadeInSection>
+            <FadeInSection>
+              <VFXCard
+                video={Fly}
+                cardTitle="ISOxo Big Bang"
+                caption="ISOxo with a audio-visual masterpiece of a nebula."
+              />{" "}
+            </FadeInSection>{" "}
+            <FadeInSection>
+              <VFXCard
+                video={WideO}
+                cardTitle="Disco Lines Remix"
+                caption="Audio-visual remix inspired by Disco Lines's music."
+              />
+            </FadeInSection>{" "}
+            <FadeInSection>
+              <VFXCard
+                video={StudyTime}
+                cardTitle="Study Time"
+                caption="Relaxing visuals designed for an immersive study environment."
+              />
+            </FadeInSection>
           </div>
           <div className="flex flex-col gap-4">
-            <VFXCard
-              video={Gunner}
-              cardTitle="Gunner's Path"
-              caption="A thrilling visual journey packed with dynamic audio."
-            />
-            <VFXCard
-              video={OnAndOff}
-              cardTitle="On and Off"
-              caption="Experience the switch between chaos and calm through visuals."
-            />
-            <VFXCard
-              video={Tunnel}
-              cardTitle="Tunnel Vision"
-              caption="Travel through an infinite tunnel with hypnotic VFX."
-            />
-            <VFXCard
-              video={Pokemon}
-              cardTitle="Pokemon Battle"
-              caption="Reimagined battle visuals inspired by the Pokemon universe."
-            />
-            <VFXCard
-              video={Galaxy}
-              cardTitle="Frank Ocean Galaxy Voyage"
-              caption="Frank Ocean with a audio-visual masterpiece galaxy."
-            />
-            <VFXCard
-              video={Ideas}
-              cardTitle="Burst of Ideas"
-              caption="A dynamic representation of creativity and ideas coming to life."
-            />
+            <FadeInSection>
+              <VFXCard
+                video={Gunner}
+                cardTitle="Gunner's Path"
+                caption="A thrilling visual journey packed with dynamic audio."
+              />
+            </FadeInSection>{" "}
+            <FadeInSection>
+              <VFXCard
+                video={OnAndOff}
+                cardTitle="On and Off"
+                caption="Experience the switch between chaos and calm through visuals."
+              />
+            </FadeInSection>{" "}
+            <FadeInSection>
+              <VFXCard
+                video={Tunnel}
+                cardTitle="Tunnel Vision"
+                caption="Travel through an infinite tunnel with hypnotic VFX."
+              />
+            </FadeInSection>{" "}
+            <FadeInSection>
+              <VFXCard
+                video={Pokemon}
+                cardTitle="Pokemon Battle"
+                caption="Reimagined battle visuals inspired by the Pokemon universe."
+              />
+            </FadeInSection>{" "}
+            <FadeInSection>
+              <VFXCard
+                video={Galaxy}
+                cardTitle="Frank Ocean Galaxy Voyage"
+                caption="Frank Ocean with a audio-visual masterpiece galaxy."
+              />{" "}
+            </FadeInSection>{" "}
+            <FadeInSection>
+              <VFXCard
+                video={Ideas}
+                cardTitle="Burst of Ideas"
+                caption="A dynamic representation of creativity and ideas coming to life."
+              />{" "}
+            </FadeInSection>{" "}
           </div>
         </div>
         <div className="flex justify-center gap-x-12 py-12">
@@ -122,6 +146,7 @@ export default function VfxGallery() {
               View Projects
             </button>
           </Link>
+
           <a
             target="_blank"
             draggable={false}

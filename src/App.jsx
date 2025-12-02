@@ -6,7 +6,7 @@ import AppFooter from "./components/AppFooter";
 import FadeInSection from "./components/FadeInSection";
 import { Suspense, lazy } from "react";
 import { HelmetProvider, Helmet } from "react-helmet-async";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 const VFX = lazy(() => import("./components/VfxGallery"));
 const Projects = lazy(() => import("./components/Projects"));
@@ -62,55 +62,52 @@ function App() {
             </FadeInSection>
           </section>
 
-          <Router>
-            <Suspense
-              fallback={
-                <div className="bg-gradient flex justify-center place-items-center text-center text-5xl h-[80vh] animate-pulse uppercase">
-                  Loading...
-                </div>
-              }
-            >
-              <Routes>
-                <Route
-                  path="/"
-                  element={
-                    <div>
-                      <section aria-labelledby="timeline">
-                        <FadeInSection>
-                          <Timeline />
-                        </FadeInSection>
-                      </section>
-                      <section
-                        aria-labelledby="projects"
-                        className="overflow-y-hidden"
-                      >
-                        <Projects />
-                      </section>
-                    </div>
-                  }
-                />
-                <Route
-                  path="/vfx"
-                  element={
+          {/* <Router> */}
+          <Suspense
+            fallback={
+              <div className="bg-gradient flex justify-center place-items-center text-center text-5xl h-[80vh] animate-pulse uppercase">
+                Loading...
+              </div>
+            }
+          >
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <div>
+                    <section aria-labelledby="timeline">
+                      <FadeInSection>
+                        <Timeline />
+                      </FadeInSection>
+                    </section>
                     <section
-                      aria-labelledby="vfx"
+                      aria-labelledby="projects"
                       className="overflow-y-hidden"
                     >
-                      <VFX />
-                    </section>
-                  }
-                />
-                <Route
-                  path="*"
-                  element={
-                    <section aria-labelledby="error page">
                       <Projects />
                     </section>
-                  }
-                />
-              </Routes>
-            </Suspense>
-          </Router>
+                  </div>
+                }
+              />
+              <Route
+                path="/vfx"
+                element={
+                  <section aria-labelledby="vfx" className="overflow-y-hidden">
+                    <VFX />
+                  </section>
+                }
+              />
+              <Route
+                path="*"
+                element={
+                  <section aria-labelledby="error page">
+                    <Projects />
+                  </section>
+                }
+              />
+            </Routes>
+          </Suspense>
+          {/* </Router> */}
 
           <section aria-labelledby="contact">
             <FadeInSection>

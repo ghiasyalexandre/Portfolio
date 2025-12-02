@@ -179,7 +179,7 @@ export default function Projects() {
                 cardImg="./Mahtx.webp"
                 skills={["react", "html", "js", "css"]}
                 link="https://mahtxdetail.com/"
-                caption="Car Detailing Business website email booking system, SEO optimized score of 92 from Google Index Analytics."
+                caption="Car Detailing Business website email booking system, SEO optimized score of 96/100 from Google Index Analytics."
               />
             </div>
           </FadeInSection>
@@ -201,8 +201,8 @@ export default function Projects() {
                 video="xcHfXqt_XFM"
                 thumbnail="./PriceReviewThumbnail.webp"
                 caption="A product review website where users can see or post reviews and view other users. Implemented user
-      sign-up/login system, product reviewing, profanity filter, review abuse reporting, and frontend administrator
-      controls."
+                sign-up/login system, product reviewing, profanity filter, review abuse reporting, and frontend administrator
+                controls."
                 skills={["html", "js", "sql", "php"]}
               />
             </div>

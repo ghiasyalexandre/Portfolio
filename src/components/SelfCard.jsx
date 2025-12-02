@@ -1,8 +1,15 @@
 import Porto from "../../public/Porto.webp";
-import { BrowserRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function SelfCard(props) {
-  const vfx = () => document.getElementById("vfx-gallery-title");
+  // const vfx = () => document.getElementById("vfx-gallery-title");
+  const { pathname } = useLocation();
+
+  const buttonText =
+    pathname === "/vfx" ? "See my Experience." : "See my VFX Library.";
+
+  const linkTarget = pathname === "/vfx" ? "/" : "/vfx";
 
   return (
     <div className="bg-gradient border-neutral-800 border-t group">
@@ -38,23 +45,15 @@ function SelfCard(props) {
                 ServiceNow. Previous experience at the University of Central
                 Florida, Daytona State College, and Lockheed Martin. <br />
               </figcaption>
-              <BrowserRouter>
-                <Link
-                  to="/vfx"
-                  draggable={false}
-                  aria-label="View all projects by the Ghiasy Alexandre"
-                  onClick={() => {
-                    vfx().scrollIntoView({
-                      behavior: "smooth",
-                      block: "start",
-                    });
-                  }}
-                >
-                  <p className="fun-text text-center lg:text-xl xl:text-2xl pt-1.5 hover:underline underline-offset-2 hover:cursor-pointer">
-                    See my VFX work.
-                  </p>
-                </Link>
-              </BrowserRouter>
+              <Link
+                to={linkTarget}
+                draggable={false}
+                aria-label="View all projects by the Ghiasy Alexandre"
+              >
+                <p className="fun-text hover:bg-right text-center lg:text-xl xl:text-2xl pt-1.5 hover:cursor-pointer">
+                  {buttonText}
+                </p>
+              </Link>
               <hr className="self-hr mx-auto my-4 lg:my-8 w-[80%] group-hover:bg-right" />
               <div className="flex justify-evenly">
                 <a
