@@ -46,7 +46,7 @@ export default function VfxGallery() {
             Tap or Hover to Play Audio !
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 px-8 lg:px-16 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 px-4 lg:px-8 xl:px-16 gap-4">
           <div className="flex flex-col gap-4">
             <FadeInSection>
               <VFXCard
