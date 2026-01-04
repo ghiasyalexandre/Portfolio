@@ -119,7 +119,7 @@ export default function Projects() {
                 cardImg="./pdpsi.webp"
                 skills={["angular", "html", "ts", "css"]}
                 link="https://ucfpdpsi.org"
-                caption="Business website for the University of Central Florida's historical Asian Cultural Fraternity. Sub 1ms load time! 92/100 Google Index Analytics."
+                caption="Business website for the University of Central Florida's historical Asian Cultural Fraternity. Sub 1ms load time! 93/100 Google Index Analytics."
               />
             </div>
           </FadeInSection>
