@@ -7,7 +7,7 @@ import {
 const Experience = ({ experience }) => {
   return (
     <section
-      aria-labelledby="experience-title text-pretty text-balance group"
+      aria-labelledby="experience-title text-pretty text-balance"
       className="pt-8 px-8 lg:px-16 rounded-lg max-w-sm xs:max-w-md sm:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto transition-all duration-300 ease-in-out"
     >
       <div className="flex flex-col justify-center pb-12">
@@ -53,7 +53,7 @@ const Experience = ({ experience }) => {
                 icon={exp.type === "work" ? faBriefcase : faGraduationCap}
               />
             </div>
-            <div className="p-6 bg-gradient rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <div className="p-6 bg-gradient group rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
               <div className="flex flex-col sm:flex-row items-center justify-between">
                 <h2
                   className="text-lg sm:text-xl text-center sm:text-left font-semibold text-white"
@@ -71,9 +71,21 @@ const Experience = ({ experience }) => {
               <p className="text-gray-100 mt-2 text-center sm:text-left whitespace-pre-line ">
                 {exp.description}
               </p>
-              <p className="text-white italic mt-2 text-center font-semibold sm:text-left whitespace-pre-line">
-                {exp.highlight}
-              </p>
+              {exp.highlightUrl ? (
+              <a
+                href={exp.highlightUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:cursor-pointer"
+              >
+                <p className="fun-text group-hover:bg-right font-semibold pt-1.5 italic mt-2 text-center sm:text-left whitespace-pre-line">
+                  {exp.highlight}
+                </p>
+              </a>
+              ) : (  <p className="text-white font-semibold pt-1.5 italic mt-2 text-center sm:text-left whitespace-pre-line">
+                  {exp.highlight}
+                </p>
+              )}
             </div>
           </div>
         ))}

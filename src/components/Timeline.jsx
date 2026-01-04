@@ -6,7 +6,7 @@ export default function Timeline() {
       type: "education",
       title: "M.S. Robotics & Autonomous Systems",
       organization: "University of Central Florida",
-      dateRange: "Starting Jan 2026",
+      dateRange: "Started Jan 2026",
       description:
         "Accepted into UCF's Robotics and Autonomous Systems Masters program.",
     },
@@ -17,12 +17,9 @@ export default function Timeline() {
       dateRange: "Sep 2025 - Present",
       description:
         "Focus on supporting customers by troubleshooting the ServiceNow platform related to authentication (LDAP/SSO), web services (SOAP/REST), data extraction (JDBC), integrations, scripting, networking, relational databases, and log analysis.",
-<<<<<<< HEAD
       highlight: `★ Certified System Administrator ★`,
+      highlightUrl: "https://www.credly.com/badges/8cb66e4b-3e09-4676-a312-4fba67e2af26/linked_in_profile",
 
-=======
-      highlight: `★ ServiceNow Certified ★`,
->>>>>>> 111b4f518e77a2c779f87a8d83da936f15698bd6
     },
     {
       type: "work",
