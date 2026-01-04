@@ -1,6 +1,16 @@
 import Porto from "../../public/Porto.webp";
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function SelfCard(props) {
+  // const vfx = () => document.getElementById("vfx-gallery-title");
+  const { pathname } = useLocation();
+
+  const buttonText =
+    pathname === "/vfx" ? "See my Experience." : "See my VFX Library.";
+
+  const linkTarget = pathname === "/vfx" ? "/" : "/vfx";
+
   return (
     <div className="bg-gradient border-neutral-800 border-t group">
       <div className="grid grid-cols-1 md:grid-cols-3 px-4 sm:pl-8 py-8">
@@ -31,13 +41,20 @@ function SelfCard(props) {
               >
                 Software developer with a background in web design,
                 client-server applications, software development cycles, and IT
-                best practices. Current Technical Support Engineer for 
-                ServiceNow. Previous experience at the University of Central Florida,
-                Daytona State College, and Lockheed Martin. <br />
-                See my VFX work below.
+                best practices. Current Technical Support Engineer for
+                ServiceNow. Previous experience at the University of Central
+                Florida, Daytona State College, and Lockheed Martin. <br />
               </figcaption>
+              <Link
+                to={linkTarget}
+                draggable={false}
+                aria-label="View all projects by the Ghiasy Alexandre"
+              >
+                <p className="fun-text hover:bg-right text-center lg:text-xl xl:text-2xl pt-1.5 hover:cursor-pointer">
+                  {buttonText}
+                </p>
+              </Link>
               <hr className="self-hr mx-auto my-4 lg:my-8 w-[80%] group-hover:bg-right" />
-
               <div className="flex justify-evenly">
                 <a
                   className="group/icon"

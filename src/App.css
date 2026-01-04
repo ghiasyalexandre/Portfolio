@@ -58,3 +58,23 @@
   --color-stop-2: #6c5ce7;
   --color-stop-3: #f56d9a;
 }
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 16px;
+  bottom: 47px;
+
+  width: 4px; /* border thickness */
+
+  background: linear-gradient(135deg, #55efc4, #6c5ce7, #d63031);
+  background-size: 200% 200%;
+  background-position: 0% 0%;
+  transition: background 0.5s ease-in-out;
+}
+
+/* Hover state = smoothly shift the gradient */
+.timeline:hover::before {
+  background-position: 100% 100%;
+}

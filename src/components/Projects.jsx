@@ -49,8 +49,19 @@ export default function Projects() {
           <hr className="w-48 lg:w-72 border-neutral-400/50 mx-auto"></hr>
         </div>
       </FadeInSection>
-      <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center gap-8 mx-4 xs:mx-12 sm:mx-16 ">
+      <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center gap-6 mx-4 xs:mx-12 sm:mx-16 ">
         <div className="flex flex-col gap-8">
+          <FadeInSection>
+            <div ref={reveal}>
+              <VideoCard
+                cardTitle="VRon"
+                video={VRonVid}
+                skills={["unity", "sharp", "vr"]}
+                link="https://github.com/ghiasyalexandre"
+                caption="A Mario Kart like virtual reality game with Tron like visuals."
+              />
+            </div>
+          </FadeInSection>
           <FadeInSection>
             <section aria-labelledby="plight-of-proteus-title" ref={reveal}>
               <div className=" bg-gradient border border-white rounded-xl hover:shadow-neonLightSlim transition-all duration-1000 ease-in-out">
@@ -90,7 +101,8 @@ export default function Projects() {
                   <hr className="border-neutral-700 my-4 mx-8" />
                   <figcaption className="text-center text-neutral-300 text-base sm:text-lg lg:text-base xl:text-xl mx-8 md:mx-16 mb-2 ">
                     A 2D procedurally generated Rogue like adventure game
-                    optimized to run within the browser with webGL.
+                    optimized to run within the browser with webGL made in
+                    Unity.
                   </figcaption>
                   <div className="flex justify-center py-2">
                     <DynamicSkills skills={["unity", "sharp"]} />
@@ -98,44 +110,6 @@ export default function Projects() {
                 </figure>
               </div>
             </section>
-          </FadeInSection>
-
-          <FadeInSection>
-            <div ref={reveal}>
-              <Card
-                cardTitle="Money Maker Mindset"
-                cardImg="./MMindset.webp"
-                skills={["angular", "html", "ts", "css"]}
-                link="https://financial-app-8ra.pages.dev/"
-                caption={`A Financial Education website with articles on investing, saving, and tools such as a loan calculator. \n(work in progress)`}
-              />
-            </div>
-          </FadeInSection>
-
-          <FadeInSection>
-            <div ref={reveal}>
-              <VideoCard
-                cardTitle="VRon"
-                video={VRonVid}
-                skills={["unity", "sharp", "vr"]}
-                link="https://github.com/ghiasyalexandre"
-                caption="A Mario Kart like virtual reality game with Tron like visuals."
-              />
-            </div>
-          </FadeInSection>
-
-          <FadeInSection>
-            <div ref={reveal}>
-              <YoutubeCard
-                cardTitle="Price Review"
-                video="xcHfXqt_XFM"
-                thumbnail="./PriceReviewThumbnail.webp"
-                caption="A product review website where users can see or post reviews and view other users. Implemented user
-      sign-up/login system, product reviewing, profanity filter, review abuse reporting, and frontend administrator
-      controls."
-                skills={["html", "js", "sql", "php"]}
-              />
-            </div>
           </FadeInSection>
 
           <FadeInSection>
@@ -149,16 +123,39 @@ export default function Projects() {
               />
             </div>
           </FadeInSection>
+
+          <FadeInSection>
+            <div ref={reveal}>
+              <Card
+                cardTitle="SimpleC Compiler"
+                cardImg={SimpleC}
+                link="https://github.com/ghiasyalexandre/SimpleC"
+                skills={["c"]}
+                caption="A Simplistic Version of C called SimpleC. Implemented a text parser to identify keywords, identifiers, variables, and function calls."
+              />
+            </div>
+          </FadeInSection>
+
+          <FadeInSection>
+            <div ref={reveal}>
+              <Card
+                cardTitle="Money Maker Mindset"
+                cardImg="./MMindset.webp"
+                skills={["angular", "html", "ts", "css"]}
+                link="https://financial-app-8ra.pages.dev/"
+                caption={`A Financial Education website with articles on investing, saving, and tools such as a loan calculator. \n(work in progress)`}
+              />
+            </div>
+          </FadeInSection>
         </div>
         <div className="flex flex-col gap-4 lg:gap-8">
           <FadeInSection>
             <div ref={reveal}>
-              <Card
-                cardTitle="Mahtx Detail Co"
-                cardImg="./Mahtx.webp"
-                skills={["react", "html", "js", "css"]}
-                link="https://mahtxdetail.com/"
-                caption="Car Detailing Business website email booking system, SEO optimized score of 92 from Google Index Analytics."
+              <VideoCard
+                cardTitle="Audio Visualizer"
+                video={Viz}
+                skills={["unity", "sharp"]}
+                caption="An efficient Voxel audio visualization using hlsl shaders to push 1 million voxels at more than 60fps with plenty of color!"
               />
             </div>
           </FadeInSection>
@@ -176,6 +173,18 @@ export default function Projects() {
           </FadeInSection>
 
           <FadeInSection>
+            <div ref={reveal}>
+              <Card
+                cardTitle="Mahtx Detail Co"
+                cardImg="./Mahtx.webp"
+                skills={["react", "html", "js", "css"]}
+                link="https://mahtxdetail.com/"
+                caption="Car Detailing Business website email booking system, SEO optimized score of 96/100 from Google Index Analytics."
+              />
+            </div>
+          </FadeInSection>
+
+          <FadeInSection>
             <Card
               cardTitle="Taildawg Productions"
               cardImg="./Taildawg.webp"
@@ -187,33 +196,24 @@ export default function Projects() {
 
           <FadeInSection>
             <div ref={reveal}>
-              <VideoCard
-                cardTitle="Audio Visualizer"
-                video={Viz}
-                skills={["unity", "sharp"]}
-                caption="An efficient Voxel audio visualization using hlsl shaders to push 1 million voxels at more than 60fps with plenty of color!"
+              <YoutubeCard
+                cardTitle="Price Review"
+                video="xcHfXqt_XFM"
+                thumbnail="./PriceReviewThumbnail.webp"
+                caption="A product review website where users can see or post reviews and view other users. Implemented user
+                sign-up/login system, product reviewing, profanity filter, review abuse reporting, and frontend administrator
+                controls."
+                skills={["html", "js", "sql", "php"]}
               />
             </div>
           </FadeInSection>
-
-          <div className="pb-4 lg:pb-12">
-            <FadeInSection>
-              <div ref={reveal}>
-                <Card
-                  cardTitle="SimpleC Compiler"
-                  cardImg={SimpleC}
-                  link="https://github.com/ghiasyalexandre/SimpleC"
-                  skills={["c"]}
-                  caption="A Simplistic Version of C called SimpleC. Implemented a text parser to identify keywords, identifiers, variables, and function calls."
-                />
-              </div>
-            </FadeInSection>
-          </div>
         </div>
       </div>
       <div className="flex justify-center py-12 w-full ">
         <Link to="/vfx" draggable={false} aria-label="View VFX Gallery">
-          <button className="bg-gradient text-white scale-110">View VFX Work</button>
+          <button className="bg-gradient text-white scale-110">
+            View VFX Work
+          </button>
         </Link>
       </div>
     </article>

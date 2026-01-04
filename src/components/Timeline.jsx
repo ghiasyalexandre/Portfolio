@@ -4,20 +4,25 @@ export default function Timeline() {
   const experience = [
     {
       type: "education",
-      title: "M.S. Robotics Systems",
+      title: "M.S. Robotics & Autonomous Systems",
       organization: "University of Central Florida",
       dateRange: "Starting Jan 2026",
-      description: "Accepted into UCF's Robotics and Autonomous Systems Masters program.",
+      description:
+        "Accepted into UCF's Robotics and Autonomous Systems Masters program.",
     },
-        {
+    {
       type: "work",
       title: "Technical Support Engineer - Automation",
       organization: "ServiceNow",
       dateRange: "Sep 2025 - Present",
       description:
         "Focus on supporting customers by troubleshooting the ServiceNow platform related to authentication (LDAP/SSO), web services (SOAP/REST), data extraction (JDBC), integrations, scripting, networking, relational databases, and log analysis.",
+<<<<<<< HEAD
       highlight: `★ Certified System Administrator ★`,
 
+=======
+      highlight: `★ ServiceNow Certified ★`,
+>>>>>>> 111b4f518e77a2c779f87a8d83da936f15698bd6
     },
     {
       type: "work",
