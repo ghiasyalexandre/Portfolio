@@ -49,8 +49,8 @@ export default function Projects() {
           <hr className="w-48 lg:w-72 border-neutral-400/50 mx-auto"></hr>
         </div>
       </FadeInSection>
-      <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center gap-6 mx-4 xs:mx-12 sm:mx-16 ">
-        <div className="flex flex-col gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center gap-4 lg:gap-6 mx-4 md:mx-8 xl:mx-12 ">
+        <div className="flex flex-col gap-4 lg:gap-8">
           <FadeInSection>
             <div ref={reveal}>
               <VideoCard
@@ -119,7 +119,7 @@ export default function Projects() {
                 cardImg="./pdpsi.webp"
                 skills={["angular", "html", "ts", "css"]}
                 link="https://ucfpdpsi.org"
-                caption="Business website for the University of Central Florida's historical Asian Cultural Fraternity. Sub 1ms load time! 93/100 Google Index Analytics."
+                caption="Business website for the University of Central Florida's historical Asian Cultural Fraternity. Sub 1ms load time! 92/100 Google Index Analytics."
               />
             </div>
           </FadeInSection>
