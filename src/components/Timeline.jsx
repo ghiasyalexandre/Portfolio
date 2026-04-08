@@ -2,14 +2,14 @@ import ExperienceShowcase from "./Experience";
 
 export default function Timeline() {
   const experience = [
-    {
-      type: "education",
-      title: "M.S. Robotics & Autonomous Systems",
-      organization: "University of Central Florida",
-      dateRange: "Started Jan 2026",
-      description:
-        "Accepted into UCF's Robotics and Autonomous Systems Masters program.",
-    },
+    // {
+    //   type: "education",
+    //   title: "M.S. Robotics & Autonomous Systems",
+    //   organization: "University of Central Florida",
+    //   dateRange: "Started Jan 2026",
+    //   description:
+    //     "Accepted into UCF's Robotics and Autonomous Systems Masters program.",
+    // },
     {
       type: "work",
       title: "Technical Support Engineer - Automation",
@@ -17,9 +17,9 @@ export default function Timeline() {
       dateRange: "Sep 2025 - Present",
       description:
         "Focus on supporting customers by troubleshooting the ServiceNow platform related to authentication (LDAP/SSO), web services (SOAP/REST), data extraction (JDBC), integrations, scripting, networking, relational databases, and log analysis.",
-      highlight: `★ Certified System Administrator ★`,
-      highlightUrl: "https://www.credly.com/badges/8cb66e4b-3e09-4676-a312-4fba67e2af26/linked_in_profile",
-
+      highlight: `★ Certified System Administrator & Discovery Implementation Specialist ★`,
+      highlightUrl:
+        "https://www.credly.com/badges/8cb66e4b-3e09-4676-a312-4fba67e2af26/linked_in_profile",
     },
     {
       type: "work",
