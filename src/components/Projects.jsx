@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import VideoCard from "./VideoCard";
 import DynamicSkills from "./DynamicSkills";
 import { useState } from "react";
+import DuskVideo from "../../public/videos/duskHoldingVideo.webm";
 // const VideoCard = lazy(() => import("../components/VideoCard"));
 
 export default function Projects() {
@@ -114,12 +115,12 @@ export default function Projects() {
 
           <FadeInSection>
             <div ref={reveal}>
-              <Card
-                cardTitle="UCF Pi Delta Psi"
-                cardImg="./pdpsi.webp"
+              <VideoCard
+                cardTitle="Dusk Holdings LLC"
+                video={DuskVideo}
                 skills={["angular", "html", "ts", "css"]}
-                link="https://ucfpdpsi.org"
-                caption="Business website for the University of Central Florida's historical Asian Cultural Fraternity. Sub 1ms load time! 92/100 Google Index Analytics."
+                link="https://duskholding.com"
+                caption="Dusk Holdings LLC delivers manufacturing driven projects with a focus on accuracy, reliability, and high-performance components."
               />
             </div>
           </FadeInSection>
@@ -132,6 +133,18 @@ export default function Projects() {
                 link="https://github.com/ghiasyalexandre/SimpleC"
                 skills={["c"]}
                 caption="A Simplistic Version of C called SimpleC. Implemented a text parser to identify keywords, identifiers, variables, and function calls."
+              />
+            </div>
+          </FadeInSection>
+
+          <FadeInSection>
+            <div ref={reveal}>
+              <Card
+                cardTitle="UCF Pi Delta Psi"
+                cardImg="./pdpsi.webp"
+                skills={["angular", "html", "ts", "css"]}
+                link="https://ucfpdpsi.org"
+                caption="Business website for the University of Central Florida's historical Asian Cultural Fraternity. Sub 1ms load time! 92/100 Google Index Analytics."
               />
             </div>
           </FadeInSection>

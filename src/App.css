@@ -78,3 +78,23 @@
 .timeline:hover::before {
   background-position: 100% 100%;
 }
+
+.youtube-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.youtube-wrapper .yt-lite {
+  width: 100%;
+  height: 100%;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.youtube-wrapper .yt-lite.lyt-activated::before {
+  background-image: none !important;
+  height: 0 !important;
+  padding-bottom: 0 !important;
+}
