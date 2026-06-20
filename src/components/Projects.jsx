@@ -118,7 +118,7 @@ export default function Projects() {
               <VideoCard
                 cardTitle="Dusk Holdings LLC"
                 video={DuskVideo}
-                skills={["angular", "html", "ts", "css"]}
+                skills={["next", "html", "ts", "css"]}
                 link="https://duskholding.com"
                 caption="Dusk Holdings LLC delivers manufacturing driven projects with a focus on accuracy, reliability, and high-performance components."
               />
