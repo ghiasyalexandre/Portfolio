@@ -72,17 +72,18 @@ const Experience = ({ experience }) => {
                 {exp.description}
               </p>
               {exp.highlightUrl ? (
-              <a
-                href={exp.highlightUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:cursor-pointer"
-              >
-                <p className="fun-text group-hover:bg-right font-semibold pt-1.5 italic mt-2 text-center sm:text-left whitespace-pre-line">
-                  {exp.highlight}
-                </p>
-              </a>
-              ) : (  <p className="text-white font-semibold pt-1.5 italic mt-2 text-center sm:text-left whitespace-pre-line">
+                <a
+                  href={exp.highlightUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:cursor-pointer"
+                >
+                  <p className="fun-text group-hover:bg-right font-semibold pt-1.5 italic mt-2 text-center sm:text-left whitespace-pre-line">
+                    {exp.highlight}
+                  </p>
+                </a>
+              ) : (
+                <p className="text-white font-semibold pt-1.5 italic mt-2 text-center sm:text-left whitespace-pre-line">
                   {exp.highlight}
                 </p>
               )}
