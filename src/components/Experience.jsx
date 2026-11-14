@@ -37,12 +37,12 @@ const Experience = ({ experience }) => {
             className="mb-8 ml-8 relative shadow shadow-white/30"
             aria-labelledby={`experience-title-${index}`}
           >
-            <div className="absolute -left-12 top-6 w-8 h-8 bg-white text-black rounded-full flex items-center justify-center shadow-lg">
-              <FontAwesomeIcon
+            <div id={`${index}`} className={`absolute -left-[54px] top-6 w-10 h-10 bg-white text-black peer-hover-[:nth-of-type(${index})]:animate-pulse rounded-full flex items-center justify-center shadow-lg`}>
+              <FontAwesomeIcon className="w-7 h-5"
                 icon={exp.type === "work" ? faBriefcase : faGraduationCap}
               />
             </div>
-            <div className="p-6 bg-gradient rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <div className={`p-6 bg-gradient peer-[:nth-of-type(${index})]: rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300`}>
               <div className="flex flex-col sm:flex-row items-center justify-between">
                 <h2
                   className="text-lg sm:text-xl text-center sm:text-left font-semibold text-gray-100"

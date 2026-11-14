@@ -13,11 +13,10 @@ const Projects = lazy(() => import("./components/Projects"));
 
 import "./App.css";
 import Email from "./components/Email";
-import ErrorPage from "./components/ErrorPage";
 
 function App() {
   return (
-    <HelmetProvider>
+    <HelmetProvider className="sr-only">
       <div className="App">
         <Helmet>
           <title>Ghiasy Alexandre's Portfolio</title>
