@@ -4,15 +4,15 @@ function Skills() {
   return (
     <div className="bg-gradient border-y border-neutral-800 w-full relative h-36 xs:h-40 sm:h-44 lg:h-52">
       <div className="flex flex-col justify-center pb-6">
-        <h1 className="mt-4 mb-2 mx-auto text-4xl sm:text-5xl lg:text-6xl font-semibold text-white text-center justify-items-center">
+        <h1 className="mt-4 mb-2 mx-auto text-4xl sm:text-5xl lg:text-6xl font-semibold text-white text-center justify-items-center border-b border-neutral-700 pb-2 sm:pb-4">
           Technologies
         </h1>
-        <hr className="w-80 lg:w-96 border-neutral-400 mt-2 mx-auto"></hr>
+        {/* <hr className="w-80 lg:w-96 border-neutral-400/50 mt-2 mx-auto"></hr> */}
       </div>
       {/* <hr className="w-28 justify-self-center"></hr> */}
       <div className="skills-container">
         <svg
-          className="color-java skill-icon tooltip h-16"
+          className="color-java skill-icon tooltip h-14"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 384 512"
         >
@@ -67,6 +67,21 @@ function Skills() {
           <path d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z" />
           <title id="bottom" className="tooltiptext">
             CSS
+          </title>
+        </svg>
+
+        <svg
+          className="color-react skill-icon tooltip"
+          xmlns="http://www.w3.org/2000/svg"
+          height="1em"
+          viewBox="0 0 128 128"
+        >
+          <path
+            fill="currentColor"
+            d="M64 0a64 64 0 1 1 0 128A64 64 0 0 1 64 0ZM37.5 37.5v53h10.4V56.8l38.2 46.1c1.2-.4 2.4-.8 3.6-1.3L50.4 52.8V37.5H37.5Zm53 0H80.1V74l10.4 12.6V37.5Z"
+          />{" "}
+          <title id="bottom" className="tooltiptext">
+            Next.js
           </title>
         </svg>
 
@@ -169,9 +184,8 @@ function Skills() {
 
       <div className="skills-container2">
         <svg
-          className="color-java skill-icon tooltip"
+          className="color-java skill-icon tooltip h-14"
           xmlns="http://www.w3.org/2000/svg"
-          height="1em"
           viewBox="0 0 384 512"
         >
           <path d="M277.74 312.9c9.8-6.7 23.4-12.5 23.4-12.5s-38.7 7-77.2 10.2c-47.1 3.9-97.7 4.7-123.1 1.3-60.1-8 33-30.1 33-30.1s-36.1-2.4-80.6 19c-52.5 25.4 130 37 224.5 12.1zm-85.4-32.1c-19-42.7-83.1-80.2 0-145.8C296 53.2 242.84 0 242.84 0c21.5 84.5-75.6 110.1-110.7 162.6-23.9 35.9 11.7 74.4 60.2 118.2zm114.6-176.2c.1 0-175.2 43.8-91.5 140.2 24.7 28.4-6.5 54-6.5 54s62.7-32.4 33.9-72.9c-26.9-37.8-47.5-56.6 64.1-121.3zm-6.1 270.5a12.19 12.19 0 0 1-2 2.6c128.3-33.7 81.1-118.9 19.8-97.3a17.33 17.33 0 0 0-8.2 6.3 70.45 70.45 0 0 1 11-3c31-6.5 75.5 41.5-20.6 91.4zM348 437.4s14.5 11.9-15.9 21.2c-57.9 17.5-240.8 22.8-291.6.7-18.3-7.9 16-19 26.8-21.3 11.2-2.4 17.7-2 17.7-2-20.3-14.3-131.3 28.1-56.4 40.2C232.84 509.4 401 461.3 348 437.4zM124.44 396c-78.7 22 47.9 67.4 148.1 24.5a185.89 185.89 0 0 1-28.2-13.8c-44.7 8.5-65.4 9.1-106 4.5-33.5-3.8-13.9-15.2-13.9-15.2zm179.8 97.2c-78.7 14.8-175.8 13.1-233.3 3.6 0-.1 11.8 9.7 72.4 13.6 92.2 5.9 233.8-3.3 237.1-46.9 0 0-6.4 16.5-76.2 29.7zM260.64 353c-59.2 11.4-93.5 11.1-136.8 6.6-33.5-3.5-11.6-19.7-11.6-19.7-86.8 28.8 48.2 61.4 169.5 25.9a60.37 60.37 0 0 1-21.1-12.8z" />
@@ -225,6 +239,21 @@ function Skills() {
           <path d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z" />
           <title id="bottom" className="tooltiptext">
             CSS
+          </title>
+        </svg>
+
+        <svg
+          className="color-react skill-icon tooltip"
+          xmlns="http://www.w3.org/2000/svg"
+          height="1em"
+          viewBox="0 0 128 128"
+        >
+          <path
+            fill="currentColor"
+            d="M64 0a64 64 0 1 1 0 128A64 64 0 0 1 64 0ZM37.5 37.5v53h10.4V56.8l38.2 46.1c1.2-.4 2.4-.8 3.6-1.3L50.4 52.8V37.5H37.5Zm53 0H80.1V74l10.4 12.6V37.5Z"
+          />{" "}
+          <title id="bottom" className="tooltiptext">
+            Next.js
           </title>
         </svg>
 

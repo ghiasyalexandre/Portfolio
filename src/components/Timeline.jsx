@@ -2,6 +2,14 @@ import ExperienceShowcase from "./Experience";
 
 export default function Timeline() {
   const experience = [
+    // {
+    //   type: "education",
+    //   title: "M.S. Robotics & Autonomous Systems",
+    //   organization: "University of Central Florida",
+    //   dateRange: "Started Jan 2026",
+    //   description:
+    //     "Accepted into UCF's Robotics and Autonomous Systems Masters program.",
+    // },
     {
       type: "work",
       title: "Datacenter Technician",

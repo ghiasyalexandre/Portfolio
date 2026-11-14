@@ -25,6 +25,8 @@
   overflow: hidden;
   display: flex;
   white-space: nowrap;
+  will-change: transform;
+
   width: 4.5vw;
   height: auto;
   min-width: 22px;
@@ -32,8 +34,6 @@
     max-width: 52px !important;
   }
 }
-
-
 
 .skill-icon-card-footer {
   margin: auto;

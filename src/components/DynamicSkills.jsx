@@ -19,7 +19,7 @@ function DynamicSkills(props) {
             <title className="tooltip hover:scale-115 transition-transform ease-in-out duration-300text">
               Javascript
             </title>
-          </svg>
+          </svg>,
         );
       } else if (skill === "java") {
         results.push(
@@ -33,7 +33,7 @@ function DynamicSkills(props) {
             <title className="tooltip hover:scale-115 transition-transform ease-in-out duration-300text">
               Java
             </title>
-          </svg>
+          </svg>,
         );
       } else if (skill === "sharp") {
         results.push(
@@ -47,7 +47,7 @@ function DynamicSkills(props) {
             <title className="tooltip hover:scale-115 transition-transform ease-in-out duration-300text">
               C#
             </title>
-          </svg>
+          </svg>,
         );
       } else if (skill === "c") {
         results.push(
@@ -61,7 +61,7 @@ function DynamicSkills(props) {
             <title className="tooltip hover:scale-115 transition-transform ease-in-out duration-300text">
               C
             </title>
-          </svg>
+          </svg>,
         );
       } else if (skill === "php") {
         results.push(
@@ -75,7 +75,7 @@ function DynamicSkills(props) {
             <title className="tooltip hover:scale-115 transition-transform ease-in-out duration-300text">
               PHP
             </title>
-          </svg>
+          </svg>,
         );
       } else if (skill === "sql") {
         results.push(
@@ -89,7 +89,7 @@ function DynamicSkills(props) {
             <title className="tooltip hover:scale-115 transition-transform ease-in-out duration-300text">
               SQL
             </title>
-          </svg>
+          </svg>,
         );
       } else if (skill === "react") {
         results.push(
@@ -103,7 +103,7 @@ function DynamicSkills(props) {
             <title className="tooltip hover:scale-115 transition-transform ease-in-out duration-300text">
               React
             </title>
-          </svg>
+          </svg>,
         );
       } else if (skill === "angular") {
         results.push(
@@ -117,7 +117,7 @@ function DynamicSkills(props) {
             <title className="tooltip hover:scale-115 transition-transform ease-in-out duration-300text">
               Angular
             </title>
-          </svg>
+          </svg>,
         );
       } else if (skill === "ts") {
         results.push(
@@ -131,7 +131,7 @@ function DynamicSkills(props) {
             <title className="tooltip hover:scale-115 transition-transform ease-in-out duration-300text">
               Typescript
             </title>
-          </svg>
+          </svg>,
         );
       } else if (skill === "unity") {
         results.push(
@@ -145,7 +145,7 @@ function DynamicSkills(props) {
             <title className="tooltip hover:scale-115 transition-transform ease-in-out duration-300text">
               Unity
             </title>
-          </svg>
+          </svg>,
         );
       } else if (skill === "html") {
         results.push(
@@ -159,7 +159,7 @@ function DynamicSkills(props) {
             <title className="tooltip hover:scale-115 transition-transform ease-in-out duration-300text">
               HTML
             </title>
-          </svg>
+          </svg>,
         );
       } else if (skill === "vr") {
         results.push(
@@ -173,7 +173,26 @@ function DynamicSkills(props) {
             <title className="tooltip hover:scale-115 transition-transform ease-in-out duration-300text">
               VR
             </title>
-          </svg>
+          </svg>,
+        );
+      } else if (skill === "next") {
+        results.push(
+          <svg
+            key={index}
+            className="color-html skill-icon-card-footer h-6 xs:h-7 sm:h-8 md:h-9 xl:h-10 tooltip hover:scale-115 transition-transform ease-in-out duration-300"
+            viewBox="0 0 128 128"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            // xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <title className="tooltip hover:scale-115 transition-transform ease-in-out duration-300text">
+              Next.js
+            </title>
+            <path
+              fill="currentColor"
+              d="M64 0a64 64 0 1 1 0 128A64 64 0 0 1 64 0ZM37.5 37.5v53h10.4V56.8l38.2 46.1c1.2-.4 2.4-.8 3.6-1.3L50.4 52.8V37.5H37.5Zm53 0H80.1V74l10.4 12.6V37.5Z"
+            />
+          </svg>,
         );
       } else if (skill === "css") {
         results.push(
@@ -187,7 +206,7 @@ function DynamicSkills(props) {
             <title className="tooltip hover:scale-115 transition-transform ease-in-out duration-300text">
               CSS
             </title>
-          </svg>
+          </svg>,
         );
       }
     });

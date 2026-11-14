@@ -2,8 +2,7 @@ const PoPGif = `${import.meta.env.BASE_URL}PoP.gif`;
 const PoPThumbnail = `${import.meta.env.BASE_URL}PoPThumbnail.webp`;
 const VRonVid = `${import.meta.env.BASE_URL}videos/VRon.webm`;
 const SimpleC = `${import.meta.env.BASE_URL}SimpleC.webp`;
-const Viz = `${import.meta.env.BASE_URL}videos/Viz.webm`;
-import DuskVideo from "/videos/duskHoldingVideo.webm";
+const Viz = `${import.meta.env.BASE_URL}videos/Voxel1.webm`;
 import FadeInSection from "./FadeInSection";
 import YoutubeCard from "./YoutubeCard";
 import Card from "./Card";
@@ -11,6 +10,7 @@ import { Link } from "react-router-dom";
 import VideoCard from "./VideoCard";
 import DynamicSkills from "./DynamicSkills";
 import { useState } from "react";
+const DuskVideo = `${import.meta.env.BASE_URL}videos/duskHoldingVideo.webm`;
 // const VideoCard = lazy(() => import("../components/VideoCard"));
 
 export default function Projects() {
