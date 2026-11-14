@@ -2,19 +2,19 @@ import ExperienceShowcase from "./Experience";
 
 export default function Timeline() {
   const experience = [
-    // {
-    //   type: "education",
-    //   title: "M.S. Robotics & Autonomous Systems",
-    //   organization: "University of Central Florida",
-    //   dateRange: "Started Jan 2026",
-    //   description:
-    //     "Accepted into UCF's Robotics and Autonomous Systems Masters program.",
-    // },
+    {
+      type: "work",
+      title: "Datacenter Technician",
+      organization: "TensorWave",
+      dateRange: "Oct 2026 - Present",
+      description:
+        "Install, configure, diagnose, and maintain AMD servers ensuring optimal server performance, network connectivity, hardware reliability, and operational uptime for large-scale AI workloads.",
+    },
     {
       type: "work",
       title: "Technical Support Engineer - Automation",
       organization: "ServiceNow",
-      dateRange: "Sep 2025 - Present",
+      dateRange: "Sep 2025 - Sep 2026",
       description:
         "Focus on supporting customers by troubleshooting the ServiceNow platform related to authentication (LDAP/SSO), web services (SOAP/REST), data extraction (JDBC), integrations, scripting, networking, relational databases, and log analysis.",
       highlight: `★ Certified System Administrator & Discovery Implementation Specialist ★`,

@@ -39,11 +39,12 @@ function SelfCard(props) {
                 aria-labelledby="about-me"
                 className=" text-neutral-200 group-hover:text-white w-[80%] mx-auto text-center text-sm sm:text-base lg:text-xl xl:text-2xl !leading-tight xl:!leading-9 transition-all duration-500 ease-in-out"
               >
-                Software developer with a background in web design,
-                client-server applications, software development cycles, and IT
-                best practices. Current Technical Support Engineer for
-                ServiceNow. Previous experience at the University of Central
-                Florida, Daytona State College, and Lockheed Martin. <br />
+                Data Center Technician at TensorWave, specializing in AMD-powered
+  GPU infrastructure, hardware diagnostics, server maintenance, and
+  network troubleshooting. Software development background spanning
+  web applications, enterprise systems, and IT operations, with prior
+  experience at ServiceNow, the University of Central Florida,
+  Daytona State College, and Lockheed Martin. <br />
               </figcaption>
               <Link
                 to={linkTarget}
