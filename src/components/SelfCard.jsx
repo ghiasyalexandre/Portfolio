@@ -1,6 +1,16 @@
-const Porto = `${import.meta.env.BASE_URL}Porto.webp`;
+import Porto from "/Porto.webp";
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function SelfCard(props) {
+  // const vfx = () => document.getElementById("vfx-gallery-title");
+  const { pathname } = useLocation();
+
+  const buttonText =
+    pathname === "/vfx" ? "See my Experience." : "See my VFX Library.";
+
+  const linkTarget = pathname === "/vfx" ? "/" : "/vfx";
+
   return (
     <div className="bg-gradient border-neutral-800 border-t group">
       <div className="grid grid-cols-1 md:grid-cols-3 px-4 sm:pl-8 py-8">
@@ -27,17 +37,24 @@ function SelfCard(props) {
             <div>
               <figcaption
                 aria-labelledby="about-me"
-                className=" text-neutral-200 w-[80%] mx-auto text-center text-sm sm:text-base lg:text-xl xl:text-2xl !leading-tight xl:!leading-9"
+                className=" text-neutral-200 group-hover:text-white w-[80%] mx-auto text-center text-sm sm:text-base lg:text-xl xl:text-2xl !leading-tight xl:!leading-9 transition-all duration-500 ease-in-out"
               >
                 Software developer with a background in web design,
-                client-server applications, and software development cycles with
-                a focus on backend. Previous Programmer for Daytona State
-                College utilizing SQL, SQR, and PeopleTools. Interned at
-                Lockheed Martin involving simulations and C#. Check out my Audio
-                VFX library below.
+                client-server applications, software development cycles, and IT
+                best practices. Current Technical Support Engineer for
+                ServiceNow. Previous experience at the University of Central
+                Florida, Daytona State College, and Lockheed Martin. <br />
               </figcaption>
+              <Link
+                to={linkTarget}
+                draggable={false}
+                aria-label="View all projects by the Ghiasy Alexandre"
+              >
+                <p className="fun-text hover:bg-right text-center lg:text-xl xl:text-2xl pt-1.5 hover:cursor-pointer">
+                  {buttonText}
+                </p>
+              </Link>
               <hr className="self-hr mx-auto my-4 lg:my-8 w-[80%] group-hover:bg-right" />
-
               <div className="flex justify-evenly">
                 <a
                   className="group/icon"
@@ -49,7 +66,7 @@ function SelfCard(props) {
                 >
                   <svg
                     id="core"
-                    className="w-7 xs:w-6 sm:w-7 md:w-8 lg:w-10 tooltip group-hover/icon:scale-115 transition-all ease-in-out duration-300 opacity-80 hover:opacity-100 "
+                    className="w-7 xs:w-6 sm:w-7 md:w-8 lg:w-10 tooltip group-hover/icon:scale-115 transition-all ease-in-out duration-300 opacity-90 group-hover:opacity-100 "
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
                   >
@@ -77,7 +94,7 @@ function SelfCard(props) {
                 >
                   <svg
                     id="core"
-                    className="w-7 xs:w-6 sm:w-7 md:w-8 lg:w-10 tooltip group-hover/icon:scale-115 transition-all ease-in-out duration-300 opacity-80 hover:opacity-100"
+                    className="w-7 xs:w-6 sm:w-7 md:w-8 lg:w-10 tooltip group-hover/icon:scale-115 transition-all ease-in-out duration-300 opacity-90 group-hover:opacity-100"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 496 512"
                   >
@@ -99,7 +116,7 @@ function SelfCard(props) {
                 >
                   <svg
                     id="core"
-                    className="w-7 xs:w-6 sm:w-7 md:w-8 lg:w-10 tooltip group-hover/icon:scale-115 transition-all ease-in-out duration-300 opacity-80 hover:opacity-100 "
+                    className="w-7 xs:w-6 sm:w-7 md:w-8 lg:w-10 tooltip group-hover/icon:scale-115 transition-all ease-in-out duration-300 opacity-90 group-hover:opacity-100 "
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
                   >
@@ -121,7 +138,7 @@ function SelfCard(props) {
                 >
                   <svg
                     id="core"
-                    className="h-7 xs:h-6 sm:h-7 md:h-8 lg:h-10 tooltip group-hover/icon:scale-115 transition-all ease-in-out duration-300 opacity-80 hover:opacity-100"
+                    className="h-7 xs:h-6 sm:h-7 md:h-8 lg:h-10 tooltip group-hover/icon:scale-115 transition-all ease-in-out duration-300 opacity-90 group-hover:opacity-100"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 384 512"
                   >
