@@ -49,8 +49,7 @@ function YoutubeCard(props) {
             id={video}
             title={cardTitle}
             iframeClass="w-full h-full rounded-lg"
-            playerClass="hidden"
-            wrapperClass="youtube-lite-cover w-full aspect-video cursor-pointer border rounded-lg shadow-lg shadow-white/30"
+            wrapperClass="yt-lite youtube-lite-cover w-full aspect-video cursor-pointer border rounded-lg overflow-hidden shadow-lg shadow-white/30"
             lazyLoad={true}
             params="start=20&autoplay=1&mute=1"
             thumbnail={thumbnail}
