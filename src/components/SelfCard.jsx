@@ -1,4 +1,4 @@
-import Porto from "../../public/Porto.webp";
+const Porto = `${import.meta.env.BASE_URL}Porto.webp`;
 
 function SelfCard(props) {
   return (

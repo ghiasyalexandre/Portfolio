@@ -4,8 +4,9 @@
   overflow: hidden;
   justify-content: space-evenly;
   width: inherit;
-  left: 0%;
+  left: 0;
   animation: slide 12s infinite linear;
+  will-change: transform;
 }
 
 .skills-container2 {
@@ -14,8 +15,9 @@
   overflow: hidden;
   width: inherit;
   justify-content: space-evenly;
-  left: 0%;
+  left: 0;
   animation: slide2 12s infinite linear;
+  will-change: transform;
 }
 
 .skill-icon {
@@ -90,19 +92,30 @@
 
 @keyframes slide {
   from {
-    left: 0%;
+    transform: translateX(0);
   }
   to {
-    left: -100%;
+    transform: translateX(-100%);
   }
 }
 
 @keyframes slide2 {
   from {
-    left: 100%;
+    transform: translateX(100%);
   }
   to {
-    left: 0%;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skills-container,
+  .skills-container2 {
+    animation: none;
+  }
+
+  .skills-container2 {
+    transform: translateX(100%);
   }
 }
 

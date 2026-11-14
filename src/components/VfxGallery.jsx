@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
 import VFXCard from "./VFXCard";
 
-import Joji from "../../public/videos/CarJoji.webm";
-import InLove from "../../public/videos/FallInLove.webm";
-import Gunner from "../../public/videos/Gunner.webm";
-import Ideas from "../../public/videos/Ideas.mp4";
-import Pokemon from "../../public/videos/PokemonBattle.mp4";
-import OnAndOff from "../../public/videos/OnAndOff.mp4";
-import StudyTime from "../../public/videos/StudyTime.mp4";
-import Saturn from "../../public/videos/Saturn.webm";
-import Galaxy from "../../public/videos/Galaxy.mp4";
-import Tunnel from "../../public/videos/Tunnel.mp4";
+const Joji = `${import.meta.env.BASE_URL}videos/CarJoji.webm`;
+const InLove = `${import.meta.env.BASE_URL}videos/FallInLove.webm`;
+const Gunner = `${import.meta.env.BASE_URL}videos/Gunner.webm`;
+const Ideas = `${import.meta.env.BASE_URL}videos/Ideas.mp4`;
+const Pokemon = `${import.meta.env.BASE_URL}videos/PokemonBattle.mp4`;
+const OnAndOff = `${import.meta.env.BASE_URL}videos/OnAndOff.mp4`;
+const StudyTime = `${import.meta.env.BASE_URL}videos/StudyTime.mp4`;
+const Saturn = `${import.meta.env.BASE_URL}videos/Saturn.webm`;
+const Galaxy = `${import.meta.env.BASE_URL}videos/Galaxy.mp4`;
+const Tunnel = `${import.meta.env.BASE_URL}videos/Tunnel.mp4`;
 import { Helmet } from "react-helmet-async";
 
 export default function VfxGallery() {
