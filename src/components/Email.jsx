@@ -26,7 +26,7 @@ const Email = () => {
         "snF53js1vWDIoLxwn" // Replace with your EmailJS public key
       )
       .then(
-        (response) => {
+        () => {
           setStatus("SUCCESS");
 
           setName("");

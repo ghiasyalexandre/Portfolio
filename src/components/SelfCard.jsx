@@ -1,6 +1,8 @@
+import { Link, useLocation } from "react-router-dom";
+
 const Porto = `${import.meta.env.BASE_URL}Porto.webp`;
 
-function SelfCard(props) {
+function SelfCard() {
   // const vfx = () => document.getElementById("vfx-gallery-title");
   const { pathname } = useLocation();
 
@@ -38,26 +40,17 @@ function SelfCard(props) {
                 aria-labelledby="about-me"
                 className=" text-neutral-200 group-hover:text-white w-[80%] mx-auto text-center text-sm sm:text-base lg:text-xl xl:text-2xl !leading-tight xl:!leading-9 transition-all duration-500 ease-in-out"
               >
-                Software developer with a background in web design,
-                client-server applications, and software development cycles with
-                a focus on backend. Previous Programmer for Daytona State
-                College utilizing SQL, SQR, and PeopleTools. Interned at
-                Lockheed Martin involving simulations and C#. Check out my Audio
-                VFX library below.
+               Data Center Technician at TensorWave, specializing in AMD-powered
+  GPU infrastructure, hardware diagnostics, server maintenance, and
+  network troubleshooting. Software development background spanning
+  web applications, enterprise systems, and IT operations, with prior
+  experience at ServiceNow, the University of Central Florida,
+  Daytona State College, and Lockheed Martin.
               </figcaption>
               <Link
                 to={linkTarget}
                 draggable={false}
-                aria-label="View all projects by the Ghiasy Alexandre"
-              >
-                <p className="fun-text hover:bg-right text-center lg:text-xl xl:text-2xl pt-1.5 hover:cursor-pointer">
-                  {buttonText}
-                </p>
-              </Link>
-              <Link
-                to={linkTarget}
-                draggable={false}
-                aria-label="View all projects by the Ghiasy Alexandre"
+                aria-label={buttonText}
               >
                 <p className="fun-text hover:bg-right text-center lg:text-xl xl:text-2xl pt-1.5 hover:cursor-pointer">
                   {buttonText}

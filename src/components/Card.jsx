@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import DynamicSkills from "./DynamicSkills";
 
 function Card(props) {

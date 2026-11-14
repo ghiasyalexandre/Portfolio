@@ -21,7 +21,7 @@ export default function VideoPlayer(props) {
     if (videoRef.current) {
       try {
         await videoRef.current.play();
-      } catch (e) {
+      } catch {
         // do nothing
       }
     }
@@ -32,7 +32,7 @@ export default function VideoPlayer(props) {
       try {
         videoRef.current.muted = true;
         videoRef.current.pause();
-      } catch (e) {
+      } catch {
         // do nothing
       }
     }
