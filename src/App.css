@@ -18,7 +18,7 @@
                                 supported by Chrome, Edge, Opera and Firefox */
 
   /* this makes sure the padding and the border is included in the box sizing */
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .self-hr {
