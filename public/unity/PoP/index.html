@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="icon" href="data:,">
+    <title>Plight of Proteus</title>
+    <!-- Loader art: the main menu's backdrop (flattened layers) and the game's title font. -->
+    <link rel="preload" href="TemplateData/menu-bg.png" as="image">
+    <link rel="preload" href="TemplateData/gameplay-1987.ttf" as="font" type="font/ttf" crossorigin>
+    <style>
+      @font-face { font-family: "Gameplay 1987"; src: url("TemplateData/gameplay-1987.ttf") format("truetype"); font-display: block; }
+      :root {
+        --ink: #e9e6ff; --glow-a: #39f3ff; --glow-b: #ff3df5; --panel: rgba(12, 10, 24, .88);
+        --line: rgba(255, 255, 255, .16); --btn: clamp(46px, 9vmin, 66px); --stick: clamp(96px, 22vmin, 150px);
+        --safe-t: env(safe-area-inset-top, 0px); --safe-r: env(safe-area-inset-right, 0px);
+        --safe-b: env(safe-area-inset-bottom, 0px); --safe-l: env(safe-area-inset-left, 0px);
+      }
+      [hidden] { display: none !important; } /* buttons below set display:grid, which would override it */
+      html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #07060d;
+                   overscroll-behavior: none; -webkit-tap-highlight-color: transparent; }
+      body { font: 500 14px/1.3 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); }
+      #unity-canvas { position: fixed; inset: 0; width: 100%; height: 100%; display: block; background: #07060d; outline: none; touch-action: none; }
+
+      /* ---------- loader ---------- */
+      /* Same look as the in-game main menu: the floating-islands backdrop stretched to fill (as the
+         menu does) with crisp pixels, and white GAMEPLAY-1987 lettering with a dark outline. */
+      #loader { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+                gap: clamp(14px, 3vmin, 26px); padding: 16px; z-index: 5; color: #fff; text-transform: uppercase;
+                font-family: "Gameplay 1987", system-ui, sans-serif; letter-spacing: .04em;
+                background: #d7744a url("TemplateData/menu-bg.png") center / 100% 100% no-repeat; image-rendering: pixelated; }
+      .pixel-text { color: #fff; -webkit-text-stroke: .09em #1b1820; paint-order: stroke fill;
+                    text-shadow: 0 .08em 0 #1b1820, 0 .14em 0 rgba(27, 24, 32, .35); }
+      #loader h1 { margin: 0; text-align: center; font-weight: 400; line-height: 1.05; font-size: clamp(30px, 9vmin, 110px); }
+      #rule { position: relative; width: min(760px, 78vw); height: clamp(5px, .9vmin, 9px); background: #fff; box-shadow: 0 0 0 2px #1b1820; }
+      #rule::after { content: "+"; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -54%);
+                     font-size: clamp(26px, 6vmin, 60px); line-height: 1; padding: 0 .12em; }
+      #bar { width: min(480px, 70vw); height: clamp(14px, 2.4vmin, 22px); padding: 3px; background: rgba(27, 24, 32, .55);
+             border: 3px solid #fff; box-shadow: 0 0 0 2px #1b1820, 0 4px 0 2px rgba(27, 24, 32, .35); box-sizing: content-box; }
+      #fill { width: 0%; height: 100%; background: #fff; transition: width .15s; }
+      #status { font-size: clamp(16px, 3vmin, 26px); }
+      #error { display: none; max-width: 640px; padding: 16px; border-radius: 8px; background: #2a0f1d; color: #ffd6e6;
+               font: 500 14px/1.4 system-ui, sans-serif; text-transform: none; letter-spacing: 0; }
+
+      /* ---------- top bar: menu (+ pause while touch-playing) ---------- */
+      #topbar { position: fixed; top: calc(8px + var(--safe-t)); left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 20; }
+      .round { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; padding: 0; cursor: pointer;
+               background: rgba(10, 8, 20, .55); border: 1px solid var(--line); color: #fff; opacity: .7;
+               transition: opacity .15s, box-shadow .15s; touch-action: manipulation; }
+      .round:hover, .round:focus-visible, .round[aria-expanded="true"] { opacity: 1; box-shadow: 0 0 12px rgba(255, 61, 245, .55); outline: none; }
+      .round svg { width: 18px; height: 18px; fill: currentColor; }
+
+      #menu { position: fixed; top: calc(56px + var(--safe-t)); left: 50%; transform: translateX(-50%); z-index: 21;
+              width: min(300px, calc(100vw - 32px)); padding: 6px; border-radius: 12px; background: var(--panel);
+              border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(0, 0, 0, .5), 0 0 18px rgba(122, 61, 255, .25);
+              backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+      .row { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; padding: 10px 10px;
+             border: 0; border-radius: 8px; background: none; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+      .row:hover, .row:focus-visible { background: rgba(255, 255, 255, .07); outline: none; }
+      .row[aria-disabled="true"] { opacity: .45; cursor: default; }
+      .row small { display: block; margin-top: 2px; font-size: 12px; opacity: .6; }
+      .switch { flex: none; position: relative; width: 40px; height: 22px; border-radius: 11px; background: #2b2545; box-shadow: 0 0 0 1px var(--line) inset; transition: background .15s; }
+      .switch::after { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: #cfc9ea; transition: transform .15s, background .15s; }
+      .row[aria-checked="true"] .switch { background: linear-gradient(90deg, #1fb5c4, #b42bb0); }
+      .row[aria-checked="true"] .switch::after { transform: translateX(18px); background: #fff; }
+      .val { flex: none; min-width: 66px; padding: 3px 8px; border-radius: 10px; text-align: center; font-size: 12px;
+             background: #2b2545; box-shadow: 0 0 0 1px var(--line) inset; }
+      .val[data-level="1"] { background: linear-gradient(90deg, #1fb5c4, #b42bb0); color: #fff; }
+      #help { margin: 4px 10px 6px; padding-top: 8px; border-top: 1px solid var(--line); font-size: 12px; opacity: .65; }
+
+      /* ---------- touch controls ---------- */
+      #touch { position: fixed; inset: 0; z-index: 10; pointer-events: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+      .zone { position: absolute; bottom: 0; height: 72%; pointer-events: auto; touch-action: none; }
+      #zone-move { left: 0; width: 50%; }
+      #zone-aim { right: 0; width: 50%; }
+      .stick { position: absolute; width: var(--stick); height: var(--stick); margin: calc(var(--stick) / -2) 0 0 calc(var(--stick) / -2);
+               border-radius: 50%; border: 2px solid rgba(255, 255, 255, .22); background: rgba(10, 8, 20, .28); pointer-events: none;
+               transition: opacity .12s; opacity: .45; }
+      .stick.live { opacity: 1; }
+      .knob { position: absolute; left: 50%; top: 50%; width: 44%; height: 44%; margin: -22% 0 0 -22%; border-radius: 50%;
+              background: rgba(255, 255, 255, .28); box-shadow: 0 0 12px rgba(57, 243, 255, .45); }
+      #stick-aim .knob { box-shadow: 0 0 12px rgba(255, 61, 245, .55); }
+      #stick-aim.firing .knob { background: rgba(255, 61, 245, .6); }
+      .tbtn { position: absolute; width: var(--btn); height: var(--btn); border-radius: 50%; pointer-events: auto; touch-action: none;
+              display: grid; place-items: center; padding: 0; font: 700 11px/1 system-ui, sans-serif; letter-spacing: .06em; text-transform: uppercase;
+              color: #fff; background: rgba(10, 8, 20, .45); border: 2px solid rgba(255, 255, 255, .25); }
+      .tbtn.down { background: rgba(255, 61, 245, .45); box-shadow: 0 0 14px rgba(255, 61, 245, .6); }
+      #btn-dash  { right: calc(3vmin + var(--safe-r)); bottom: calc(46% + var(--safe-b)); width: calc(var(--btn) * 1.2); height: calc(var(--btn) * 1.2); }
+      #btn-swap  { right: calc(3vmin + var(--btn) * 1.35 + var(--safe-r)); bottom: calc(60% + var(--safe-b)); }
+      #btn-spell { right: calc(3vmin + var(--safe-r)); bottom: calc(66% + var(--safe-b)); }
+      #rotate { position: fixed; left: 50%; bottom: calc(16px + var(--safe-b)); transform: translateX(-50%); z-index: 15;
+                padding: 8px 14px; border-radius: 18px; background: var(--panel); border: 1px solid var(--line); font-size: 13px; white-space: nowrap; }
+    </style>
+  </head>
+  <body>
+    <canvas id="unity-canvas" tabindex="-1"></canvas>
+
+    <div id="loader">
+      <h1 class="pixel-text">Plight of Proteus</h1>
+      <div id="rule" class="pixel-text" aria-hidden="true"></div>
+      <div id="bar"><div id="fill"></div></div>
+      <div id="status" class="pixel-text">Loading 0%</div>
+      <div id="error"></div>
+    </div>
+
+    <div id="touch" hidden>
+      <div class="zone" id="zone-move"></div>
+      <div class="zone" id="zone-aim"></div>
+      <div class="stick" id="stick-move"><div class="knob"></div></div>
+      <div class="stick" id="stick-aim"><div class="knob"></div></div>
+      <button class="tbtn" id="btn-dash" data-button="dash" aria-label="Dash">Dash</button>
+      <button class="tbtn" id="btn-swap" data-button="swap" aria-label="Swap weapon">Swap</button>
+      <button class="tbtn" id="btn-spell" data-button="spell" aria-label="Next spell" hidden>Spell</button>
+    </div>
+    <div id="rotate" hidden>Rotate to landscape for the best view</div>
+
+    <div id="topbar">
+      <button class="round" id="btn-pause" data-button="pause" aria-label="Pause" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>
+      </button>
+      <button class="round" id="btn-menu" aria-label="Game menu" aria-haspopup="true" aria-expanded="false" aria-controls="menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2.2H4zM4 10.9h16v2.2H4zM4 15.8h16V18H4z"/></svg>
+      </button>
+    </div>
+    <div id="menu" role="menu" hidden>
+      <button class="row" id="opt-fullscreen" role="menuitemcheckbox" aria-checked="false">
+        <span>Fullscreen<small id="fs-note"></small></span><span class="switch" aria-hidden="true"></span>
+      </button>
+      <button class="row" id="opt-touch" role="menuitemcheckbox" aria-checked="false">
+        <span>Touch controls<small>On-screen sticks and buttons</small></span><span class="switch" aria-hidden="true"></span>
+      </button>
+      <button class="row" id="opt-shake" role="menuitem">
+        <span>Screen shake<small>Camera impulses on big hits</small></span><span class="val" id="shake-val">Full</span>
+      </button>
+      <button class="row" id="opt-flash" role="menuitem">
+        <span>Bright flashes<small>Screen flashes on big moments</small></span><span class="val" id="flash-val">Full</span>
+      </button>
+      <div id="help">WASD move · Mouse aim · Click fire · Space dash · Tab swap · 2–7 spells · Esc pause</div>
+    </div>
+
+    <script src="Build/Web.loader.js"></script>
+    <script>
+    (() => {
+      "use strict";
+      const $ = (s) => document.querySelector(s);
+      const canvas = $("#unity-canvas");
+      const loader = $("#loader"), fill = $("#fill"), statusEl = $("#status"), errorEl = $("#error");
+      const embedded = window.self !== window.top;
+      const coarse = window.matchMedia("(pointer: coarse)").matches;
+      let unity = null;
+
+      const store = {
+        get(k) { try { return localStorage.getItem("plight:" + k); } catch (e) { return null; } },
+        set(k, v) { try { localStorage.setItem("plight:" + k, v); } catch (e) {} },
+      };
+      const send = (method, value) => { if (unity) { try { unity.SendMessage("WebRuntime", method, value); } catch (e) {} } };
+
+      // Keyboard input goes to the focused element: keep the canvas focused while playing.
+      const focusCanvas = () => { if (document.activeElement !== canvas) canvas.focus({ preventScroll: true }); };
+      canvas.addEventListener("pointerdown", focusCanvas);
+      window.addEventListener("focus", focusCanvas);
+
+      // Pointer lock is requested by the game; browsers reject it without a user gesture, while the
+      // page is hidden, or on touch devices. Those rejections are harmless, so don't surface them.
+      window.addEventListener("unhandledrejection", (e) => {
+        const name = e.reason && (e.reason.name || "");
+        if (name === "WrongDocumentError" || name === "NotAllowedError" || name === "SecurityError") e.preventDefault();
+      });
+
+      /* ================= menu ================= */
+      const menuBtn = $("#btn-menu"), menu = $("#menu");
+      const setMenu = (open) => {
+        menu.hidden = !open;
+        menuBtn.setAttribute("aria-expanded", String(open));
+        if (!open) focusCanvas();
+      };
+      menuBtn.addEventListener("click", (e) => { e.stopPropagation(); setMenu(menu.hidden); });
+      document.addEventListener("pointerdown", (e) => { if (!menu.hidden && !menu.contains(e.target) && !menuBtn.contains(e.target)) setMenu(false); });
+      document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !menu.hidden) { setMenu(false); e.stopPropagation(); } }, true);
+
+      /* ================= fullscreen ================= */
+      // Real Fullscreen API on the whole page (canvas + overlays). When it isn't available (iPhone
+      // Safari, or an iframe without allow="fullscreen") an embedding page running embed.js can
+      // expand the iframe to cover the window instead ("pseudo" fullscreen).
+      const fsBtn = $("#opt-fullscreen"), fsNote = $("#fs-note");
+      const root = document.documentElement;
+      const fsApi = !!(root.requestFullscreen || root.webkitRequestFullscreen) && (document.fullscreenEnabled || document.webkitFullscreenEnabled);
+      let pseudoFs = false, hostSupportsPseudo = false;
+      const fsElement = () => document.fullscreenElement || document.webkitFullscreenElement;
+      const isFs = () => !!fsElement() || pseudoFs;
+      const fsAvailable = () => fsApi || (embedded && hostSupportsPseudo);
+      function syncFs() {
+        fsBtn.setAttribute("aria-checked", String(isFs()));
+        const ok = fsAvailable();
+        fsBtn.setAttribute("aria-disabled", String(!ok));
+        fsNote.textContent = ok ? "" : (embedded ? "Not allowed by this page" : "Not supported by this browser");
+      }
+      async function setFullscreen(on) {
+        if (fsApi) {
+          try {
+            if (on && !fsElement()) {
+              await (root.requestFullscreen ? root.requestFullscreen({ navigationUI: "hide" }) : root.webkitRequestFullscreen());
+              if (coarse && screen.orientation && screen.orientation.lock) screen.orientation.lock("landscape").catch(() => {});
+            } else if (!on && fsElement()) {
+              await (document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen());
+            }
+            return;
+          } catch (e) { /* fall through to the embed fallback */ }
+        }
+        if (embedded && hostSupportsPseudo) window.parent.postMessage({ type: "plight:fullscreen", on }, "*");
+      }
+      fsBtn.addEventListener("click", () => { if (fsAvailable()) setFullscreen(!isFs()); });
+      document.addEventListener("fullscreenchange", syncFs);
+      document.addEventListener("webkitfullscreenchange", syncFs);
+      window.addEventListener("message", (e) => {
+        if (e.source !== window.parent || !e.data || typeof e.data.type !== "string") return;
+        if (e.data.type === "plight:host") { hostSupportsPseudo = true; syncFs(); }
+        if (e.data.type === "plight:fullscreen-state") { pseudoFs = !!e.data.on; syncFs(); }
+      });
+      if (embedded) window.parent.postMessage({ type: "plight:hello" }, "*");
+      syncFs();
+
+      /* ================= touch controls ================= */
+      const touchEl = $("#touch"), touchBtn = $("#opt-touch"), pauseBtn = $("#btn-pause"), spellBtn = $("#btn-spell"), rotateEl = $("#rotate");
+      const pref = store.get("touch"); // "on" | "off" | null (auto: on for touchscreens)
+      let touchOn = pref ? pref === "on" : coarse;
+      let gameplay = false, wand = false, rotateDismissed = false;
+      const state = { mx: 0, my: 0, ax: 0, ay: 0, fire: false };
+      let dirty = false;
+
+      function flush() {
+        dirty = false;
+        const f = (v) => v.toFixed(3);
+        send("TouchState", `${f(state.mx)} ${f(state.my)} ${f(state.ax)} ${f(state.ay)} ${state.fire ? 1 : 0}`);
+      }
+      const markDirty = () => { if (!dirty) { dirty = true; requestAnimationFrame(flush); } };
+
+      function makeStick(zone, stickEl, onChange, homeSide) {
+        const knob = stickEl.querySelector(".knob");
+        let id = null, cx = 0, cy = 0;
+        const radius = () => stickEl.offsetWidth / 2;
+        function home() {
+          const r = zone.getBoundingClientRect(), s = radius();
+          const x = homeSide === "left" ? r.left + s * 1.5 : r.right - s * 1.5;
+          place(x, r.bottom - s * 1.4);
+        }
+        function place(x, y) { cx = x; cy = y; stickEl.style.left = x + "px"; stickEl.style.top = y + "px"; }
+        function update(x, y) {
+          const s = radius(); let dx = (x - cx) / s, dy = (y - cy) / s;
+          const m = Math.hypot(dx, dy); if (m > 1) { dx /= m; dy /= m; }
+          knob.style.transform = `translate(${dx * s * 0.62}px, ${dy * s * 0.62}px)`;
+          onChange(dx, -dy, Math.min(m, 1));
+        }
+        function end() {
+          id = null; stickEl.classList.remove("live"); knob.style.transform = ""; home(); onChange(0, 0, 0);
+        }
+        zone.addEventListener("pointerdown", (e) => {
+          if (id !== null) return;
+          id = e.pointerId; try { zone.setPointerCapture(id); } catch (err) {}
+          // Float the stick to the thumb, kept fully on screen.
+          const s = radius(); const x = Math.max(s, Math.min(innerWidth - s, e.clientX)), y = Math.max(s, Math.min(innerHeight - s, e.clientY));
+          place(x, y); stickEl.classList.add("live"); update(e.clientX, e.clientY); e.preventDefault();
+        });
+        zone.addEventListener("pointermove", (e) => { if (e.pointerId === id) { update(e.clientX, e.clientY); e.preventDefault(); } });
+        zone.addEventListener("pointerup", (e) => { if (e.pointerId === id) end(); });
+        zone.addEventListener("pointercancel", (e) => { if (e.pointerId === id) end(); });
+        return { home, end, get active() { return id !== null; } };
+      }
+
+      const DEAD = 0.18, AIM_FIRE = 0.35;
+      const moveStick = makeStick($("#zone-move"), $("#stick-move"), (x, y, m) => {
+        if (m < DEAD) { x = 0; y = 0; }
+        state.mx = x; state.my = y; markDirty();
+      }, "left");
+      const aimStick = makeStick($("#zone-aim"), $("#stick-aim"), (x, y, m) => {
+        // Twin-stick: pushing the right stick aims and holds fire.
+        const firing = m >= AIM_FIRE;
+        state.ax = m >= DEAD ? x : 0; state.ay = m >= DEAD ? y : 0; state.fire = firing;
+        $("#stick-aim").classList.toggle("firing", firing); markDirty();
+      }, "right");
+
+      // Action buttons fire on press (like a key down).
+      document.querySelectorAll("[data-button]").forEach((b) => {
+        b.addEventListener("pointerdown", (e) => {
+          e.preventDefault(); e.stopPropagation();
+          b.classList.add("down"); send("TouchButton", b.dataset.button);
+        });
+        const up = () => b.classList.remove("down");
+        b.addEventListener("pointerup", up); b.addEventListener("pointercancel", up); b.addEventListener("pointerleave", up);
+        b.addEventListener("click", (e) => e.preventDefault());
+      });
+
+      // Keep overlay touches away from the game (no stray taps/clicks) and the page (no scroll/zoom).
+      ["touchstart", "touchmove", "touchend", "touchcancel"].forEach((t) =>
+        touchEl.addEventListener(t, (e) => { e.stopPropagation(); if (e.cancelable) e.preventDefault(); }, { passive: false }));
+      touchEl.addEventListener("contextmenu", (e) => e.preventDefault());
+
+      function syncTouch() {
+        touchBtn.setAttribute("aria-checked", String(touchOn));
+        const show = touchOn && gameplay;
+        touchEl.hidden = !show;
+        pauseBtn.hidden = !show;
+        spellBtn.hidden = !wand;
+        const portrait = innerHeight > innerWidth;
+        rotateEl.hidden = !(show && portrait && !rotateDismissed);
+        if (show) { moveStick.home(); aimStick.home(); }
+        else { if (moveStick.active) moveStick.end(); if (aimStick.active) aimStick.end(); }
+      }
+      touchBtn.addEventListener("click", () => {
+        touchOn = !touchOn; store.set("touch", touchOn ? "on" : "off");
+        send("TouchEnabled", touchOn ? 1 : 0); syncTouch();
+      });
+      rotateEl.addEventListener("click", () => { rotateDismissed = true; syncTouch(); });
+      window.addEventListener("resize", syncTouch);
+      window.addEventListener("blur", () => { moveStick.active && moveStick.end(); aimStick.active && aimStick.end(); });
+
+      // The game reports when gameplay controls make sense (bit 1) and whether the wand is equipped (bit 2).
+      window.addEventListener("plight:state", (e) => {
+        const flags = e.detail.flags | 0;
+        gameplay = (flags & 1) !== 0; wand = (flags & 2) !== 0; syncTouch();
+      });
+      syncTouch();
+
+      /* ================= comfort: screen shake + bright flashes ================= */
+      // Full / Reduced / Off, remembered per browser; reduced by default when the system asks for less motion.
+      const levels = [1, 0.5, 0], levelName = { 1: "Full", 0.5: "Reduced", 0: "Off" };
+      const lessMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const readLevel = (k) => { const v = parseFloat(store.get(k)); return levels.includes(v) ? v : (lessMotion ? 0.5 : 1); };
+      const feel = { shake: readLevel("shake"), flash: readLevel("flash") };
+      const sendFeel = () => send("SetFeel", `${feel.shake} ${feel.flash}`);
+      function syncFeel() {
+        [["shake", "#opt-shake", "#shake-val", "Screen shake"], ["flash", "#opt-flash", "#flash-val", "Bright flashes"]].forEach(([k, row, val, label]) => {
+          const el = $(val); el.textContent = levelName[feel[k]]; el.dataset.level = String(feel[k]);
+          $(row).setAttribute("aria-label", `${label}: ${levelName[feel[k]]}`);
+        });
+      }
+      ["shake", "flash"].forEach((k) => $("#opt-" + k).addEventListener("click", () => {
+        feel[k] = levels[(levels.indexOf(feel[k]) + 1) % levels.length];
+        store.set(k, String(feel[k])); syncFeel(); sendFeel();
+      }));
+      // Changed from the in-game Settings menu: mirror it here and remember it.
+      window.addEventListener("plight:feel", (e) => {
+        const d = e.detail || {};
+        const near = (v) => levels.reduce((a, b) => (Math.abs(b - v) < Math.abs(a - v) ? b : a));
+        feel.shake = near(+d.shake); feel.flash = near(+d.flash);
+        store.set("shake", String(feel.shake)); store.set("flash", String(feel.flash));
+        syncFeel();
+      });
+      syncFeel();
+
+      /* ================= boot ================= */
+      function showError(message) {
+        errorEl.style.display = "block";
+        errorEl.textContent = "The game failed to start: " + message;
+      }
+
+      createUnityInstance(canvas, {
+        arguments: [],
+        primaryDataUrls: ["globalgamemanagers.br","globalgamemanagers.assets.br","level0.br","resources.assets.br","resources.resource.br","Resources/unity_builtin_extra.br","RuntimeInitializeOnLoads.json.br","ScriptingAssemblies.json.br","sharedassets0.assets.br","sharedassets0.resource.br","boot.config.br","Il2CppData/Metadata/global-metadata.dat.br","Resources/unity default resources.br"],
+        secondaryDataUrls: ["level1.br","sharedassets1.assets.br","sharedassets1.resource.br","level2.br","sharedassets2.assets.br","level3.br","sharedassets3.assets.br","level4.br","sharedassets4.assets.br","level5.br","sharedassets5.assets.br","level6.br","sharedassets6.assets.br","level7.br","sharedassets7.assets.br"],
+        frameworkUrl: "Build/Web.framework.js.br",
+        codeUrl: "Build/Web.wasm.br",
+        streamingAssetsUrl: "StreamingAssets",
+        autoSyncPersistentDataPath: true, // saves/settings sync to IndexedDB automatically (manual sync is deprecated)
+        companyName: "Adair LLC",
+        productName: "Plight Of Proteous",
+        productVersion: "1.0",
+        // Native resolution, capped: this pixel-art game gains nothing above 2x (1.5x on phones,
+        // where fill rate is scarce and bloom runs on every pixel).
+        devicePixelRatio: Math.min(window.devicePixelRatio || 1, coarse ? 1.5 : 2),
+        showBanner: (msg, type) => { if (type === "error") showError(msg); else console.warn(msg); },
+      }, (progress) => {
+        const pct = Math.round(progress * 100);
+        fill.style.width = pct + "%";
+        statusEl.textContent = "Loading " + pct + "%";
+      }).then((instance) => {
+        unity = instance;
+        window.unityInstance = instance;
+        window.__popReady = performance.now();
+        loader.style.display = "none";
+        send("TouchEnabled", touchOn ? 1 : 0);
+        sendFeel();
+        if (typeof window.__plightState === "number")
+          window.dispatchEvent(new CustomEvent("plight:state", { detail: { flags: window.__plightState } }));
+        focusCanvas();
+      }).catch((message) => {
+        showError(message);
+      });
+    })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+/unity/PoP/*.br
+  Content-Encoding: br
+
+/unity/PoP/Build/Web.wasm.br
+  Content-Type: application/wasm
+
+/unity/PoP/Build/Web.framework.js.br
+  Content-Type: application/javascript

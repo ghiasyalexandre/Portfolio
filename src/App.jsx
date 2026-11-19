@@ -10,6 +10,7 @@ import { Routes, Route } from "react-router-dom";
 
 const VFX = lazy(() => import("./components/VfxGallery"));
 const Projects = lazy(() => import("./components/Projects"));
+const PoPGame = lazy(() => import("./components/PoPGame"));
 
 import "./App.css";
 import Email from "./components/Email";
@@ -18,6 +19,23 @@ import Email from "./components/Email";
 function App() {
   return (
     <HelmetProvider className="sr-only">
+      <Routes>
+        <Route
+          path="/games/PoP"
+          element={
+            <Suspense fallback={null}>
+              <PoPGame />
+            </Suspense>
+          }
+        />
+        <Route path="*" element={<MainSite />} />
+      </Routes>
+    </HelmetProvider>
+  );
+}
+
+function MainSite() {
+  return (
       <div className="App">
         <Helmet>
           <title>Ghiasy Alexandre&apos;s Portfolio</title>
@@ -120,7 +138,6 @@ function App() {
           <AppFooter />
         </footer>
       </div>
-    </HelmetProvider>
   );
 }
 

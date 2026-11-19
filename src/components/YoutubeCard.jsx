@@ -37,7 +37,7 @@ function YoutubeCard(props) {
         className="text-neutral-400 text-left text-xs sm:text-sm pl-5 sm:pl-8 pt-4 sm:px-6 sm:pt-6"
         aria-hidden="true"
       >
-        Click Image to Preview!
+        Click to Play!
       </p>
 
       <figure className="video-figure">

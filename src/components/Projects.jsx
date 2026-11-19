@@ -1,4 +1,4 @@
-const PoPGif = `${import.meta.env.BASE_URL}PoP.gif`;
+const PoPVideo = `${import.meta.env.BASE_URL}videos/PoP.webm`;
 const PoPThumbnail = `${import.meta.env.BASE_URL}PoPThumbnail.webp`;
 const VRonVid = `${import.meta.env.BASE_URL}videos/VRon.webm`;
 const SimpleC = `${import.meta.env.BASE_URL}SimpleC.webp`;
@@ -9,16 +9,21 @@ import Card from "./Card";
 import { Link } from "react-router-dom";
 import VideoCard from "./VideoCard";
 import DynamicSkills from "./DynamicSkills";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const DuskVideo = `${import.meta.env.BASE_URL}videos/duskHoldingVideo.webm`;
 // const VideoCard = lazy(() => import("../components/VideoCard"));
 
 export default function Projects() {
-  const [viewPoP, setViewPop] = useState(false);
+  // Show the light thumbnail (as the video poster) first; give the video its source only
+  // after the page has loaded. The poster stays up until the first frame is ready.
+  const [popSrc, setPopSrc] = useState(null);
 
-  function toggleViewPop() {
-    setViewPop(!viewPoP);
-  }
+  useEffect(() => {
+    const loadVideo = () => setPopSrc(PoPVideo);
+    if (document.readyState === "complete") loadVideo();
+    else window.addEventListener("load", loadVideo, { once: true });
+    return () => window.removeEventListener("load", loadVideo);
+  }, []);
 
   const reveal = () => {
     var reveals = document.querySelectorAll(".reveal");
@@ -70,31 +75,28 @@ export default function Projects() {
                   className=" text-neutral-400 text-left text-xs sm:text-sm pt-2 px-4 sm:pl-8 sm:pt-2"
                   aria-hidden="true"
                 >
-                  Click Image to Preview!
+                  Click to Play!
                 </p>
                 <figure>
                   <div>
-                    <button
-                      onClick={toggleViewPop}
+                    <Link
+                      to="/games/PoP"
+                      draggable={false}
                       className="w-full h-auto inline-block cursor-pointer px-4 sm:px-6 border-0 "
-                      aria-label="Toggle preview for Plight of Proteus"
+                      aria-label="Play Plight of Proteus"
                     >
-                      {!viewPoP ? (
-                        <img
-                          className="w-full h-auto border rounded-lg shadow-lg shadow-white/30"
-                          src={PoPThumbnail}
-                          draggable={false}
-                          aria-label="Toggle preview for Plight of Proteus"
-                        />
-                      ) : (
-                        <img
-                          className="w-full h-auto border rounded-lg shadow-lg shadow-white/30"
-                          src={PoPGif}
-                          draggable={false}
-                          alt="Plight of Proteus Preview"
-                        />
-                      )}
-                    </button>
+                      <video
+                        className="w-full h-auto aspect-video object-cover border rounded-lg shadow-lg shadow-white/30"
+                        poster={PoPThumbnail}
+                        src={popSrc ?? undefined}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        draggable={false}
+                        aria-label="Plight of Proteus gameplay preview"
+                      />
+                    </Link>
                   </div>
                   <h2 className="text-2xl xs:text-3xl sm:text-4xl  mt-4 text-center font-semibold px-4 lg:px-8">
                     Plight of Proteus
@@ -103,7 +105,7 @@ export default function Projects() {
                   <figcaption className="text-center text-neutral-300 text-base sm:text-lg lg:text-base xl:text-xl mx-8 md:mx-16 mb-2 ">
                     A 2D procedurally generated Rogue like adventure game
                     optimized to run within the browser with webGL made in
-                    Unity.
+                    Unity. Click the gif to try the demo!
                   </figcaption>
                   <div className="flex justify-center py-2">
                     <DynamicSkills skills={["unity", "sharp"]} />
@@ -149,7 +151,7 @@ export default function Projects() {
             </div>
           </FadeInSection>
 
-          <FadeInSection>
+          {/* <FadeInSection>
             <div ref={reveal}>
               <Card
                 cardTitle="Money Maker Mindset"
@@ -159,7 +161,7 @@ export default function Projects() {
                 caption={`A Financial Education website with articles on investing, saving, and tools such as a loan calculator. \n(work in progress)`}
               />
             </div>
-          </FadeInSection>
+          </FadeInSection> */}
         </div>
         <div className="flex flex-col gap-4 lg:gap-8">
           <FadeInSection>
@@ -207,7 +209,7 @@ export default function Projects() {
             </div>
           </FadeInSection>
 
-          <FadeInSection>
+          {/* <FadeInSection>
             <div ref={reveal}>
               <YoutubeCard
                 cardTitle="Price Review"
@@ -219,7 +221,7 @@ export default function Projects() {
                 skills={["html", "js", "sql", "php"]}
               />
             </div>
-          </FadeInSection>
+          </FadeInSection> */}
         </div>
       </div>
       <div className="flex justify-center py-12 w-full ">

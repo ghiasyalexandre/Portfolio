@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Embedding Plight of Proteus</title>
+  <style>
+    body { margin: 0; padding: 32px 16px; background: #f4f3f8; color: #1d1b26; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 960px; margin: 0 auto; }
+    pre { overflow-x: auto; padding: 14px 16px; border-radius: 8px; background: #1d1b26; color: #e9e6ff; font-size: 13px; }
+    .narrow { max-width: 480px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Embedding example</h1>
+    <p>The game below is placed with two lines. It fills its column width, keeps a 16:9 ratio and shows a
+       click-to-play cover, so nothing downloads until a visitor chooses to play.</p>
+
+    <div data-plight-embed></div>
+
+    <h2>Snippet</h2>
+<pre>&lt;div data-plight-embed&gt;&lt;/div&gt;
+&lt;script src="https://YOUR-HOST/plight/embed.js" defer&gt;&lt;/script&gt;</pre>
+
+    <p>Options: <code>data-aspect="4/3"</code>, <code>data-autoload="true"</code>, <code>data-title="..."</code>,
+       <code>data-src="https://.../index.html"</code>. Size it with normal CSS on the container, e.g. a narrower one:</p>
+    <div class="narrow" data-plight-embed data-aspect="4/3" data-title="Plight of Proteus (4:3)"></div>
+
+    <h2>Plain iframe alternative</h2>
+<pre>&lt;iframe src="https://YOUR-HOST/plight/index.html" title="Plight of Proteus"
+        allow="fullscreen; autoplay; gamepad; screen-wake-lock" allowfullscreen
+        style="width:100%; aspect-ratio:16/9; border:0"&gt;&lt;/iframe&gt;</pre>
+  </main>
+  <script src="embed.js" defer></script>
+</body>
+</html>
